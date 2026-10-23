@@ -1,20 +1,110 @@
 [
   {
-    "title": "NASA Space News",
-    "summary": "Explore the latest space exploration and science updates from NASA.",
-    "url": "https://www.nasa.gov/news/",
-    "image": "",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-10-20"
-  },
-  {
-    "title": "ESA Space Science",
-    "summary": "Discover astronomy, planetary science and space exploration from ESA.",
-    "url": "https://www.esa.int/Science_Exploration/Space_Science",
-    "image": "",
+    "title": "Stars brewing in a nebulous cauldron",
+    "summary": "Image: Stars brewing in a nebulous cauldron",
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Stars_brewing_in_a_nebulous_cauldron",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/stars_brewing_in_a_nebulous_cauldron/27584043-1-eng-GB/Stars_brewing_in_a_nebulous_cauldron_card_full.jpg",
     "source": "ESA",
     "category": "Science",
-    "published": "2026-10-19"
+    "published": "2026-10-22T10:00:00+02:00"
+  },
+  {
+    "title": "MMX lifts off to Mars’s moon Phobos",
+    "summary": "Image: MMX lifts off to Mars’s moon Phobos",
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/mmx_lifts_off_to_mars_s_moon_phobos/27583877-2-eng-GB/MMX_lifts_off_to_Mars_s_moon_Phobos_card_full.gif",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-20T09:00:00+02:00"
+  },
+  {
+    "title": "Celebrating BepiColombo, three words at a time",
+    "summary": "Video: 00:03:32 BepiColombo launched on 20 October 2018. This year, the anniversary is special. After eight years of travelling through the inner Solar System, the ESA/JAXA mission will arrive at Mercury on 9 December, 2026. To celebrate, mission team members were asked to describe BepiColombo in just three words. Their answers capture the character of the mission and the people behind it. Complex, collaborative and transformative are among the words chosen, reflecting both the demanding journey",
+    "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/10/Celebrating_BepiColombo_three_words_at_a_time",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/videos/2026/10/celebrating_bepicolombo_three_words_at_a_time/27584100-1-eng-GB/Celebrating_BepiColombo_three_words_at_a_time_card_full.png",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-19T17:00:00+02:00"
+  },
+  {
+    "title": "Euclid discovers new comet",
+    "summary": "The European Space Agency’s Euclid space telescope has discovered its first previously unknown comet, in images taken between 16 and 24 September 2026.",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_new_comet",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/comet_c_2026_s1_euclid_streaks_across_the_sky/27582276-1-eng-GB/Comet_C_2026_S1_Euclid_streaks_across_the_sky_card_full.gif",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-19T14:00:00+02:00"
+  },
+  {
+    "title": "Where winds blow and lava flows",
+    "summary": "Image: Where winds blow and lava flows",
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Where_winds_blow_and_lava_flows",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/where_winds_blow_and_lava_flows/27545666-1-eng-GB/Where_winds_blow_and_lava_flows_card_full.jpg",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-14T11:00:00+02:00"
+  },
+  {
+    "title": "Mars moon lander set to launch on 19 October",
+    "summary": "The Martian Moons eXploration ( MMX ) mission is set to launch into space on a H3 rocket from the Tanegashima Space Center at 04:41 JST on 20 October 2026 (20:41 BST / 21:41 CEST on 19 October 2026). MMX will be the first mission to collect a sample from Mars’s moon Phobos and bring it back to Earth.  MMX is led by the Japan Aerospace Exploration Agency (JAXA), in collaboration with the National Aeronautics and Space Administration (NASA), the French space agency (CNES), the German Aerospace Cen",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_moon_lander_set_to_launch_on_19_October",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/mmx_from_launch_to_phobos/27573728-1-eng-GB/MMX_from_launch_to_Phobos_card_full.png",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-13T14:00:00+02:00"
+  },
+  {
+    "title": "Solar Orbiter tracks origin of mysterious magnetic switchbacks",
+    "summary": "The European Space Agency-led Solar Orbiter spacecraft has flown through an S-shaped kink known as a ‘switchback’ in the solar wind’s magnetic field. By fingerprinting the elusive particles within the switchback, Solar Orbiter has traced its origin back to the Sun’s surface and revealed more about solar magnetism – the unruly instigator of dangerous solar storms.",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_tracks_origin_of_mysterious_magnetic_switchbacks",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2022/05/solar_orbiter_at_perihelion_27_march_2022/24071526-1-eng-GB/Solar_Orbiter_at_perihelion_27_March_2022_card_full.png",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-08T11:00:00+02:00"
+  },
+  {
+    "title": "Mars’s oddest cloud may be even odder than we thought",
+    "summary": "Scientists using the European Space Agency's Mars Express , in combination with a state-of-the-art meteorological model of the Red Planet, have found that there may be some very exotic physics behind Mars’s most curious cloud.",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_s_oddest_cloud_may_be_even_odder_than_we_thought",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/the_arsia_mons_elongated_cloud_as_seen_by_mars_express/27546706-1-eng-GB/The_Arsia_Mons_Elongated_Cloud_as_seen_by_Mars_Express_card_full.png",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-07T17:00:00+02:00"
+  },
+  {
+    "title": "Webb captures commotion from nebula’s stellar jets",
+    "summary": "Image: Webb captures commotion from nebula’s stellar jets",
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Webb_captures_commotion_from_nebula_s_stellar_jets",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/10/webb_captures_commotion_from_nebula_s_stellar_jets/27545931-4-eng-GB/Webb_captures_commotion_from_nebula_s_stellar_jets_card_full.jpg",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-06T15:00:00+02:00"
+  },
+  {
+    "title": "Science begins for Smile",
+    "summary": "On 23 September, the European-Chinese Smile mission was declared ready to start revealing how Earth responds to the wind of charged particles from the Sun. This follows a busy in-space commissioning period since the spacecraft launched on 19 May and reached its target orbit for science operations on 20 June.",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Smile/Science_begins_for_Smile",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/09/smile_s_first_ultraviolet_image_shows_auroral_substorm/27545329-1-eng-GB/Smile_s_first_ultraviolet_image_shows_auroral_substorm_card_full.png",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-09-30T09:05:00+02:00"
+  },
+  {
+    "title": "Galaxies in a cosmic house of mirrors",
+    "summary": "Image: This NASA/ESA/CSA James Webb Space Telescope Picture of the Month features galaxies in great detail that have been warped and multiplied like they’ve stepped into a house of mirrors. The brilliant golden galaxies splashed across this image belong to a galaxy cluster called MACS J0454.1-0300. The orange galaxies concentrated on one side of the cluster are not actually part of the cluster and are much farther away from us. MACS J0454.1-0300 is itself immensely distant: the light from these ",
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2026/09/Galaxies_in_a_cosmic_house_of_mirrors",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/09/galaxies_in_a_cosmic_house_of_mirrors/27538440-1-eng-GB/Galaxies_in_a_cosmic_house_of_mirrors_card_full.jpg",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-09-29T10:00:00+02:00"
+  },
+  {
+    "title": "BepiColombo’s Mercury arrival begins - full replay",
+    "summary": "Video: 02:31:10 Watch the replay of the livestream originally broadcast on 3 September as ESA/JAXA's BepiColombo mission took the first critical step towards arriving at Mercury. After travelling through the inner Solar System together for eight years, BepiColombo's Mercury Transfer Module (MTM) will separate from the rest of the stacked spacecraft on 3 September 2026. This marks the beginning of one of the most complex planetary arrival sequences ever attempted by ESA. Broadcast live from ESA's",
+    "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/09/BepiColombo_s_Mercury_arrival_begins_-_full_replay",
+    "image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/videos/2026/09/bepicolombo_s_mercury_arrival_begins_-_full_replay/27450090-5-eng-GB/BepiColombo_s_Mercury_arrival_begins_-_full_replay_card_full.jpg",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-09-03T17:00:00+02:00"
   }
 ]
