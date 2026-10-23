@@ -312,7 +312,7 @@ footer { background:var(--navy); color:#d9e4f0; padding:28px 22px; }
 <script>
 const searchInput = document.getElementById('search');
 const categoryFilter = document.getElementById('category-filter');
-const cards = Array.from(document.querySelectorAll('.story-card'));
+let cards = Array.from(document.querySelectorAll('.story-card'));
 const count = document.getElementById('story-count');
 const noResults = document.getElementById('no-results');
 
@@ -345,6 +345,73 @@ document.querySelectorAll('[data-nav-category]').forEach(link => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 filterStories();
+  async function loadLiveNews() {
+  try {
+    const response = await fetch('./news.json');
+    if (!response.ok) throw new Error('News file could not load');
+
+    const stories = await response.json();
+    const grid = document.getElementById('story-grid');
+
+    document.querySelectorAll('.live-news-card').forEach(card => card.remove());
+
+    stories.forEach(story => {
+      const article = document.createElement('article');
+      article.className = 'story-card live-news-card';
+      article.dataset.category = story.category || 'Science';
+
+      const imageBox = document.createElement('div');
+      imageBox.className = 'story-image';
+
+      const img = document.createElement('img');
+      img.src = story.image || '';
+      img.alt = story.title || 'Science news';
+      img.loading = 'lazy';
+      img.style.cssText = 'width:100%;height:100%;object-fit:cover;';
+      img.onerror = () => {
+        img.remove();
+        imageBox.textContent = '🔭';
+      };
+      imageBox.appendChild(img);
+
+      const content = document.createElement('div');
+      content.className = 'story-content';
+
+      const category = document.createElement('span');
+      category.className = 'category';
+      category.textContent = story.category || 'Science';
+
+      const title = document.createElement('h3');
+      title.textContent = story.title || 'Science News';
+
+      const summary = document.createElement('p');
+      summary.textContent = story.summary || '';
+
+      const meta = document.createElement('div');
+      meta.className = 'story-meta';
+      meta.textContent = (story.source || 'News Source') +
+        (story.published ? ' · ' + new Date(story.published).toLocaleDateString() : '');
+
+      const link = document.createElement('a');
+      link.className = 'read-link';
+      link.href = story.url || '#';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Read Original Story ↗️';
+
+      content.append(category, title, summary, meta, link);
+      article.append(imageBox, content);
+      grid.prepend(article);
+    });
+
+    cards = Array.from(document.querySelectorAll('.story-card'));
+    filterStories();
+  } catch (error) {
+    console.error('Live news loading failed:', error);
+  }
+}
+
+loadLiveNews();
 </script>
 </body>
 </html>
