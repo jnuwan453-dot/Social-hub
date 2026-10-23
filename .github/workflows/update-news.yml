@@ -1,0 +1,39 @@
+name: Update Space and Science News
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository files
+        uses: actions/checkout@v4
+        with:
+          ref: Social-Hub
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch latest news
+        run: python scripts/update_news.py
+
+      - name: Save updated news
+        run: |
+          if [ -n "$(git status --porcelain news.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add news.json
+            git commit -m "Automatically update space and science news"
+            git push origin HEAD:Social-Hub
+          else
+            echo "No news changes to save."
+          fi
