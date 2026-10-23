@@ -121,5 +121,5 @@ def main():
 
     print(f"Saved {min(len(articles), 24)} news stories.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
