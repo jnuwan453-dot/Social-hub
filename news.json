@@ -1,0 +1,20 @@
+[
+  {
+    "title": "NASA Space News",
+    "summary": "Explore the latest space exploration and science updates from NASA.",
+    "url": "https://www.nasa.gov/news/",
+    "image": "",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-10-20"
+  },
+  {
+    "title": "ESA Space Science",
+    "summary": "Discover astronomy, planetary science and space exploration from ESA.",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science",
+    "image": "",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-10-19"
+  }
+]
