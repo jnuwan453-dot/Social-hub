@@ -390,7 +390,23 @@ filterStories();
       const meta = document.createElement('div');
       meta.className = 'story-meta';
       meta.textContent = (story.source || 'News Source') +
-        (story.published ? ' · ' + new Date(story.published).toLocaleDateString() : '');
+       const publishedDate = story.published
+  ? new Date(story.published)
+  : null;
+
+const validDate =
+  publishedDate && !Number.isNaN(publishedDate.getTime());
+
+meta.textContent =
+  (story.source || 'News Source') +
+  (validDate
+    ? ' · ' + publishedDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'UTC'
+      })
+    : '');
 
       const link = document.createElement('a');
       link.className = 'read-link';
