@@ -387,10 +387,10 @@ filterStories();
       const summary = document.createElement('p');
       summary.textContent = story.summary || '';
 
-      const meta = document.createElement('div');
-      meta.className = 'story-meta';
-      meta.textContent = (story.source || 'News Source') +
-       const publishedDate = story.published
+ const meta = document.createElement("div");
+meta.className = "story-meta";
+
+const publishedDate = story.published
   ? new Date(story.published)
   : null;
 
@@ -407,8 +407,6 @@ meta.textContent =
         timeZone: "UTC"
       })
     : "");
-
-      const link = document.createElement('a');
       link.className = 'read-link';
       link.href = story.url || '#';
       link.target = '_blank';
