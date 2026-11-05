@@ -1,5 +1,32 @@
 [
   {
+    "title": "Midwestern City Lights",
+    "summary": "City lights from the Midwestern United States to the East Coast sparkle across the landscape a couple of hours before sunrise on Oct. 18, 2026. Major urban areas visible in the photograph include Chicago, Illinois; Detroit, Michigan; and the New York metropolitan region. The International Space Station was orbiting 259 miles above Earth when this […]",
+    "url": "https://www.nasa.gov/image-article/midwestern-city-lights/",
+    "image": "",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-05T15:17:19+00:00"
+  },
+  {
+    "title": "NASA Astronauts to Answer Questions from Florida Students",
+    "summary": "Students in Florida will hear from NASA astronauts Jessica Watkins and Luke Delaney as they answer prerecorded STEM questions while aboard the International Space Station. The Earth-to-space call will begin at 10:40 a.m. EST Tuesday, Nov. 10, and will stream live on the agency’s Learn With NASA YouTube channel. This event is hosted by Freedom Crossing Academy in […]",
+    "url": "https://www.nasa.gov/learning-resources/nasa-astronauts-to-answer-questions-from-florida-students-2/",
+    "image": "",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-05T15:11:25+00:00"
+  },
+  {
+    "title": "Hubble Learns Galactic History From Stars",
+    "summary": "This Hubble image features the sparkling collection of stars named Messier 30 (M30), also called NGC 7099.",
+    "url": "https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
+    "image": "",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-05T12:56:21+00:00"
+  },
+  {
     "title": "APOD: 2026 November 5 – Enceladus in Silhouette",
     "summary": "APOD Science APOD APOD: 2026 November 5 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Enceladus in Silhouette […]",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-5-enceladus-in-silhouette/",
@@ -61,32 +88,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-04T16:16:41+00:00"
-  },
-  {
-    "title": "Hubble Reveals Cosmic Mystery",
-    "summary": "This photo released on Nov. 2, 2026, showcases NGC  4449, a dwarf irregular. Researchers using NASA’s Hubble Space Telescope studied 37 nearby dwarf galaxies — small galaxies containing a few thousand to hundreds of millions of stars — including NGC 4449 and found that much of the oxygen they expected to see is missing. Read […]",
-    "url": "https://www.nasa.gov/image-article/hubble-reveals-cosmic-mystery/",
-    "image": "",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-04T15:59:36+00:00"
-  },
-  {
-    "title": "APOD: 2026 November 4 – The Not-So-Hidden Galaxy, IC 342",
-    "summary": "APOD Science APOD APOD: 2026 November 4 – The… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. The Not-So-Hidden […]",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-4-the-not-so-hidden-galaxy-ic-342/",
-    "image": "",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-04T05:05:00+00:00"
-  },
-  {
-    "title": "Before the Dawn in America’s Heartland",
-    "summary": "With hardly a cloud in sight, astronauts had a sweeping view of nighttime lights in the U.S. Midwest.",
-    "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland/",
-    "image": "",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-04T05:01:00+00:00"
   }
 ]
