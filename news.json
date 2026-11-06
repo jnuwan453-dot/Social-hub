@@ -1,5 +1,23 @@
 [
   {
+    "title": "APOD: 2026 November 6 – A Farewell to Swift",
+    "summary": "APOD Science APOD APOD: 2026 November 6 – A… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. A Farewell […]",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
+    "image": "",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-06T05:05:00+00:00"
+  },
+  {
+    "title": "Taking a Gander at Utah’s Goosenecks",
+    "summary": "The San Juan River has carved deep, improbably curvy meanders into the desert landscape.",
+    "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+    "image": "",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-06T05:01:00+00:00"
+  },
+  {
     "title": "Midwestern City Lights",
     "summary": "City lights from the Midwestern United States to the East Coast sparkle across the landscape a couple of hours before sunrise on Oct. 18, 2026. Major urban areas visible in the photograph include Chicago, Illinois; Detroit, Michigan; and the New York metropolitan region. The International Space Station was orbiting 259 miles above Earth when this […]",
     "url": "https://www.nasa.gov/image-article/midwestern-city-lights/",
@@ -70,23 +88,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-04T18:00:02+00:00"
-  },
-  {
-    "title": "NASA Navigation Experiment Shows Promise for Planetary Landings",
-    "summary": "NASA successfully demonstrated technology designed to help spacecraft autonomously navigate to safe landing sites on the Moon and on other planets. An Alta-X drone equipped with the agency’s Safe and Precise Landing – Integrated Capabilities Evolution (SPLICE) guidance, navigation, and control payload completed simulated lunar descent and landing maneuvers Aug. 27. The flight took place […]",
-    "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-navigation-experiment-shows-promise-for-planetary-landings/",
-    "image": "",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-04T16:52:43+00:00"
-  },
-  {
-    "title": "NASA Space Grant Students Fuel Agency’s Inspiration Tour",
-    "summary": "NASA’s Inspiration Tour spread the excitement of space exploration and aeronautical innovation by connecting the public, industry, and academia with the people, technologies, and organizations that drive American leadership in space. At nearly every stop across the country, NASA Space Grant has brought students into the heart of the action. In Iowa, NASA Administrator Jared […]",
-    "url": "https://www.nasa.gov/learning-resources/nasa-space-grant-students-fuel-agencys-inspiration-tour/",
-    "image": "",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-04T16:16:41+00:00"
   }
 ]
