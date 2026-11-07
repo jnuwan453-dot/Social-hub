@@ -115,7 +115,22 @@ main { max-width:1180px; margin:auto; padding:28px 22px 55px; }
 }
 .story-card h3 { font: bold 22px/1.25 Georgia,serif; margin:12px 0 8px; }
 .story-card p { color:#58677a; font-size:14px; margin:0 0 17px; }
-.story-meta { margin-top:auto; color:var(--muted); font-size:12px; padding-top:12px; }
+.story-meta {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.updated-time {
+  display: block;
+  color: #68778a;
+  font-size: 11px;
+  font-weight: 600;
+}
 .read-link { color:#174d7a; font-weight:bold; font-size:14px; margin-top:12px; }
 .read-link:hover { color:var(--red); }
 .no-results {
@@ -389,7 +404,31 @@ const categoryFilter = document.getElementById('category-filter');
 let cards = Array.from(document.querySelectorAll('.story-card'));
 const count = document.getElementById('story-count');
 const noResults = document.getElementById('no-results');
+// Static Stories - Last Updated Date & Time
+const staticLastUpdated = new Date("2026-11-07T23:44:00+05:30");
 
+function addStaticLastUpdated() {
+  const formattedDate = staticLastUpdated.toLocaleString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Colombo"
+  });
+
+  document.querySelectorAll(
+    ".story-card:not(.live-news-card) .story-meta"
+  ).forEach(meta => {
+    const updated = document.createElement("span");
+    updated.className = "updated-time";
+    updated.textContent = "Last updated: " + formattedDate;
+    meta.appendChild(updated);
+  });
+}
+
+addStaticLastUpdated();
 function filterStories() {
   const query = searchInput.value.trim().toLowerCase();
   const category = categoryFilter.value;
