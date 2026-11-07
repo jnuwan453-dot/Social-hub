@@ -1,5 +1,14 @@
 [
   {
+    "title": "APOD: 2026 November 7 – De Gerlache-Kocher Massif",
+    "summary": "APOD Science APOD APOD: 2026 November 7 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. De Gerlache-Kocher Massif […]",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-7-de-gerlache-kocher-massif/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/GerlacheKocherMassif_Sans.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-07T05:05:00+00:00"
+  },
+  {
     "title": "M30’s Sparkling Stars",
     "summary": "This NASA/ESA Hubble Space Telescope image released Nov. 5, 2026, provides a lesson in galactic history. The sparkling collection of stars is named Messier 30 (M30) after the French astronomer, Charles Messier, who cataloged M30 and other diffuse objects that might be mistaken for comets in the early telescopes of Messier’s time. M30 lies about […]",
     "url": "https://www.nasa.gov/image-article/m30s-sparkling-stars/",
@@ -79,14 +88,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-05T05:01:00+00:00"
-  },
-  {
-    "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
-    "summary": "On Wednesday, NASA unveiled its newest experimental aircraft, the X-70 Fractal, during the UP.Summit at the agency’s Kennedy Space Center in Florida. This high-performance, highly adaptable research platform is designed to accelerate the development and testing of advanced aviation technologies.  The crewed X-70 features advanced, rapidly reconfigurable flight-control technology that will allow NASA to explore […]",
-    "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/nasa-x-70-image.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-05T01:43:21+00:00"
   }
 ]
