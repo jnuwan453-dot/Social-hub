@@ -418,14 +418,14 @@ function addStaticLastUpdated() {
     timeZone: "Asia/Colombo"
   });
 
-  document.querySelectorAll(
-    ".story-card:not(.live-news-card) .story-meta"
-  ).forEach(meta => {
-    const updated = document.createElement("span");
-    updated.className = "updated-time";
-    updated.textContent = "Last updated: " + formattedDate;
-    meta.appendChild(updated);
-  });
+ document.querySelectorAll(
+  ".story-card:not(.live-news-card) .story-meta"
+).forEach(meta => {
+  const updated = document.createElement("span");
+  updated.className = "updated-time";
+  updated.textContent = "Last updated: " + formattedDate;
+  meta.appendChild(updated);
+});
 }
 
 addStaticLastUpdated();
