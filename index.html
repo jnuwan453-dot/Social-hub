@@ -1230,16 +1230,24 @@ categoryFilter.addEventListener('change', filterStories);
 
 /* NAVIGATION CATEGORY FILTER */
 
-document.querySelectorAll('[data-nav-category]').forEach(link => {
-
+// Navigation Menu Controls
+document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', function() {
 
-    categoryFilter.value = this.dataset.navCategory;
+    const category = this.dataset.navCategory;
+    const linkText = this.textContent.trim();
+
+    if (linkText === 'Home' || linkText === 'Latest Stories') {
+      categoryFilter.value = 'All';
+      searchInput.value = '';
+    } 
+    else if (category) {
+      categoryFilter.value = category;
+      searchInput.value = '';
+    }
 
     document.querySelectorAll('nav a').forEach(item => {
-
       item.classList.remove('active');
-
     });
 
     this.classList.add('active');
@@ -1247,9 +1255,7 @@ document.querySelectorAll('[data-nav-category]').forEach(link => {
     filterStories();
 
   });
-
 });
-
 
 /* FOOTER YEAR */
 
