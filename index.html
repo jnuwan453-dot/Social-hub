@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="The Civic Brief brings you clear and informative stories about space, science, discoveries, AI technology and world news.">
-
-<meta name="keywords" content="Space News, Science, NASA, Discoveries, Artificial Intelligence, AI Technology, World News, Astronomy">
-
-<meta name="author" content="The Civic Brief">
-
-<meta name="robots" content="index, follow">
-
+<meta name="description" content="The Civic Brief explains space, science, discoveries, AI and technology, and world news through clear stories and trusted sources.">
+<meta name="theme-color" content="#10243a">
 <title>The Civic Brief | Space, Science, AI & World News</title>
 
 <style>
@@ -23,16 +16,12 @@
   --paper:#f4f7fb;
   --ink:#18283a;
   --muted:#68778a;
-  --white:#ffffff;
+  --line:#e1e8f0;
 }
 
-* {
-  box-sizing:border-box;
-}
+* { box-sizing:border-box; }
 
-html {
-  scroll-behavior:smooth;
-}
+html { scroll-behavior:smooth; }
 
 body {
   margin:0;
@@ -51,10 +40,6 @@ button,input,select {
   font:inherit;
 }
 
-button {
-  cursor:pointer;
-}
-
 .topline {
   height:5px;
   background:linear-gradient(90deg,var(--red),var(--gold),var(--blue));
@@ -62,7 +47,7 @@ button {
 
 header {
   background:var(--navy);
-  color:white;
+  color:#fff;
 }
 
 .header-inner {
@@ -78,9 +63,10 @@ header {
 }
 
 .logo {
-  width:52px;
-  height:52px;
-  border-radius:12px;
+  width:54px;
+  height:54px;
+  flex:0 0 54px;
+  border-radius:13px;
   background:var(--red);
   display:grid;
   place-items:center;
@@ -95,14 +81,13 @@ header {
   line-height:1.15;
 }
 
+.brand-accent { color:var(--gold); }
+
 .tagline {
   color:#c9d6e4;
-  font-size:13px;
+  font-size:12px;
   margin-top:5px;
-}
-
-.brand-accent {
-  color:var(--gold);
+  letter-spacing:1.1px;
 }
 
 .nav-wrap {
@@ -116,15 +101,15 @@ nav {
   padding:0 22px;
   display:flex;
   flex-wrap:wrap;
-  gap:5px;
+  gap:4px;
   align-items:center;
 }
 
 nav a {
   color:#eef4fb;
   display:inline-block;
-  padding:13px 12px;
-  font-size:14px;
+  padding:13px 11px;
+  font-size:13px;
   border-bottom:3px solid transparent;
 }
 
@@ -140,15 +125,17 @@ main {
   padding:28px 22px 55px;
 }
 
+/* HERO SECTION */
+
 .hero {
   display:grid;
   grid-template-columns:1.4fr .8fr;
-  gap:25px;
-  background:var(--blue);
-  color:white;
+  gap:20px;
+  background:linear-gradient(120deg,var(--blue),#102b49);
+  color:#fff;
   border-radius:17px;
   overflow:hidden;
-  margin-bottom:29px;
+  margin-bottom:34px;
 }
 
 .hero-copy {
@@ -171,15 +158,50 @@ main {
 
 .hero p {
   color:#dce6f1;
-  max-width:580px;
+  max-width:590px;
+  margin:0;
 }
 
 .hero-art {
   min-height:280px;
   display:grid;
   place-items:center;
-  background:radial-gradient(circle at 55% 40%,#4674a0,#173e63 58%,#10243a);
-  font-size:clamp(90px,16vw,165px);
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 68% 35%,#f0bb61 0 2px,transparent 3px),
+    radial-gradient(circle at 25% 30%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 55% 45%,#3977a8,#173e63 55%,#10243a);
+}
+
+.hero-art:before {
+  content:"";
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#77c7e8,#28608f 65%,#17304d);
+  box-shadow:inset -22px -15px 35px #0004,0 0 55px #5bb5e855;
+  position:absolute;
+}
+
+.hero-art:after {
+  content:"";
+  width:280px;
+  height:85px;
+  border:10px solid #f0bb61bf;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  border-radius:50%;
+  transform:rotate(-24deg);
+  position:absolute;
+}
+
+.hero-symbol {
+  position:relative;
+  z-index:1;
+  color:white;
+  font-size:50px;
+  font-weight:bold;
 }
 
 .hero-btn {
@@ -189,8 +211,10 @@ main {
   border-radius:7px;
   padding:11px 17px;
   font-weight:bold;
-  margin-top:10px;
+  margin-top:20px;
 }
+
+/* SECTION HEADINGS */
 
 .section-heading {
   display:flex;
@@ -213,6 +237,8 @@ main {
   margin:0;
 }
 
+/* SEARCH AND FILTER */
+
 .toolbar {
   display:flex;
   flex-wrap:wrap;
@@ -224,7 +250,7 @@ main {
 .toolbar select {
   border:1px solid #d3dce6;
   border-radius:8px;
-  background:white;
+  background:#fff;
   padding:12px 13px;
   color:var(--ink);
 }
@@ -235,36 +261,48 @@ main {
 }
 
 .toolbar select {
-  min-width:175px;
+  min-width:185px;
 }
+
+.toolbar input:focus,
+.toolbar select:focus {
+  outline:3px solid #173e6326;
+  border-color:var(--blue);
+}
+
+/* STORY CARDS */
 
 .story-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:19px;
-  align-items:stretch;
 }
 
 .story-card {
-  background:white;
-  border:1px solid #e3e9f0;
+  background:#fff;
+  border:1px solid var(--line);
   border-radius:13px;
   overflow:hidden;
-  box-shadow:0 4px 15px #10243a0a;
+  box-shadow:0 4px 15px #10243a0d;
   display:flex;
   flex-direction:column;
   min-width:0;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.story-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px #10243a14;
 }
 
 .story-image {
-  width:100%;
   height:190px;
-  min-height:190px;
   overflow:hidden;
   display:grid;
   place-items:center;
-  font-size:66px;
-  background:linear-gradient(135deg,#d9e8f6,#f4f7fb);
+  background:linear-gradient(135deg,#d9e8f6,#edf3f9);
+  color:var(--blue);
+  font-size:54px;
 }
 
 .story-image img {
@@ -296,7 +334,7 @@ main {
 }
 
 .story-card h3 {
-  font:bold 22px/1.25 Georgia,serif;
+  font:bold 21px/1.25 Georgia,serif;
   margin:12px 0 8px;
 }
 
@@ -311,16 +349,6 @@ main {
   color:var(--muted);
   font-size:12px;
   padding-top:12px;
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-}
-
-.updated-time {
-  display:block;
-  color:#68778a;
-  font-size:11px;
-  font-weight:600;
 }
 
 .read-link {
@@ -328,6 +356,7 @@ main {
   font-weight:bold;
   font-size:14px;
   margin-top:12px;
+  display:inline-block;
 }
 
 .read-link:hover {
@@ -336,7 +365,7 @@ main {
 
 .no-results {
   display:none;
-  background:white;
+  background:#fff;
   padding:25px;
   border-radius:10px;
   color:var(--muted);
@@ -344,28 +373,32 @@ main {
   grid-column:1/-1;
 }
 
+.notice {
+  font-size:12px;
+  color:var(--muted);
+  margin-top:18px;
+}
+
+/* ABOUT SECTION */
+
 .about {
   margin-top:36px;
   padding:27px;
-  background:white;
-  border:1px solid #e0e7ef;
+  background:#fff;
+  border:1px solid var(--line);
   border-radius:13px;
 }
 
 .about h2 {
   font:bold 25px Georgia,serif;
-  margin-top:0;
+  margin:0 0 10px;
 }
 
 .about p {
   color:#58677a;
 }
 
-.notice {
-  font-size:12px;
-  color:var(--muted);
-  margin-top:20px;
-}
+/* FOOTER */
 
 footer {
   background:var(--navy);
@@ -383,14 +416,15 @@ footer {
   font-size:13px;
 }
 
+/* RESPONSIVE DESIGN */
+
 @media(max-width:850px) {
   .hero {
     grid-template-columns:1fr;
   }
 
   .hero-art {
-    min-height:170px;
-    font-size:100px;
+    min-height:190px;
   }
 
   .story-grid {
@@ -421,13 +455,16 @@ footer {
   }
 
   .story-image {
-    height:190px;
-    min-height:190px;
+    height:180px;
   }
 
   .section-heading {
-    align-items:start;
+    align-items:flex-start;
     flex-direction:column;
+  }
+
+  .hero-art {
+    min-height:165px;
   }
 }
 </style>
@@ -437,9 +474,12 @@ footer {
 
 <div class="topline"></div>
 
-<header>
+<header id="home">
+
   <div class="header-inner">
+
     <div class="brand-row">
+
       <div class="logo">CB</div>
 
       <div>
@@ -451,59 +491,107 @@ footer {
           SPACE · SCIENCE · DISCOVERIES · AI & TECHNOLOGY · WORLD NEWS
         </div>
       </div>
+
     </div>
+
   </div>
 
   <div class="nav-wrap">
+
     <nav aria-label="Main navigation">
+
       <a class="active" href="#home">Home</a>
-      <a href="#articles" data-nav-category="All">Latest Stories</a>
-      <a href="#articles" data-nav-category="Space">Space</a>
-      <a href="#articles" data-nav-category="Science">Science</a>
-      <a href="#articles" data-nav-category="Discoveries">Discoveries</a>
-      <a href="#articles" data-nav-category="AI & Technology">AI & Technology</a>
-      <a href="#articles" data-nav-category="World News">World News</a>
+
+      <a href="#articles" data-nav-category="All">
+        Latest Stories
+      </a>
+
+      <a href="#articles" data-nav-category="Space">
+        Space
+      </a>
+
+      <a href="#articles" data-nav-category="Science">
+        Science
+      </a>
+
+      <a href="#articles" data-nav-category="Discoveries">
+        Discoveries
+      </a>
+
+      <a href="#articles" data-nav-category="AI & Technology">
+        AI & Technology
+      </a>
+
+      <a href="#articles" data-nav-category="World News">
+        World News
+      </a>
+
       <a href="#about">About</a>
+
     </nav>
+
   </div>
+
 </header>
 
-<main id="home">
+<main>
 
-  <section class="hero">
+  <!-- HERO SECTION -->
+
+  <section class="hero" aria-labelledby="hero-title">
+
     <div class="hero-copy">
-      <div class="eyebrow">Understand the world</div>
 
-      <h1>Big ideas. New discoveries. Clear stories.</h1>
+      <div class="eyebrow">
+        Understand the world
+      </div>
+
+      <h1 id="hero-title">
+        Big ideas. New discoveries. Clear stories.
+      </h1>
 
       <p>
         Explore space, science, groundbreaking discoveries,
-        artificial intelligence and important events from around
-        the world — in one place.
+        artificial intelligence and important events from
+        around the world — explained clearly.
       </p>
 
       <a class="hero-btn" href="#articles">
         Explore the latest stories →
       </a>
+
     </div>
 
-    <div class="hero-art" aria-label="Space illustration">
-      🌌
+    <div class="hero-art" role="img"
+         aria-label="Illustration representing space and discovery">
+
+      <span class="hero-symbol">CB</span>
+
     </div>
+
   </section>
 
-  <section id="articles">
+  <!-- LATEST STORIES -->
+
+  <section id="articles" aria-labelledby="latest-heading">
 
     <div class="section-heading">
+
       <div>
-        <h2>Latest Stories</h2>
+        <h2 id="latest-heading">Latest Stories</h2>
         <p>Curiosity starts with a good question.</p>
       </div>
 
-      <p id="story-count">Loading stories...</p>
+      <p id="story-count" aria-live="polite">
+        Loading stories…
+      </p>
+
     </div>
 
+    <!-- SEARCH AND CATEGORY FILTER -->
+
     <div class="toolbar">
+
       <input
         id="search"
         type="search"
@@ -512,13 +600,16 @@ footer {
       >
 
       <select id="category-filter" aria-label="Filter by category">
+
         <option value="All">All topics</option>
         <option value="Space">Space</option>
         <option value="Science">Science</option>
         <option value="Discoveries">Discoveries</option>
         <option value="AI & Technology">AI & Technology</option>
         <option value="World News">World News</option>
+
       </select>
+
     </div>
 
     <div class="story-grid" id="story-grid">
@@ -526,6 +617,7 @@ footer {
       <!-- SPACE STORY 1 -->
 
       <article class="story-card" data-category="Space">
+
         <div class="story-image">
           <img
             src="https://images-assets.nasa.gov/image/PIA04921/PIA04921~orig.jpg"
@@ -535,6 +627,7 @@ footer {
         </div>
 
         <div class="story-content">
+
           <span class="category">Space</span>
 
           <h3>How Scientists Explore Distant Worlds</h3>
@@ -548,20 +641,21 @@ footer {
             Space · Educational overview
           </div>
 
-          <a
-            class="read-link"
-            href="https://science.nasa.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://science.nasa.gov/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore NASA resources ↗️
           </a>
+
         </div>
+
       </article>
 
       <!-- SCIENCE STORY 1 -->
 
       <article class="story-card" data-category="Science">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=85"
@@ -571,6 +665,7 @@ footer {
         </div>
 
         <div class="story-content">
+
           <span class="category">Science</span>
 
           <h3>How Scientific Discoveries Are Tested</h3>
@@ -584,29 +679,31 @@ footer {
             Science · Explainer
           </div>
 
-          <a
-            class="read-link"
-            href="https://www.nationalacademies.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://www.nationalacademies.org/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore science resources ↗️
           </a>
+
         </div>
+
       </article>
 
       <!-- DISCOVERIES STORY 1 -->
 
       <article class="story-card" data-category="Discoveries">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
-            alt="Satellite and Earth observation"
+            alt="Earth viewed from space"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
           <span class="category">Discoveries</span>
 
           <h3>Inside the Search for New Forms of Life</h3>
@@ -620,66 +717,31 @@ footer {
             Discoveries · Research overview
           </div>
 
-          <a
-            class="read-link"
-            href="https://astrobiology.nasa.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://astrobiology.nasa.gov/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore astrobiology ↗️
           </a>
-        </div>
-      </article>
 
-      <!-- WORLD NEWS STORY 1 -->
-
-      <article class="story-card" data-category="World News">
-        <div class="story-image">
-          <img
-            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=85"
-            alt="Global news and world events"
-            loading="lazy"
-          >
         </div>
 
-        <div class="story-content">
-          <span class="category">World News</span>
-
-          <h3>Understanding Global Events Through Reliable Sources</h3>
-
-          <p>
-            A practical guide to comparing reporting,
-            checking original statements and separating
-            verified facts from claims.
-          </p>
-
-          <div class="story-meta">
-            World News · Media literacy
-          </div>
-
-          <a
-            class="read-link"
-            href="https://news.un.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read UN News ↗️
-          </a>
-        </div>
       </article>
 
       <!-- SPACE STORY 2 -->
 
       <article class="story-card" data-category="Space">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85"
-            alt="Space exploration and mission planning"
+            alt="Earth and satellite communications"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
           <span class="category">Space</span>
 
           <h3>Why Space Missions Need Careful Planning</h3>
@@ -693,20 +755,21 @@ footer {
             Space · Mission basics
           </div>
 
-          <a
-            class="read-link"
-            href="https://www.nasa.gov/missions/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://www.nasa.gov/missions/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore NASA missions ↗️
           </a>
+
         </div>
+
       </article>
 
       <!-- SCIENCE STORY 2 -->
 
       <article class="story-card" data-category="Science">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1561553873-e8491a564f01?auto=format&fit=crop&w=900&q=85"
@@ -716,6 +779,7 @@ footer {
         </div>
 
         <div class="story-content">
+
           <span class="category">Science</span>
 
           <h3>What Climate Measurements Tell Us</h3>
@@ -729,29 +793,31 @@ footer {
             Science · Earth systems
           </div>
 
-          <a
-            class="read-link"
-            href="https://climate.nasa.gov/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://climate.nasa.gov/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore climate science ↗️
           </a>
+
         </div>
+
       </article>
 
       <!-- DISCOVERIES STORY 2 -->
 
       <article class="story-card" data-category="Discoveries">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=85"
-            alt="Astronomy and distant galaxies"
+            alt="Distant galaxies in deep space"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
           <span class="category">Discoveries</span>
 
           <h3>How New Telescopes Expand Our View</h3>
@@ -765,66 +831,107 @@ footer {
             Discoveries · Astronomy
           </div>
 
-          <a
-            class="read-link"
-            href="https://science.nasa.gov/universe/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://science.nasa.gov/universe/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore the universe ↗️
           </a>
+
         </div>
+
       </article>
 
-      <!-- WORLD NEWS STORY 2 -->
+      <!-- WORLD NEWS STORY 1 -->
 
       <article class="story-card" data-category="World News">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=85"
-            alt="World news journalism and reporting"
+            alt="Newspaper and world news reporting"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
           <span class="category">World News</span>
 
           <h3>Five Ways to Check a News Report</h3>
 
           <p>
             Check the date, find the original source,
-            compare independent reporting and verify images
-            before sharing.
+            compare independent reporting and verify images before sharing.
           </p>
 
           <div class="story-meta">
             World News · Verification guide
           </div>
 
-          <a
-            class="read-link"
-            href="https://www.reuters.com/fact-check/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://www.reuters.com/fact-check/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore fact checks ↗️
           </a>
+
         </div>
+
       </article>
 
-      <!-- AI STORY 1 -->
+      <!-- WORLD NEWS STORY 2 -->
 
-      <article class="story-card" data-category="AI & Technology">
+      <article class="story-card" data-category="World News">
+
         <div class="story-image">
           <img
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85"
-            alt="Artificial Intelligence Technology"
+            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=85"
+            alt="Journalist reporting global events"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
+          <span class="category">World News</span>
+
+          <h3>Understanding Global Events Through Reliable Sources</h3>
+
+          <p>
+            A practical guide to comparing reporting,
+            checking original statements and separating verified facts from claims.
+          </p>
+
+          <div class="story-meta">
+            World News · Media literacy
+          </div>
+
+          <a class="read-link"
+             href="https://news.un.org/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read UN News ↗️
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- AI STORY 1 -->
+
+      <article class="story-card" data-category="AI & Technology">
+
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85"
+            alt="Artificial intelligence technology concept"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="story-content">
+
           <span class="category">AI & Technology</span>
 
           <h3>How Artificial Intelligence Is Changing Everyday Life</h3>
@@ -838,29 +945,31 @@ footer {
             AI & Technology · Explainer
           </div>
 
-          <a
-            class="read-link"
-            href="https://www.ibm.com/think/topics/artificial-intelligence"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://www.ibm.com/think/topics/artificial-intelligence"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore AI ↗️
           </a>
+
         </div>
+
       </article>
 
       <!-- AI STORY 2 -->
 
       <article class="story-card" data-category="AI & Technology">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=85"
-            alt="AI safety and cybersecurity"
+            alt="Cybersecurity technology"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
           <span class="category">AI & Technology</span>
 
           <h3>Can AI Be Trusted? Understanding AI Safety</h3>
@@ -874,29 +983,31 @@ footer {
             AI & Technology · AI Safety
           </div>
 
-          <a
-            class="read-link"
-            href="https://www.nist.gov/artificial-intelligence"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://www.nist.gov/artificial-intelligence"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore AI Safety ↗️
           </a>
+
         </div>
+
       </article>
 
       <!-- AI STORY 3 -->
 
       <article class="story-card" data-category="AI & Technology">
+
         <div class="story-image">
           <img
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85"
-            alt="Future of work and artificial intelligence"
+            alt="Computer workstation and future of work"
             loading="lazy"
           >
         </div>
 
         <div class="story-content">
+
           <span class="category">AI & Technology</span>
 
           <h3>Will AI Change the Future of Human Jobs?</h3>
@@ -910,15 +1021,15 @@ footer {
             AI & Technology · Future of Work
           </div>
 
-          <a
-            class="read-link"
-            href="https://www.weforum.org/agenda/archive/future-of-work/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-link"
+             href="https://www.weforum.org/agenda/archive/future-of-work/"
+             target="_blank"
+             rel="noopener noreferrer">
             Explore Future of Work ↗️
           </a>
+
         </div>
+
       </article>
 
       <div class="no-results" id="no-results">
@@ -928,33 +1039,39 @@ footer {
     </div>
 
     <p class="notice">
-      Editorial note: These are introductory educational stories,
-      not breaking-news reports. Follow the linked sources
-      for current information.
+      Editorial note: These introductory stories provide background information.
+      For current developments, follow the linked original sources and check publication dates.
     </p>
 
   </section>
 
+  <!-- ABOUT -->
+
   <section class="about" id="about">
+
     <h2>About The Civic Brief</h2>
 
     <p>
-      The Civic Brief helps curious readers explore space,
-      science, discoveries, artificial intelligence and
-      world events through clear, accessible explainers
-      and links to established information sources.
+      The Civic Brief helps curious readers explore space, science,
+      discoveries, artificial intelligence and world events through
+      clear, accessible explainers and links to established information sources.
     </p>
 
     <p>
-      We aim to make complex subjects easier to understand
-      and encourage readers to check original sources.
+      Our goal is to make complex subjects easier to understand,
+      provide useful context and encourage readers to check original sources.
     </p>
+
   </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
+
   <div class="footer-inner">
+
     <div>
       © <span id="year"></span> The Civic Brief
     </div>
@@ -962,26 +1079,47 @@ footer {
     <div>
       Curiosity · Context · Credible sources
     </div>
+
   </div>
+
 </footer>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
 const searchInput = document.getElementById('search');
+
 const categoryFilter = document.getElementById('category-filter');
+
+const storyGrid = document.getElementById('story-grid');
+
 const count = document.getElementById('story-count');
+
 const noResults = document.getElementById('no-results');
 
-let cards = Array.from(
-  document.querySelectorAll('.story-card')
-);
+let cards = [];
+
+
+function refreshCards() {
+
+  cards = Array.from(
+    document.querySelectorAll('.story-card')
+  );
+
+}
+
 
 function filterStories() {
+
   const query = searchInput.value.trim().toLowerCase();
+
   const category = categoryFilter.value;
 
   let visible = 0;
 
   cards.forEach(card => {
+
     const matchesText =
       card.innerText.toLowerCase().includes(query);
 
@@ -993,9 +1131,8 @@ function filterStories() {
 
     card.style.display = show ? 'flex' : 'none';
 
-    if (show) {
-      visible++;
-    }
+    if (show) visible++;
+
   });
 
   count.textContent =
@@ -1003,28 +1140,171 @@ function filterStories() {
 
   noResults.style.display =
     visible === 0 ? 'block' : 'none';
+
 }
+
 
 searchInput.addEventListener('input', filterStories);
 
 categoryFilter.addEventListener('change', filterStories);
 
+
 document.querySelectorAll('[data-nav-category]').forEach(link => {
+
   link.addEventListener('click', () => {
+
     categoryFilter.value = link.dataset.navCategory;
+
     filterStories();
+
+    document.querySelectorAll('nav a').forEach(item => {
+      item.classList.remove('active');
+    });
+
+    link.classList.add('active');
+
   });
+
 });
+
 
 document.getElementById('year').textContent =
   new Date().getFullYear();
 
 
-/* AUTOMATIC NEWS FROM news.json */
+/* CREATE LIVE NEWS CARDS */
+
+function createLiveNewsCard(story) {
+
+  const article = document.createElement('article');
+
+  article.className = 'story-card live-news-card';
+
+  article.dataset.category = story.category || 'Science';
+
+
+  const imageBox = document.createElement('div');
+
+  imageBox.className = 'story-image';
+
+
+  if (story.image && /^https?:\/\//i.test(story.image)) {
+
+    const img = document.createElement('img');
+
+    img.src = story.image;
+
+    img.alt = story.title || 'Science news image';
+
+    img.loading = 'lazy';
+
+    img.onerror = () => {
+
+      img.remove();
+
+      imageBox.textContent = '🔭';
+
+    };
+
+    imageBox.appendChild(img);
+
+  } else {
+
+    imageBox.textContent = '🔭';
+
+  }
+
+
+  const content = document.createElement('div');
+
+  content.className = 'story-content';
+
+
+  const category = document.createElement('span');
+
+  category.className = 'category';
+
+  category.textContent = story.category || 'Science';
+
+
+  const title = document.createElement('h3');
+
+  title.textContent = story.title || 'Science News';
+
+
+  const summary = document.createElement('p');
+
+  const cleanSummary =
+    (story.summary || '').replace(/\s+/g,' ').trim();
+
+  summary.textContent = cleanSummary.length > 230
+    ? cleanSummary.slice(0,227).replace(/\s+\S*$/,'') + '…'
+    : cleanSummary;
+
+
+  const meta = document.createElement('div');
+
+  meta.className = 'story-meta';
+
+
+  const publishedDate = story.published
+    ? new Date(story.published)
+    : null;
+
+  const validDate =
+    publishedDate &&
+    !Number.isNaN(publishedDate.getTime());
+
+
+  meta.textContent =
+    (story.source || 'News Source') +
+    (validDate
+      ? ' · ' + publishedDate.toLocaleDateString('en-US', {
+          year:'numeric',
+          month:'short',
+          day:'numeric',
+          timeZone:'UTC'
+        })
+      : '');
+
+
+  const link = document.createElement('a');
+
+  link.className = 'read-link';
+
+  link.href = story.url || '#';
+
+  link.target = '_blank';
+
+  link.rel = 'noopener noreferrer';
+
+  link.textContent = 'Read Original Story ↗️';
+
+
+  content.append(
+    category,
+    title,
+    summary,
+    meta,
+    link
+  );
+
+  article.append(imageBox, content);
+
+  return article;
+
+}
+
+
+/* LOAD NASA AND OTHER LIVE NEWS */
 
 async function loadLiveNews() {
+
   try {
-    const response = await fetch('./news.json');
+
+    const response = await fetch('./news.json', {
+      cache:'no-store'
+    });
 
     if (!response.ok) {
       throw new Error('News file could not load');
@@ -1033,146 +1313,49 @@ async function loadLiveNews() {
     const stories = await response.json();
 
     if (!Array.isArray(stories)) {
-      throw new Error('Invalid news data format');
+      throw new Error('News data format is invalid');
     }
 
-    const grid = document.getElementById('story-grid');
 
     document.querySelectorAll('.live-news-card').forEach(card => {
       card.remove();
     });
 
+
     stories.forEach(story => {
-      const article = document.createElement('article');
 
-      article.className = 'story-card live-news-card';
+      const article = createLiveNewsCard(story);
 
-      article.dataset.category =
-        story.category || 'Science';
+      storyGrid.insertBefore(article, noResults);
 
-      const imageBox = document.createElement('div');
-
-      imageBox.className = 'story-image';
-
-      const img = document.createElement('img');
-
-      img.alt = story.title || 'Science news';
-
-      img.loading = 'lazy';
-
-      img.decoding = 'async';
-
-      img.src = story.image || '';
-
-      img.onerror = () => {
-        img.remove();
-        imageBox.textContent = '🔭';
-      };
-
-      if (story.image) {
-        imageBox.appendChild(img);
-      } else {
-        imageBox.textContent = '🔭';
-      }
-
-      const content = document.createElement('div');
-
-      content.className = 'story-content';
-
-      const category = document.createElement('span');
-
-      category.className = 'category';
-
-      category.textContent =
-        story.category || 'Science';
-
-      const title = document.createElement('h3');
-
-      title.textContent =
-        story.title || 'Science News';
-
-      const summary = document.createElement('p');
-
-      summary.textContent =
-        story.summary || '';
-
-      const meta = document.createElement('div');
-
-      meta.className = 'story-meta';
-
-      const publishedDate = story.published
-        ? new Date(story.published)
-        : null;
-
-      const validDate =
-        publishedDate &&
-        !Number.isNaN(publishedDate.getTime());
-
-      meta.textContent =
-        (story.source || 'News Source') +
-        (
-          validDate
-            ? ' · ' +
-              publishedDate.toLocaleDateString('en-US', {
-                year:'numeric',
-                month:'short',
-                day:'numeric',
-                timeZone:'UTC'
-              })
-            : ''
-        );
-
-      const link = document.createElement('a');
-
-      link.className = 'read-link';
-
-      link.href = story.url || '#';
-
-      link.target = '_blank';
-
-      link.rel = 'noopener noreferrer';
-
-      link.textContent = 'Read Original Story ↗️';
-
-      content.append(
-        category,
-        title,
-        summary,
-        meta,
-        link
-      );
-
-      article.append(
-        imageBox,
-        content
-      );
-
-      grid.prepend(article);
     });
 
-    cards = Array.from(
-      document.querySelectorAll('.story-card')
-    );
+
+    refreshCards();
 
     filterStories();
 
   } catch (error) {
-    console.error(
-      'Live news loading failed:',
-      error
-    );
 
-    cards = Array.from(
-      document.querySelectorAll('.story-card')
-    );
+    console.error('Live news loading failed:', error);
+
+    refreshCards();
 
     filterStories();
+
   }
+
 }
+
+
+/* INITIALIZE WEBSITE */
+
+refreshCards();
 
 filterStories();
 
 loadLiveNews();
+
 </script>
 
 </body>
