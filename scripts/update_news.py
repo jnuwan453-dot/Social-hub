@@ -57,8 +57,8 @@ MAX_ARTICLES = 24
 
 class VisibleTextParser(HTMLParser):
 
-    def __init__(self):
-        super().__init__(convert_charrefs=True)
+    def _init_(self):
+        super()._init_(convert_charrefs=True)
         self.parts = []
         self.skip_depth = 0
         self.skip_tags = {"script", "style", "noscript", "svg"}
@@ -202,7 +202,12 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    title_variants = [
+    # Remove repeated title from the beginning.
+    if title:
+
+        title_clean = clean_text(title)
+
+        title_variants = [
             title_clean,
             re.sub(
                 r"^APOD\s*[:\-–|]\s*",
@@ -211,19 +216,6 @@ def clean_summary(value, title="", limit=230):
                 flags=re.IGNORECASE
             ),
         ]
-
-        # Remove APOD date prefix from title variants too.
-        for variant in list(title_variants):
-
-            variant = re.sub(
-                r"^\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
-                "",
-                variant,
-                flags=re.IGNORECASE
-            )
-
-            if variant:
-                title_variants.append(variant)
 
         for title_variant in title_variants:
 
@@ -235,7 +227,6 @@ def clean_summary(value, title="", limit=230):
                 text = text[len(title_variant):].lstrip(
                     " -–|:;,."
                 )
-                break
 
     # Remove remaining placeholder-only fragments.
     text = re.sub(
@@ -433,8 +424,8 @@ def valid_image_url(url, base_url=""):
 
 class ImageMetaParser(HTMLParser):
 
-    def __init__(self):
-        super().__init__()
+    def _init_(self):
+        super()._init_()
         self.image = ""
 
     def handle_starttag(self, tag, attrs):
@@ -1029,5 +1020,5 @@ def main():
         )
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
