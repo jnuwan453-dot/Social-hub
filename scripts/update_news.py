@@ -19,7 +19,7 @@ FEEDS = [
     },
     {
         "name": "ESA",
-        "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
+       "url": "https://www.esa.int/rssfeed/Science_Exploration/Space_Science",
         "category": "Science",
     },
 ]
