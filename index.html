@@ -318,7 +318,14 @@ main {
   border:1px solid #d5dee8;
   border-radius:8px;
   padding:13px 15px;
-  font-size:14px;
+  font-size:15px;
+  font-weight:500;
+  color:#172436;
+}
+
+.toolbar input::placeholder {
+  color:#52657b;
+  opacity:1;
 }
 
 .toolbar input {
@@ -654,7 +661,7 @@ select:focus-visible {
   .about { padding:22px; }
 
   footer { padding:28px 17px; }
-}
+  }
 </style>
 </head>
 
@@ -716,8 +723,6 @@ select:focus-visible {
 
 <main>
 
-  <!-- PROFESSIONAL HERO -->
-
   <section class="hero">
 
     <div class="hero-copy">
@@ -746,8 +751,6 @@ select:focus-visible {
     <strong>THE CIVIC BRIEF — YOUR WINDOW TO A CHANGING WORLD</strong>
     <span>Science · Technology · Discovery · World</span>
   </div>
-
-  <!-- STORIES -->
 
   <section id="articles">
 
@@ -984,8 +987,6 @@ select:focus-visible {
 
   </section>
 
-  <!-- ABOUT -->
-
   <section class="about" id="about">
 
     <h2>About The Civic Brief</h2>
@@ -1005,8 +1006,6 @@ select:focus-visible {
   </section>
 
 </main>
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1033,7 +1032,6 @@ select:focus-visible {
   </div>
 
 </footer>
-
 <script>
 
 /* ELEMENTS */
@@ -1059,9 +1057,7 @@ function refreshCards() {
 /* IMAGE FALLBACK */
 
 function setupImageFallback(img) {
-
   img.addEventListener('error', function() {
-
     const imageBox = img.parentElement;
 
     if (!imageBox) return;
@@ -1069,15 +1065,11 @@ function setupImageFallback(img) {
     imageBox.innerHTML = '';
 
     const fallback = document.createElement('div');
-
     fallback.className = 'image-fallback';
-
     fallback.textContent = '🔭';
 
     imageBox.appendChild(fallback);
-
   }, { once:true });
-
 }
 
 
@@ -1091,17 +1083,18 @@ document.querySelectorAll('.story-image img').forEach(img => {
 /* SEARCH AND FILTER */
 
 function filterStories() {
-
   const query = searchInput.value.trim().toLowerCase();
-
+  const searchWords = query.split(/\s+/).filter(Boolean);
   const category = categoryFilter.value;
 
   let visible = 0;
 
   cards.forEach(card => {
+    const searchableText = card.innerText.toLowerCase();
 
-    const matchesText =
-      card.innerText.toLowerCase().includes(query);
+    const matchesText = searchWords.every(word =>
+      searchableText.includes(word)
+    );
 
     const matchesCategory =
       category === 'All' ||
@@ -1112,7 +1105,6 @@ function filterStories() {
     card.style.display = show ? 'flex' : 'none';
 
     if (show) visible++;
-
   });
 
   count.textContent =
@@ -1120,31 +1112,23 @@ function filterStories() {
 
   noResults.style.display =
     visible === 0 ? 'block' : 'none';
-
 }
 
 
 searchInput.addEventListener('input', filterStories);
-
 categoryFilter.addEventListener('change', filterStories);
 
 
 /* NAVIGATION */
 
 document.querySelectorAll('nav a').forEach(link => {
-
   link.addEventListener('click', function() {
-
     const category = this.dataset.navCategory;
 
     if (category !== undefined) {
-
       categoryFilter.value = category;
-
       searchInput.value = '';
-
       filterStories();
-
     }
 
     document.querySelectorAll('nav a').forEach(item => {
@@ -1152,9 +1136,7 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 
     this.classList.add('active');
-
   });
-
 });
 
 
@@ -1167,68 +1149,50 @@ document.getElementById('year').textContent =
 /* CREATE LIVE NEWS CARD */
 
 function createLiveNewsCard(story) {
-
   const article = document.createElement('article');
-
   article.className = 'story-card live-news-card';
-
   article.dataset.category = story.category || 'Science';
 
 
   /* IMAGE */
 
   const imageBox = document.createElement('div');
-
   imageBox.className = 'story-image';
 
   if (
     story.image &&
     /^https?:\/\//i.test(story.image)
   ) {
-
     const img = document.createElement('img');
 
     img.src = story.image;
-
     img.alt = story.title || 'Science news image';
-
     img.loading = 'lazy';
 
     setupImageFallback(img);
-
     imageBox.appendChild(img);
 
   } else {
-
     const fallback = document.createElement('div');
 
     fallback.className = 'image-fallback';
-
     fallback.textContent = '🔭';
 
     imageBox.appendChild(fallback);
-
   }
 
 
   /* CONTENT */
 
   const content = document.createElement('div');
-
   content.className = 'story-content';
 
-
   const category = document.createElement('span');
-
   category.className = 'category';
-
   category.textContent = story.category || 'Science';
 
-
   const title = document.createElement('h3');
-
   title.textContent = story.title || 'Science News';
-
 
   const summary = document.createElement('p');
 
@@ -1244,7 +1208,6 @@ function createLiveNewsCard(story) {
   /* SOURCE AND PUBLICATION DATE */
 
   const meta = document.createElement('div');
-
   meta.className = 'story-meta';
 
   const publishedDate = story.published
@@ -1274,13 +1237,9 @@ function createLiveNewsCard(story) {
   const link = document.createElement('a');
 
   link.className = 'read-link';
-
   link.href = story.url || '#';
-
   link.target = '_blank';
-
   link.rel = 'noopener noreferrer';
-
   link.textContent = 'Read Original Story ↗️';
 
 
@@ -1298,34 +1257,27 @@ function createLiveNewsCard(story) {
   );
 
   return article;
-
 }
 
 
 /* LOAD LIVE NEWS FROM news.json */
 
 async function loadLiveNews() {
-
   try {
-
     const response = await fetch('./news.json', {
       cache:'no-store'
     });
 
     if (!response.ok) {
-
       throw new Error(
         'News file could not load: ' + response.status
       );
-
     }
 
     const stories = await response.json();
 
     if (!Array.isArray(stories)) {
-
       throw new Error('News data format is invalid');
-
     }
 
 
@@ -1347,19 +1299,16 @@ async function loadLiveNews() {
     /* INSERT NEWS BEFORE STATIC STORIES */
 
     validStories.slice().reverse().forEach(story => {
-
       const article = createLiveNewsCard(story);
 
       storyGrid.insertBefore(
         article,
         storyGrid.firstElementChild
       );
-
     });
 
 
     refreshCards();
-
     filterStories();
 
     console.log(
@@ -1368,27 +1317,21 @@ async function loadLiveNews() {
     );
 
   } catch (error) {
-
     console.error(
       'Live news loading failed:',
       error
     );
 
     refreshCards();
-
     filterStories();
-
   }
-
 }
 
 
 /* INITIALIZE */
 
 refreshCards();
-
 filterStories();
-
 loadLiveNews();
 
 </script>
