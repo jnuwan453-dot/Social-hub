@@ -11,7 +11,6 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
 
-# Keep the existing feed sources and the existing NASA/ESA collection workflow.
 FEEDS = [
     {
         "name": "NASA",
@@ -29,9 +28,16 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; TheCivicBriefNewsBot/1.0)"
 }
 
+VALID_CATEGORIES = {
+    "Space",
+    "Science",
+    "Discoveries",
+    "AI & Technology",
+    "World News",
+}
+
 
 class VisibleTextParser(HTMLParser):
-    """Extract readable text while ignoring scripts, styles and page navigation."""
 
     def _init_(self):
         super()._init_()
@@ -45,8 +51,9 @@ class VisibleTextParser(HTMLParser):
             self.parts.append(" ")
 
     def handle_endtag(self, tag):
-        if tag.lower() in ("script", "style", "noscript", "svg") and self.skip_depth:
-            self.skip_depth -= 1
+        if tag.lower() in ("script", "style", "noscript", "svg"):
+            if self.skip_depth:
+                self.skip_depth -= 1
         elif tag.lower() in ("p", "div", "br", "li", "h1", "h2", "h3"):
             self.parts.append(" ")
 
@@ -57,6 +64,7 @@ class VisibleTextParser(HTMLParser):
 
 def clean_text(value):
     parser = VisibleTextParser()
+
     try:
         parser.feed(value or "")
         text = " ".join(parser.parts)
@@ -68,35 +76,40 @@ def clean_text(value):
 
 
 def clean_summary(value, title="", limit=230):
+
     text = clean_text(value)
 
     if not text:
         return "Read the original report for the latest details."
 
-    # Remove common feed/page navigation fragments and generic labels.
-    boilerplate = [
-        r"\bAPOD\b",
-        r"Today’s APOD Archive",
-        r"Today's APOD Archive",
-        r"Today’s Archive",
-        r"Today's Archive",
+    # Remove APOD navigation and common website labels.
+    patterns = [
+        r"Today'?s APOD Archive",
         r"Submissions Index",
         r"Search Calendar RSS Education About Discuss",
         r"Astronomy Picture of the Day",
         r"Discover the cosmos!?",
         r"Read this release in English here\.?",
-        r"Read more\s*\.?",
         r"Continue reading\s*\.?",
         r"Click here\s*\.?",
         r"Share this story\s*\.?",
+        r"\bAPOD\b",
     ]
 
-    for pattern in boilerplate:
+    for pattern in patterns:
         text = re.sub(pattern, " ", text, flags=re.IGNORECASE)
 
-    # Remove author/byline prefixes without deleting the article body.
+    # Remove APOD date/header fragments.
     text = re.sub(
-        r"^(?:By|Written by|Author:?|Posted by)\s+[^.]{2,120}(?:\.\s*|\s+)(?=[A-Z])",
+        r"^(?:Science\s*\|\s*)?\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–—:|]\s",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove common byline prefixes.
+    text = re.sub(
+        r"^(?:By|Written by|Author:?|Posted by)\s+[^.]{2,120}\.\s*",
         "",
         text,
         flags=re.IGNORECASE
@@ -107,7 +120,15 @@ def clean_summary(value, title="", limit=230):
     if title and text.lower().startswith(title.lower()):
         text = text[len(title):].lstrip(" :–—-.")
 
-    # Avoid returning empty or navigation-only summaries.
+    # Remove repeated title fragments.
+    if title:
+        text = re.sub(
+            re.escape(title),
+            "",
+            text,
+            flags=re.IGNORECASE
+        ).strip(" -|:.")
+
     if len(re.sub(r"[^A-Za-z0-9]", "", text)) < 35:
         return "Read the original report for the latest details."
 
@@ -116,7 +137,6 @@ def clean_summary(value, title="", limit=230):
 
     shortened = text[:limit - 1]
 
-    # Prefer a complete sentence when one is available near the limit.
     sentence_end = max(
         shortened.rfind(". "),
         shortened.rfind("! "),
@@ -132,61 +152,81 @@ def clean_summary(value, title="", limit=230):
 
 
 def classify_category(title, summary, fallback="Space"):
-    """Use conservative title/summary keywords; otherwise retain feed category."""
 
     text = f"{title} {summary}".lower()
 
+    # AI and technology.
     if re.search(
-        r"\b(artificial intelligence|\bai\b|machine learning|robotics|technology|algorithm|computer|cybersecurity)\b",
+        r"\b(artificial intelligence|machine learning|robotics|"
+        r"technology|algorithm|computer|cybersecurity|"
+        r"quantum computing|semiconductor|microchip)\b",
         text
     ):
         return "AI & Technology"
 
+    # Earth and environmental science.
     if re.search(
-        r"\b(climate|weather|clouds?|fog|earth observatory|ocean|wildfire|hurricane|atmosphere|ecosystem|biodiversity|earth science)\b",
+        r"\b(climate|weather|clouds?|fog|earth observatory|"
+        r"ocean|wildfire|hurricane|atmosphere|ecosystem|"
+        r"biodiversity|earth science|reservoir|flood|flooding|"
+        r"river|rainfall|drought|water surge|water levels|"
+        r"soil|forest|volcano|earthquake)\b",
         text
     ):
         return "Science"
 
+    # Discoveries and scientific findings.
     if re.search(
-        r"\b(discover(?:y|ies|ed)|finds? source|detect(?:s|ed|ion)|evidence of|newly found|first ever|mysterious outburst|rubies on mars)\b",
+        r"\b(discovery|discoveries|discovered|detection|detected|"
+        r"evidence of|newly found|first ever|new finding|"
+        r"newly discovered|exoplanet|signs of life|"
+        r"mysterious outburst)\b",
         text
     ):
         return "Discoveries"
 
+    # Space missions, astronomy and exploration.
     if re.search(
-        r"\b(space|mars|moon|lunar|planet|saturn|jupiter|astronaut|rocket|rover|telescope|galaxy|star|orbit|chandra|perseverance|curiosity)\b",
+        r"\b(space|mars|moon|lunar|planet|saturn|jupiter|"
+        r"astronaut|rocket|rover|telescope|galaxy|galaxies|"
+        r"star|stars|orbit|chandra|perseverance|curiosity|"
+        r"voyager|satellite|nebula|cosmos|ngc)\b",
         text
     ):
         return "Space"
 
-    valid_categories = {
-        "Space",
-        "Science",
-        "Discoveries",
-        "AI & Technology",
-        "World News"
-    }
+    if fallback in VALID_CATEGORIES:
+        return fallback
 
-    return fallback if fallback in valid_categories else "Science"
+    return "Science"
 
 
 def get_text(item, *names):
+
     for name in names:
         element = item.find(name)
 
-        if element is not None and element.text:
-            return element.text.strip()
+        if element is not None:
+            if element.text:
+                return element.text.strip()
+
+            # Support RSS elements containing nested content.
+            full_text = "".join(element.itertext()).strip()
+
+            if full_text:
+                return full_text
 
     return ""
 
 
 def valid_image_url(url, base_url=""):
+
     if not url:
         return ""
 
     url = html.unescape(url.strip())
     url = urljoin(base_url, url)
+
     parsed = urlparse(url)
 
     if parsed.scheme not in ("http", "https") or not parsed.netloc:
@@ -202,6 +242,7 @@ class ImageMetaParser(HTMLParser):
         self.image = ""
 
     def handle_starttag(self, tag, attrs):
+
         if tag.lower() != "meta":
             return
 
@@ -222,6 +263,7 @@ class ImageMetaParser(HTMLParser):
             "twitter:image",
             "twitter:image:src"
         ):
+
             content = data.get("content", "")
 
             if content and not self.image:
@@ -229,13 +271,16 @@ class ImageMetaParser(HTMLParser):
 
 
 def get_page_image(article_url):
+
     try:
+
         request = urllib.request.Request(
             article_url,
             headers=HEADERS
         )
 
-        with urllib.request.urlopen(request, timeout=12) as response:
+        with urllib.request.urlopen(request, timeout=15) as response:
+
             content_type = response.headers.get(
                 "Content-Type", ""
             ).lower()
@@ -261,17 +306,28 @@ def get_page_image(article_url):
         if image_url:
             return image_url
 
-        match = re.search(
+        # Alternative metadata patterns.
+        patterns = [
             r'<link[^>]+rel=["\']image_src["\'][^>]+href=["\']([^"\']+)',
-            page_html,
-            re.IGNORECASE
-        )
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        ]
 
-        if match:
-            return valid_image_url(
-                match.group(1),
-                page_url
+        for pattern in patterns:
+
+            match = re.search(
+                pattern,
+                page_html,
+                re.IGNORECASE
             )
+
+            if match:
+                image_url = valid_image_url(
+                    match.group(1),
+                    page_url
+                )
+
+                if image_url:
+                    return image_url
 
     except Exception as error:
         print(f"Could not get article image: {error}")
@@ -283,6 +339,7 @@ def get_image(item, article_url):
 
     # 1. RSS media fields.
     for element in item.iter():
+
         tag = element.tag.lower()
 
         if (
@@ -290,6 +347,7 @@ def get_image(item, article_url):
             tag.endswith("}content") or
             tag.endswith("}enclosure")
         ):
+
             image_url = valid_image_url(
                 element.attrib.get("url", ""),
                 article_url
@@ -298,12 +356,13 @@ def get_image(item, article_url):
             if image_url:
                 return image_url
 
-    # 2. Image embedded in the RSS description/summary.
+    # 2. Image embedded in RSS description.
     description = get_text(
         item,
         "description",
         "summary",
-        "{*}summary"
+        "{*}summary",
+        "{*}content"
     )
 
     match = re.search(
@@ -313,6 +372,7 @@ def get_image(item, article_url):
     )
 
     if match:
+
         image_url = valid_image_url(
             match.group(1),
             article_url
@@ -328,7 +388,9 @@ def get_image(item, article_url):
 def parse_published(value):
 
     if value:
+
         try:
+
             parsed = parsedate_to_datetime(value)
 
             if parsed.tzinfo is None:
@@ -341,7 +403,9 @@ def parse_published(value):
             ).isoformat()
 
         except Exception:
+
             try:
+
                 parsed = datetime.fromisoformat(
                     value.replace("Z", "+00:00")
                 )
@@ -388,6 +452,7 @@ def main():
     for feed in FEEDS:
 
         try:
+
             print(f"Reading {feed['name']} feed...")
 
             request = urllib.request.Request(
@@ -399,6 +464,7 @@ def main():
                 request,
                 timeout=20
             ) as response:
+
                 root = ET.fromstring(response.read())
 
             items = root.findall(".//item")
@@ -470,17 +536,20 @@ def main():
                 })
 
         except Exception as error:
+
             print(
                 f"Could not read {feed['name']} feed: {error}"
             )
 
-    # Never replace a working news.json with an empty/failed feed result.
+    # Protect existing news.json if all feeds fail.
     if not articles:
 
         if os.path.exists("news.json"):
+
             print(
                 "No new feed items; keeping existing news.json."
             )
+
             return
 
         raise RuntimeError(
@@ -492,8 +561,11 @@ def main():
         reverse=True
     )
 
+    # Write safely using a temporary file.
+    temporary_file = "news.json.tmp"
+
     with open(
-        "news.json",
+        temporary_file,
         "w",
         encoding="utf-8"
     ) as file:
@@ -504,6 +576,11 @@ def main():
             ensure_ascii=False,
             indent=2
         )
+
+    os.replace(
+        temporary_file,
+        "news.json"
+    )
 
     image_count = sum(
         1
