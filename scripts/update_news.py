@@ -17,7 +17,16 @@ from email.utils import parsedate_to_datetime
 
 FEEDS = [
     {
+        "name": "NASA APOD",
+        "source": "NASA",
+        "urls": [
+            "https://science.nasa.gov/feed/apod-basic/",
+        ],
+        "category": "Space",
+    },
+    {
         "name": "NASA",
+        "source": "NASA",
         "urls": [
             "https://www.nasa.gov/feed/",
         ],
@@ -25,7 +34,9 @@ FEEDS = [
     },
     {
         "name": "ESA",
+        "source": "ESA",
         "urls": [
+            "https://www.esa.int/rss/science.rss",
             "https://www.esa.int/rssfeed/Science_Exploration/Space_Science",
             "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
         ],
@@ -57,8 +68,8 @@ MAX_ARTICLES = 24
 
 class VisibleTextParser(HTMLParser):
 
-    def _init_(self):
-        super()._init_(convert_charrefs=True)
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
         self.parts = []
         self.skip_depth = 0
         self.skip_tags = {"script", "style", "noscript", "svg"}
@@ -117,17 +128,22 @@ def clean_text(value):
 
 
 # --------------------------------------------------
-# NASA APOD AND GENERAL SUMMARY CLEANING
+# SUMMARY CLEANING
 # --------------------------------------------------
+
+FALLBACK_SUMMARY = (
+    "Read the original report for the latest details."
+)
+
 
 def clean_summary(value, title="", limit=230):
 
     text = clean_text(value)
 
     if not text:
-        return "Read the original report for the latest details."
+        return FALLBACK_SUMMARY
 
-    # Remove NASA APOD navigation and archive labels.
+    # Remove common NASA APOD navigation text.
     boilerplate_patterns = [
 
         r"Today's\s+APOD\s+Archive",
@@ -156,6 +172,7 @@ def clean_summary(value, title="", limit=230):
         r"Skip to main content",
         r"Menu\s+Search",
         r"Navigation",
+
     ]
 
     for pattern in boilerplate_patterns:
@@ -167,20 +184,11 @@ def clean_summary(value, title="", limit=230):
             flags=re.IGNORECASE
         )
 
-    # Remove navigation words and menu sequences.
+    # Remove navigation words.
     text = re.sub(
         r"\b(?:Archive|Submissions Index|Search|Calendar|"
         r"Education|Discuss|Navigation)\b",
         " ",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    # Remove author/byline prefixes.
-    text = re.sub(
-        r"^(?:By|Written by|Author:?|Posted by)\s+"
-        r"[^.]{2,120}(?:\.\s*|\s+)(?=[A-Z])",
-        "",
         text,
         flags=re.IGNORECASE
     )
@@ -228,22 +236,26 @@ def clean_summary(value, title="", limit=230):
                     " -–|:;,."
                 )
 
-    # Remove remaining placeholder-only fragments.
+    # Remove remaining placeholder fragments.
     text = re.sub(
         r"\[\s*(?:\.\.\.|…)?\s*\]",
         " ",
         text
     )
 
-    # Remove standalone ellipsis.
+    text = re.sub(
+        r"\b(?:Read more|Continue reading)\b",
+        " ",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove ellipsis and clean punctuation.
     text = re.sub(r"(?:\.\.\.|…)+", " ", text)
-
-    # Clean repeated punctuation and whitespace.
     text = re.sub(r"\s+", " ", text)
-
     text = text.strip(" -–|•…:;,. ")
 
-    # Reject navigation-only or meaningless summaries.
+    # Reject navigation-only summaries.
     meaningful = re.sub(
         r"[^A-Za-z0-9]",
         "",
@@ -251,8 +263,7 @@ def clean_summary(value, title="", limit=230):
     )
 
     if len(meaningful) < 35:
-
-        return "Read the original report for the latest details."
+        return FALLBACK_SUMMARY
 
     if len(text) <= limit:
         return text
@@ -380,23 +391,22 @@ def get_best_summary(item, title):
             candidates.append(value)
 
     if not candidates:
-        return clean_summary("", title)
+        return FALLBACK_SUMMARY
 
     cleaned = [
         clean_summary(value, title)
         for value in candidates
     ]
 
-    # Prefer the most informative usable summary.
     usable = [
         value for value in cleaned
-        if value != "Read the original report for the latest details."
+        if value != FALLBACK_SUMMARY
     ]
 
     if usable:
         return max(usable, key=len)
 
-    return cleaned[0]
+    return FALLBACK_SUMMARY
 
 
 # --------------------------------------------------
@@ -424,8 +434,8 @@ def valid_image_url(url, base_url=""):
 
 class ImageMetaParser(HTMLParser):
 
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
         self.image = ""
 
     def handle_starttag(self, tag, attrs):
@@ -600,7 +610,6 @@ def parse_published(value):
             parsed = parsedate_to_datetime(value)
 
             if parsed.tzinfo is None:
-
                 parsed = parsed.replace(
                     tzinfo=timezone.utc
                 )
@@ -618,7 +627,6 @@ def parse_published(value):
                 )
 
                 if parsed.tzinfo is None:
-
                     parsed = parsed.replace(
                         tzinfo=timezone.utc
                     )
@@ -639,25 +647,25 @@ def parse_published(value):
 
 def get_item_link(item):
 
-    link = get_text(
-        item,
-        "link",
-        "{*}link"
-    )
-
-    if link:
-        return link
-
     link_element = item.find("{*}link")
 
     if link_element is not None:
 
-        return (
+        href = (
             link_element.attrib.get("href", "")
             or link_element.attrib.get("url", "")
         )
 
-    return ""
+        if href:
+            return href
+
+        if link_element.text:
+            return link_element.text.strip()
+
+    return get_text(
+        item,
+        "link"
+    )
 
 
 # --------------------------------------------------
@@ -766,23 +774,21 @@ def main():
     seen_links = set()
 
     successful_sources = set()
-    failed_sources = set()
-
-    existing_articles = load_existing_news()
-
     configured_sources = {
-        feed["name"]
+        feed["source"]
         for feed in FEEDS
     }
 
+    existing_articles = load_existing_news()
+
     for feed in FEEDS:
 
-        source_name = feed["name"]
+        source_name = feed["source"]
 
         try:
 
             print(
-                f"\nReading {source_name} feed..."
+                f"\nReading {feed['name']} feed..."
             )
 
             items, actual_feed_url = fetch_feed(feed)
@@ -878,7 +884,7 @@ def main():
             if source_count == 0:
 
                 raise RuntimeError(
-                    f"{source_name} returned no usable articles."
+                    f"{feed['name']} returned no usable articles."
                 )
 
             successful_sources.add(
@@ -886,18 +892,19 @@ def main():
             )
 
             print(
-                f"{source_name}: {source_count} articles collected."
+                f"{feed['name']}: {source_count} articles collected."
             )
 
         except Exception as error:
 
-            failed_sources.add(
-                source_name
+            print(
+                f"Could not update {feed['name']}: {error}"
             )
 
-            print(
-                f"Could not update {source_name}: {error}"
-            )
+    # Determine which sources failed completely.
+    failed_sources = (
+        configured_sources - successful_sources
+    )
 
     # If all feeds fail, never replace the existing file.
     if not successful_sources:
@@ -908,8 +915,8 @@ def main():
 
         return
 
-    # Preserve old stories belonging to failed feeds.
-    # Also preserve stories from other existing sources.
+    # Preserve old stories belonging to failed feeds
+    # and stories from other existing sources.
     preserved_count = 0
 
     for old_article in existing_articles:
@@ -1020,5 +1027,9 @@ def main():
         )
 
 
-if _name_ == "_main_":
+# --------------------------------------------------
+# RUN SCRIPT
+# --------------------------------------------------
+
+if __name__ == "__main__":
     main()
