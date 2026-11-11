@@ -202,12 +202,7 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    # Remove repeated title from the beginning.
-    if title:
-
-        title_clean = clean_text(title)
-
-        title_variants = [
+    title_variants = [
             title_clean,
             re.sub(
                 r"^APOD\s*[:\-–|]\s*",
@@ -216,6 +211,19 @@ def clean_summary(value, title="", limit=230):
                 flags=re.IGNORECASE
             ),
         ]
+
+        # Remove APOD date prefix from title variants too.
+        for variant in list(title_variants):
+
+            variant = re.sub(
+                r"^\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
+                "",
+                variant,
+                flags=re.IGNORECASE
+            )
+
+            if variant:
+                title_variants.append(variant)
 
         for title_variant in title_variants:
 
@@ -227,6 +235,7 @@ def clean_summary(value, title="", limit=230):
                 text = text[len(title_variant):].lstrip(
                     " -–|:;,."
                 )
+                break
 
     # Remove remaining placeholder-only fragments.
     text = re.sub(
