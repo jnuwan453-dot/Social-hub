@@ -76,60 +76,72 @@ def clean_text(value):
 
 
 def clean_summary(value, title="", limit=230):
-
     text = clean_text(value)
 
     if not text:
         return "Read the original report for the latest details."
 
-    # Remove APOD navigation and common website labels.
-    patterns = [
-        r"Today'?s APOD Archive",
+    # Remove common NASA APOD navigation and page labels.
+    boilerplate_patterns = [
+        r"Today's APOD Archive",
+        r"Today’s APOD Archive",
+        r"Today's Archive",
+        r"Today’s Archive",
         r"Submissions Index",
         r"Search Calendar RSS Education About Discuss",
         r"Astronomy Picture of the Day",
         r"Discover the cosmos!?",
+        r"Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer\.?",
+        r"\bAPOD\b",
         r"Read this release in English here\.?",
+        r"Read more\s*\.?",
         r"Continue reading\s*\.?",
         r"Click here\s*\.?",
         r"Share this story\s*\.?",
-        r"\bAPOD\b",
     ]
 
-    for pattern in patterns:
-        text = re.sub(pattern, " ", text, flags=re.IGNORECASE)
-
-    # Remove APOD date/header fragments.
-    text = re.sub(
-        r"^(?:Science\s*\|\s*)?\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–—:|]\s",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    # Remove common byline prefixes.
-    text = re.sub(
-        r"^(?:By|Written by|Author:?|Posted by)\s+[^.]{2,120}\.\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    text = re.sub(r"\s+", " ", text).strip(" -|•…")
-
-    if title and text.lower().startswith(title.lower()):
-        text = text[len(title):].lstrip(" :–—-.")
-
-    # Remove repeated title fragments.
-    if title:
+    for pattern in boilerplate_patterns:
         text = re.sub(
-            re.escape(title),
-            "",
+            pattern,
+            " ",
             text,
             flags=re.IGNORECASE
-        ).strip(" -|:.")
+        )
 
-    if len(re.sub(r"[^A-Za-z0-9]", "", text)) < 35:
+    # Remove common navigation sequences.
+    text = re.sub(
+        r"\b(?:Archive|Submissions Index|Search|Calendar|RSS|Education|About|Discuss)\b",
+        " ",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove author/byline prefixes.
+    text = re.sub(
+        r"^(?:By|Written by|Author:?|Posted by)\s+[^.]{2,120}(?:\.\s*|\s+)(?=[A-Z])",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove the title if it is repeated at the start of the summary.
+    if title and text.lower().startswith(title.lower()):
+        text = text[len(title):]
+
+    # Remove date/title-like APOD prefix if present.
+    text = re.sub(
+        r"^\s*(?:Science\s*[-–|]\s*)?\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(r"\s+", " ", text).strip(" -|•…:;,")
+
+    # Avoid navigation-only or empty summaries.
+    meaningful = re.sub(r"[^A-Za-z0-9]", "", text)
+
+    if len(meaningful) < 35:
         return "Read the original report for the latest details."
 
     if len(text) <= limit:
@@ -149,7 +161,6 @@ def clean_summary(value, title="", limit=230):
         shortened = shortened.rsplit(" ", 1)[0].rstrip(" ,;:-") + "…"
 
     return shortened
-
 
 def classify_category(title, summary, fallback="Space"):
 
