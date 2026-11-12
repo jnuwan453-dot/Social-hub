@@ -1,5 +1,32 @@
 [
   {
+    "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
+    "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
+    "image": "",
+    "source": "ESA",
+    "category": "Space",
+    "published": "2026-11-12T13:11:47+00:00"
+  },
+  {
+    "title": "Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA",
+    "summary": "Shuttle Endeavour’s Last Flight Was 10 Years Ago People from communities all over California watched the skies in hopes of catching a glimpse of space shuttle Endeavour as it was ferried on the NASA 747 Shu nonadult",
+    "url": "https://www.nasa.gov/centers-and-facilities/armstrong/through-nasas-lens-capturing-space-shuttle-endeavours-move-to-la/",
+    "image": "https://www.youtube.com/embed/RrkH0jfX-4Y",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "title": "Win a trip to ESA to witness BepiColombo arrive at Mercury",
+    "summary": "Get ready to celebrate BepiColombo’s arrival at Mercury. Craft a welcoming message that could be a drawing, song, poem or any other art form and stand a chance to win a trip to mission control!",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/win-a-trip-to-esa-to-witness-bepicolombo-arrive-at-mercury",
+    "image": "",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-11-12T10:35:25+00:00"
+  },
+  {
     "title": "Moon, Venus and Spica Meet",
     "summary": "2026 November 12 - Moon, Venus and Spica Meet 2026 November 12 Moon, Venus and Spica Meet Image Credit & Copyright : Włodzimierz Bubak Explanation: Explanation: Not all those who wander are lost.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-12-moon-venus-and-spica-meet/",
@@ -88,15 +115,6 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-10T14:57:55+00:00"
-  },
-  {
-    "title": "Win a trip to ESA to witness BepiColombo arrive at Mercury",
-    "summary": "Get ready to celebrate BepiColombo’s arrival at Mercury. Craft a welcoming message that could be a drawing, song, poem or any other art form and stand a chance to win a trip to mission control!",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/win-a-trip-to-esa-to-witness-bepicolombo-arrive-at-mercury",
-    "image": "",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-10T10:52:37+00:00"
   },
   {
     "title": "Saturn Behind the Moon",
@@ -196,23 +214,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-06T05:05:00+00:00"
-  },
-  {
-    "title": "Enceladus in Silhouette",
-    "summary": "2026 November 5 - Enceladus in Silhouette 2026 November 5 Enceladus in Silhouette Image Credit & Copyright : Cassini Imaging Team , SSI , JPL , ESA , NASA Explanation: Explanation: One of our Solar System's most tantalizing…",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-5-enceladus-in-silhouette/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/PIA17144EnceladusPandora.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-05T05:05:00+00:00"
-  },
-  {
-    "title": "Webb captures commotion from nebula’s stellar jets",
-    "summary": "NASA/ESA/CSA James Webb Space Telescope has unveiled numerous stars formerly hidden by clouds of dust in a stellar nursery known as NGC 7129 – a cauldron of cosmic creation, 3300 light-years from Earth",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/webb-captures-commotion-from-nebula-s-stellar-jets",
-    "image": "",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-04T12:26:24+00:00"
   }
 ]
