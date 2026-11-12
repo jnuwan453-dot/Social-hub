@@ -1,5 +1,23 @@
 [
   {
+    "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
+    "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
+    "image": "",
+    "source": "ESA",
+    "category": "Space",
+    "published": "2026-11-12T21:24:00+00:00"
+  },
+  {
+    "title": "I Am Artemis Katie Spicer",
+    "summary": "For Katie Spicer, embracing opportunity and challenge has led to giant leaps during her time at NASA. Now as the NASA lander integration lead for Blue Origin’s Blue Moon Mark 2 lander, one of the commercially provided human…",
+    "url": "https://www.nasa.gov/missions/artemis/i-am-artemis-katie-spicer/",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/jsc2026e402724-i-am-artemis-katie.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-12T20:10:02+00:00"
+  },
+  {
     "title": "Heart in the Sky at NASA Kennedy",
     "summary": "NASA/Amber Jean Notvest The U.S. Air Force Thunderbirds create a heart-shaped smoke trail during a flight maneuver near NASA’s Vehicle Assembly Building during the agency’s MAX POWER expo and air show",
     "url": "https://www.nasa.gov/image-article/heart-in-the-sky-at-nasa-kennedy/",
@@ -36,19 +54,10 @@
     "published": "2026-11-12T13:18:40+00:00"
   },
   {
-    "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
-    "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
-    "image": "",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-12T13:11:47+00:00"
-  },
-  {
     "title": "Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA",
     "summary": "A spectacular sight as NASA’s Shuttle Carrier Aircraft with space shuttle Endeavour atop soars over the Golden Gate Bridge. Credits: NASA/Carla Thomas As a new exhibit opens showcasing NASA’s space shuttle Endeavour, NASA…",
     "url": "https://www.nasa.gov/centers-and-facilities/armstrong/through-nasas-lens-capturing-space-shuttle-endeavours-move-to-la/",
-    "image": "https://www.youtube.com/embed/RrkH0jfX-4Y",
+    "image": "https://www.nasa.gov/wp-content/uploads/2023/03/690852main_ED12-0317-012_full.jpg",
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-12T13:00:00+00:00"
@@ -108,15 +117,6 @@
     "published": "2026-11-11T05:01:00+00:00"
   },
   {
-    "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
-    "summary": "Launched nearly 50 years ago in 1977, NASA’s Voyager 1 on Wednesday, Nov. 18 will have traveled one light-day from Earth, which is more than 16 billion miles (25.9 billion kilometers).",
-    "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/voyager-1-advisory-image-2-nov-10.jpg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-10T19:22:45+00:00"
-  },
-  {
     "title": "Saturn Behind the Moon",
     "summary": "Sometimes Saturn disappears. It doesn't really go away, of course -- it just disappears from our view when Earth's Moon moves in front.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-10-saturn-behind-the-moon/",
@@ -154,7 +154,7 @@
   },
   {
     "title": "De Gerlache-Kocher Massif",
-    "summary": "Looms on the visible horizon in this close-up of the edge of the Moon. The mountainous formation rises about 4 kilometers above its surroundings and is located very close to the lunar south pole.",
+    "summary": "De Gerlache-Kocher massif looms on the visible horizon in this close-up of the edge of the Moon. The mountainous formation rises about 4 kilometers above its surroundings and is located very close to the lunar south pole.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-7-de-gerlache-kocher-massif/",
     "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/GerlacheKocherMassif_Sans.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
