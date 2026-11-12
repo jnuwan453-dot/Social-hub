@@ -19,17 +19,13 @@ FEEDS = [
     {
         "name": "NASA APOD",
         "source": "NASA",
-        "urls": [
-            "https://science.nasa.gov/feed/apod-basic/",
-        ],
+        "urls": ["https://science.nasa.gov/feed/apod-basic/"],
         "category": "Space",
     },
     {
         "name": "NASA",
         "source": "NASA",
-        "urls": [
-            "https://www.nasa.gov/feed/",
-        ],
+        "urls": ["https://www.nasa.gov/feed/"],
         "category": "Space",
     },
     {
@@ -60,6 +56,7 @@ VALID_CATEGORIES = {
 OUTPUT_FILE = "news.json"
 TEMP_FILE = "news.json.tmp"
 MAX_ARTICLES = 24
+FALLBACK_SUMMARY = "Read the original report for the latest details."
 
 
 # --------------------------------------------------
@@ -131,11 +128,6 @@ def clean_text(value):
 # SUMMARY CLEANING
 # --------------------------------------------------
 
-FALLBACK_SUMMARY = (
-    "Read the original report for the latest details."
-)
-
-
 def clean_summary(value, title="", limit=230):
 
     text = clean_text(value)
@@ -143,7 +135,6 @@ def clean_summary(value, title="", limit=230):
     if not text:
         return FALLBACK_SUMMARY
 
-    # Detect NASA website navigation-heavy summaries.
     navigation_markers = [
         r"The History of Hubble in Space",
         r"Hubble by the Numbers",
@@ -179,43 +170,28 @@ def clean_summary(value, title="", limit=230):
         if re.search(pattern, text, re.IGNORECASE)
     )
 
-    # Navigation-heavy content is not a reliable article summary.
     if navigation_count >= 2:
         return FALLBACK_SUMMARY
 
-    # Remove APOD date prefix.
-    text = re.sub(
-        r"^\s*\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-# Remove reading-time labels.
+    # Remove reading-time labels.
     text = re.sub(
         r"^\s*\d+\s+Min(?:ute)?s?\s+Read\s*",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
-    # Remove repeated article title.
-    if title:
-        title_clean = clean_text(title)
 
-        if title_clean and text.lower().startswith(
-            title_clean.lower()
-        ):
-            text = text[len(title_clean):].lstrip(
-                " -–|:;,."
-            )
-            # Remove repeated APOD date and title.
+    # Remove APOD date prefixes.
     text = re.sub(
         r"^\s*\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
+    # Remove repeated article title.
     if title:
+
         title_clean = clean_text(title)
 
         if title_clean and text.lower().startswith(
@@ -225,64 +201,29 @@ def clean_summary(value, title="", limit=230):
                 " -–|:;,."
             )
 
-    # Remove APOD credit labels wherever they appear.
+    # Remove unrelated NASA headline.
+    text = re.sub(
+        r"^\s*Shuttle Endeavour’s Last Flight Was 10 Years Ago\s*",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    # Remove APOD credit labels.
     text = re.sub(
         r"\bImage\s+Credit\s*(?:&|and)\s*Explanation\s*:\s*",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
     text = re.sub(
         r"\bExplanation\s*:\s*",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
-   # Remove reading-time labels.
-    text = re.sub(
-        r"^\s*\d+\s+Min(?:ute)?s?\s+Read\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    # Remove repeated NASA article title.
-    if title:
-        title_clean = clean_text(title)
-
-        if title_clean and text.lower().startswith(
-            title_clean.lower()
-        ):
-            text = text[len(title_clean):].lstrip(
-                " -–|:;,."
-            )
-
-    # Remove unrelated introductory headline.
-    text = re.sub(
-        r"^\s*Shuttle Endeavour’s Last Flight Was 10 Years Ago\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    # Remove APOD image credit and explanation labels.
-    text = re.sub(
-        r"^\s*Image\s+Credit\s*(?:&|and)\s*Explanation\s*:\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    text = re.sub(
-        r"^\s*Explanation\s*:\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
-    # Remove common APOD boilerplate.
     boilerplate_patterns = [
         r"Today's\s+APOD\s+Archive",
         r"Today’s\s+APOD\s+Archive",
@@ -290,10 +231,7 @@ def clean_summary(value, title="", limit=230):
         r"Today’s\s+Archive",
         r"Astronomy\s+Picture\s+of\s+the\s+Day",
         r"Discover\s+the\s+cosmos!?",
-        r"Each day a different image or photograph "
-        r"of our fascinating universe is featured, "
-        r"along with a brief explanation written by "
-        r"a professional astronomer\.?",
+        r"Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer\.?",
         r"Earth Observatory",
         r"Image of the Day",
         r"Topics",
@@ -321,11 +259,12 @@ def clean_summary(value, title="", limit=230):
     ]
 
     for pattern in boilerplate_patterns:
+
         text = re.sub(
             pattern,
             " ",
             text,
-            flags=re.IGNORECASE
+            flags=re.IGNORECASE,
         )
 
     # Remove copyright information.
@@ -333,23 +272,23 @@ def clean_summary(value, title="", limit=230):
         r"Copyright\s*[:©].*?(?=Explanation|Image Credit|$)",
         " ",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
     text = re.sub(
         r"©\s*\d{4}[^.]*\.?",
         " ",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
-    # Remove author/byline prefixes.
+    # Remove author prefixes.
     text = re.sub(
         r"^(?:By|Written by|Author:?|Posted by)\s+"
         r"[^.]{2,120}(?:\.\s*|\s+)(?=[A-Z])",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
     # Remove date and category prefixes.
@@ -358,7 +297,7 @@ def clean_summary(value, title="", limit=230):
         r"\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
     # Remove APOD prefix.
@@ -366,31 +305,30 @@ def clean_summary(value, title="", limit=230):
         r"^\s*APOD\s*[:\-–|]\s*",
         "",
         text,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
     # Remove placeholder fragments and ellipses.
     text = re.sub(
         r"\[\s*(?:\.\.\.|…)?\s*\]",
         " ",
-        text
+        text,
     )
 
     text = re.sub(
         r"(?:\.\.\.|…)+",
         " ",
-        text
+        text,
     )
 
-    # Clean whitespace and punctuation.
+    # Clean whitespace.
     text = re.sub(r"\s+", " ", text)
     text = text.strip(" -–|•…:;,. ")
 
-    # Reject summaries that contain too little real information.
     meaningful = re.sub(
         r"[^A-Za-z0-9]",
         "",
-        text
+        text,
     )
 
     if len(meaningful) < 35:
@@ -405,36 +343,53 @@ def clean_summary(value, title="", limit=230):
     sentence_end = max(
         shortened.rfind(". "),
         shortened.rfind("! "),
-        shortened.rfind("? ")
+        shortened.rfind("? "),
     )
 
     if sentence_end >= int(limit * 0.55):
+
         shortened = shortened[:sentence_end + 1]
+
     else:
+
         shortened = (
             shortened.rsplit(" ", 1)[0]
             .rstrip(" ,;:-")
             + "…"
         )
-# Clean the shortened summary before returning it.
+
+    # Clean shortened summary.
     shortened = re.sub(
         r"\s+(?:on\s+)?(?:Sunday,?\s+)?Nov\.$",
         "",
         shortened,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
+
     shortened = re.sub(
         r"\s+see linked…?$",
         "",
         shortened,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
-    shortened = re.sub(r"\s+([.,!?;:])", r"\1", shortened)
-    shortened = re.sub(r"\s+", " ", shortened).strip()
+
+    shortened = re.sub(
+        r"\s+([.,!?;:])",
+        r"\1",
+        shortened,
+    )
+
+    shortened = re.sub(
+        r"\s+",
+        " ",
+        shortened,
+    ).strip()
 
     if shortened:
         shortened = shortened[0].upper() + shortened[1:]
-    return shortened
+
+    return shortened or FALLBACK_SUMMARY
+
 
 # --------------------------------------------------
 # CATEGORY CLASSIFICATION
@@ -446,46 +401,40 @@ def classify_category(title, summary, fallback="Space"):
 
     # AI and technology stories.
     if re.search(
-        r"\b(artificial intelligence|machine learning|"
-        r"robotics|technology|algorithm|computer|"
-        r"cybersecurity|quantum computing|"
+        r"\b(artificial intelligence|machine learning|robotics|technology|"
+        r"algorithm|computer|cybersecurity|quantum computing|"
         r"semiconductor|microchip)\b",
-        text
+        text,
     ):
         return "AI & Technology"
 
-    # Earth, environment and general science stories.
+    # Earth and environmental science.
     if re.search(
-        r"\b(climate|weather|clouds?|fog|earth observatory|"
-        r"ocean|wildfire|hurricane|atmosphere|ecosystem|"
-        r"biodiversity|earth science|reservoir|flood|"
-        r"flooding|river|rainfall|drought|water surge|"
-        r"water levels|soil|forest|volcano|earthquake|"
-        r"flow country|peatland|wetland|habitat|ecology|"
-        r"environment|environmental)\b",
-        text
+        r"\b(climate|weather|clouds?|fog|earth observatory|ocean|wildfire|"
+        r"hurricane|atmosphere|ecosystem|biodiversity|earth science|"
+        r"reservoir|flood|flooding|river|rainfall|drought|water surge|"
+        r"water levels|soil|forest|volcano|earthquake|flow country|"
+        r"peatland|wetland|habitat|ecology|environment|environmental)\b",
+        text,
     ):
         return "Science"
 
-    # Discoveries and scientific findings.
+    # Discoveries.
     if re.search(
-        r"\b(discovery|discoveries|discovered|detection|"
-        r"detected|evidence of|newly found|first ever|"
-        r"new finding|newly discovered|exoplanet|"
+        r"\b(discovery|discoveries|discovered|detection|detected|evidence of|"
+        r"newly found|first ever|new finding|newly discovered|exoplanet|"
         r"signs of life|mysterious outburst)\b",
-        text
+        text,
     ):
         return "Discoveries"
 
-    # Space and astronomy stories.
+    # Space and astronomy.
     if re.search(
-        r"\b(space|mars|moon|lunar|planet|saturn|jupiter|"
-        r"astronaut|rocket|rover|telescope|galaxy|galaxies|"
-        r"star|stars|orbit|chandra|perseverance|curiosity|"
-        r"voyager|satellite|nebula|cosmos|ngc|hubble|"
-        r"bepicolombo|euclid|solar orbiter|webb|"
-        r"endeavour)\b",
-        text
+        r"\b(space|mars|moon|lunar|planet|saturn|jupiter|astronaut|rocket|"
+        r"rover|telescope|galaxy|galaxies|star|stars|orbit|chandra|"
+        r"perseverance|curiosity|voyager|satellite|nebula|cosmos|ngc|"
+        r"hubble|bepicolombo|euclid|solar orbiter|webb|endeavour)\b",
+        text,
     ):
         return "Space"
 
@@ -552,7 +501,8 @@ def get_best_summary(item, title):
     ]
 
     usable = [
-        value for value in cleaned
+        value
+        for value in cleaned
         if value != FALLBACK_SUMMARY
     ]
 
@@ -571,8 +521,10 @@ def valid_image_url(url, base_url=""):
     if not url:
         return ""
 
-    url = html.unescape(url.strip())
-    url = urljoin(base_url, url)
+    url = urljoin(
+        base_url,
+        html.unescape(url.strip()),
+    )
 
     parsed = urlparse(url)
 
@@ -611,7 +563,7 @@ class ImageMetaParser(HTMLParser):
             "og:image",
             "og:image:url",
             "twitter:image",
-            "twitter:image:src"
+            "twitter:image:src",
         ):
 
             content = data.get("content", "")
@@ -626,16 +578,17 @@ def get_page_image(article_url):
 
         request = urllib.request.Request(
             article_url,
-            headers=HEADERS
+            headers=HEADERS,
         )
 
         with urllib.request.urlopen(
             request,
-            timeout=15
+            timeout=15,
         ) as response:
 
             content_type = response.headers.get(
-                "Content-Type", ""
+                "Content-Type",
+                "",
             ).lower()
 
             if "html" not in content_type:
@@ -647,7 +600,7 @@ def get_page_image(article_url):
                 1000000
             ).decode(
                 "utf-8",
-                errors="replace"
+                errors="replace",
             )
 
         parser = ImageMetaParser()
@@ -655,18 +608,15 @@ def get_page_image(article_url):
 
         image_url = valid_image_url(
             parser.image,
-            page_url
+            page_url,
         )
 
         if image_url:
             return image_url
 
         patterns = [
-            r'<link[^>]+rel=["\']image_src["\']'
-            r'[^>]+href=["\']([^"\']+)',
-
-            r'<meta[^>]+content=["\']([^"\']+)'
-            r'["\'][^>]+property=["\']og:image["\']',
+            r'<link[^>]+rel=["\']image_src["\'][^>]+href=["\']([^"\']+)',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
         ]
 
         for pattern in patterns:
@@ -674,14 +624,14 @@ def get_page_image(article_url):
             match = re.search(
                 pattern,
                 page_html,
-                re.IGNORECASE
+                re.IGNORECASE,
             )
 
             if match:
 
                 image_url = valid_image_url(
                     match.group(1),
-                    page_url
+                    page_url,
                 )
 
                 if image_url:
@@ -698,12 +648,10 @@ def get_page_image(article_url):
 
 def get_image(item, article_url):
 
-    # 1. RSS media and enclosure 
-fields.
+    # 1. RSS media and enclosure fields.
     for element in item.iter():
 
-        if not isinstance(element.tag, 
-str):
+        if not isinstance(element.tag, str):
             continue
 
         tag = element.tag.lower()
@@ -711,59 +659,51 @@ str):
         if (
             tag.endswith("thumbnail")
             or tag.endswith("content")
-            or 
-tag.endswith("enclosure")
+            or tag.endswith("enclosure")
         ):
 
-            image_url = 
-valid_image_url(
-element.attrib.get("url", "")
-                or 
-element.attrib.get("href", ""),
-                article_url
+            image_url = valid_image_url(
+                element.attrib.get("url", "")
+                or element.attrib.get("href", ""),
+                article_url,
             )
 
-            # Reject YouTube video URLs 
-as article images.
+            # Do not use YouTube video links as article images.
             if image_url and (
-                "youtube.com" in 
-image_url.lower()
-                or "youtu.be" in 
-image_url.lower()
+                "youtube.com" in image_url.lower()
+                or "youtu.be" in image_url.lower()
             ):
                 image_url = ""
 
             if image_url:
                 return image_url
 
-    # 2. Image embedded in RSS 
-description.
+    # 2. Image embedded in RSS description.
     description = get_text(
         item,
         "description",
         "summary",
         "{*}summary",
-        "{*}encoded"
+        "{*}encoded",
     )
 
     match = re.search(
         r'<img[^>]+src=["\']([^"\']+)',
         description,
-        re.IGNORECASE
+        re.IGNORECASE,
     )
 
     if match:
 
         image_url = valid_image_url(
             match.group(1),
-            article_url
+            article_url,
         )
 
         if image_url:
             return image_url
 
-    # 3. Original article page 
-metadata.
+    # 3. Original article page metadata.
     return get_page_image(article_url)
 
 
@@ -834,7 +774,7 @@ def get_item_link(item):
 
     return get_text(
         item,
-        "link"
+        "link",
     )
 
 
@@ -856,12 +796,12 @@ def fetch_feed(feed):
 
             request = urllib.request.Request(
                 feed_url,
-                headers=HEADERS
+                headers=HEADERS,
             )
 
             with urllib.request.urlopen(
                 request,
-                timeout=25
+                timeout=25,
             ) as response:
 
                 content = response.read()
@@ -912,7 +852,7 @@ def load_existing_news():
         with open(
             OUTPUT_FILE,
             "r",
-            encoding="utf-8"
+            encoding="utf-8",
         ) as file:
 
             data = json.load(file)
@@ -944,6 +884,7 @@ def main():
     seen_links = set()
 
     successful_sources = set()
+
     configured_sources = {
         feed["source"]
         for feed in FEEDS
@@ -971,7 +912,7 @@ def main():
                     get_text(
                         item,
                         "title",
-                        "{*}title"
+                        "{*}title",
                     )
                 )
 
@@ -979,7 +920,7 @@ def main():
 
                 link = urljoin(
                     actual_feed_url,
-                    raw_link
+                    raw_link,
                 )
 
                 if (
@@ -992,7 +933,8 @@ def main():
                 parsed_link = urlparse(link)
 
                 if parsed_link.scheme not in (
-                    "http", "https"
+                    "http",
+                    "https",
                 ):
                     continue
 
@@ -1000,13 +942,13 @@ def main():
 
                 summary = get_best_summary(
                     item,
-                    title
+                    title,
                 )
 
                 category = classify_category(
                     title,
                     summary,
-                    feed["category"]
+                    feed["category"],
                 )
 
                 published = get_text(
@@ -1015,12 +957,10 @@ def main():
                     "published",
                     "{*}published",
                     "updated",
-                    "{*}updated"
+                    "{*}updated",
                 )
 
-                date = parse_published(
-                    published
-                )
+                date = parse_published(published)
 
                 print(
                     f"Getting image: {title[:60]}"
@@ -1028,7 +968,7 @@ def main():
 
                 image_url = get_image(
                     item,
-                    link
+                    link,
                 )
 
                 print(
@@ -1038,7 +978,6 @@ def main():
                 )
 
                 articles.append({
-
                     "title": title,
                     "summary": summary,
                     "url": link,
@@ -1046,7 +985,6 @@ def main():
                     "source": source_name,
                     "category": category,
                     "published": date,
-
                 })
 
                 source_count += 1
@@ -1071,12 +1009,12 @@ def main():
                 f"Could not update {feed['name']}: {error}"
             )
 
-    # Determine which sources failed completely.
+    # Determine failed sources.
     failed_sources = (
         configured_sources - successful_sources
     )
 
-    # If all feeds fail, never replace the existing file.
+    # Never overwrite news.json if all feeds fail.
     if not successful_sources:
 
         print(
@@ -1085,8 +1023,7 @@ def main():
 
         return
 
-    # Preserve old stories belonging to failed feeds
-    # and stories from other existing sources.
+    # Preserve old stories from failed feeds.
     preserved_count = 0
 
     for old_article in existing_articles:
@@ -1095,11 +1032,13 @@ def main():
             continue
 
         old_source = old_article.get(
-            "source", ""
+            "source",
+            "",
         )
 
         old_link = old_article.get(
-            "url", ""
+            "url",
+            "",
         )
 
         should_preserve = (
@@ -1113,13 +1052,9 @@ def main():
             and old_link not in seen_links
         ):
 
-            articles.append(
-                old_article
-            )
+            articles.append(old_article)
 
-            seen_links.add(
-                old_link
-            )
+            seen_links.add(old_link)
 
             preserved_count += 1
 
@@ -1130,9 +1065,10 @@ def main():
     # Sort by publication date.
     articles.sort(
         key=lambda article: article.get(
-            "published", ""
+            "published",
+            "",
         ),
-        reverse=True
+        reverse=True,
     )
 
     final_articles = articles[:MAX_ARTICLES]
@@ -1143,20 +1079,20 @@ def main():
         with open(
             TEMP_FILE,
             "w",
-            encoding="utf-8"
+            encoding="utf-8",
         ) as file:
 
             json.dump(
                 final_articles,
                 file,
                 ensure_ascii=False,
-                indent=2
+                indent=2,
             )
 
         # Atomic replacement.
         os.replace(
             TEMP_FILE,
-            OUTPUT_FILE
+            OUTPUT_FILE,
         )
 
     except Exception as error:
@@ -1165,6 +1101,7 @@ def main():
 
             try:
                 os.remove(TEMP_FILE)
+
             except OSError:
                 pass
 
@@ -1193,7 +1130,8 @@ def main():
     if failed_sources:
 
         print(
-            f"Feeds requiring attention: {', '.join(sorted(failed_sources))}"
+            "Feeds requiring attention: "
+            f"{', '.join(sorted(failed_sources))}"
         )
 
 
