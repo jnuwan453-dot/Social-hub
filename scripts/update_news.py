@@ -201,6 +201,46 @@ def clean_summary(value, title="", limit=230):
             text = text[len(title_clean):].lstrip(
                 " -–|:;,."
             )
+            # Remove repeated APOD date and title.
+    text = re.sub(
+        r"^\s*\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    if title:
+        title_clean = clean_text(title)
+
+        if title_clean and text.lower().startswith(
+            title_clean.lower()
+        ):
+            text = text[len(title_clean):].lstrip(
+                " -–|:;,."
+            )
+
+    # Remove APOD credit labels wherever they appear.
+    text = re.sub(
+        r"\bImage\s+Credit\s*(?:&|and)\s*Explanation\s*:\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(
+        r"\bExplanation\s*:\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove the unrelated introductory headline from this NASA story.
+    text = re.sub(
+        r"^\s*Shuttle Endeavour’s Last Flight Was 10 Years Ago\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
 
     # Remove APOD image credit and explanation labels.
     text = re.sub(
