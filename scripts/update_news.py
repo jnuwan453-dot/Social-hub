@@ -180,9 +180,16 @@ def clean_summary(value, title="", limit=230):
         r"Continue reading\.?",
         r"Click here\.?",
         r"Share this story\.?",
-        r"Skip to main content",
+       r"Skip to main content",
         r"Menu\s+Search",
         r"Navigation",
+
+        # NASA Hubble website navigation
+        r"Explore\s+Hubble",
+        r"Hubble\s+Overview",
+        r"About\s+Hubble",
+        r"Hubble\s+Timeline",
+        r"Why\s+Have\s+a\s+Telescope",
     ]
 
     for pattern in boilerplate_patterns:
