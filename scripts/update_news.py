@@ -698,22 +698,27 @@ def get_page_image(article_url):
 
 def get_image(item, article_url):
 
-    # 1. RSS media and enclosure fields.
+    # 1. RSS media and enclosure 
+fields.
     for element in item.iter():
 
-        if not isinstance(element.tag, str):
+        if not isinstance(element.tag, 
+str):
             continue
 
         tag = element.tag.lower()
 
-if (
+        if (
             tag.endswith("thumbnail")
             or tag.endswith("content")
-            or tag.endswith("enclosure")
+            or 
+tag.endswith("enclosure")
         ):
-            image_url = valid_image_url(
-                element.attrib.get("url", "")
-                or element.attrib.get("href", ""),
+            image_url = 
+valid_image_url(
+element.attrib.get("url", "")
+                or 
+element.attrib.get("href", ""),
                 article_url
             )
 
