@@ -234,7 +234,26 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    # Remove the unrelated introductory headline from this NASA story.
+   # Remove reading-time labels.
+    text = re.sub(
+        r"^\s*\d+\s+Min(?:ute)?s?\s+Read\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove repeated NASA article title.
+    if title:
+        title_clean = clean_text(title)
+
+        if title_clean and text.lower().startswith(
+            title_clean.lower()
+        ):
+            text = text[len(title_clean):].lstrip(
+                " -–|:;,."
+            )
+
+    # Remove unrelated introductory headline.
     text = re.sub(
         r"^\s*Shuttle Endeavour’s Last Flight Was 10 Years Ago\s*",
         "",
