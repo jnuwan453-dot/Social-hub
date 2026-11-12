@@ -706,22 +706,23 @@ def get_image(item, article_url):
 
         tag = element.tag.lower()
 
-        if (
+if (
             tag.endswith("thumbnail")
             or tag.endswith("content")
             or tag.endswith("enclosure")
         ):
-# Reject YouTube video URLs as article images.
-if image_url and (
-    "youtube.com" in image_url.lower()
-    or "youtu.be" in image_url.lower()
-):
-    image_url = ""
             image_url = valid_image_url(
                 element.attrib.get("url", "")
                 or element.attrib.get("href", ""),
                 article_url
             )
+
+            # Reject YouTube video URLs as article images.
+            if image_url and (
+                "youtube.com" in image_url.lower()
+                or "youtu.be" in image_url.lower()
+            ):
+                image_url = ""
 
             if image_url:
                 return image_url
