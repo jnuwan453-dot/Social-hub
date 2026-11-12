@@ -416,7 +416,24 @@ def clean_summary(value, title="", limit=230):
             .rstrip(" ,;:-")
             + "…"
         )
+# Clean the shortened summary before returning it.
+    shortened = re.sub(
+        r"\s+(?:on\s+)?(?:Sunday,?\s+)?Nov\.$",
+        "",
+        shortened,
+        flags=re.IGNORECASE
+    )
+    shortened = re.sub(
+        r"\s+see linked…?$",
+        "",
+        shortened,
+        flags=re.IGNORECASE
+    )
+    shortened = re.sub(r"\s+([.,!?;:])", r"\1", shortened)
+    shortened = re.sub(r"\s+", " ", shortened).strip()
 
+    if shortened:
+        shortened = shortened[0].upper() + shortened[1:]
     return shortened
 
 # --------------------------------------------------
