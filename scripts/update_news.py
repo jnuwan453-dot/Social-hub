@@ -714,6 +714,7 @@ str):
             or 
 tag.endswith("enclosure")
         ):
+
             image_url = 
 valid_image_url(
 element.attrib.get("url", "")
@@ -722,17 +723,21 @@ element.attrib.get("href", ""),
                 article_url
             )
 
-            # Reject YouTube video URLs as article images.
+            # Reject YouTube video URLs 
+as article images.
             if image_url and (
-                "youtube.com" in image_url.lower()
-                or "youtu.be" in image_url.lower()
+                "youtube.com" in 
+image_url.lower()
+                or "youtu.be" in 
+image_url.lower()
             ):
                 image_url = ""
 
             if image_url:
                 return image_url
 
-    # 2. Image embedded in RSS description.
+    # 2. Image embedded in RSS 
+description.
     description = get_text(
         item,
         "description",
@@ -757,7 +762,8 @@ element.attrib.get("href", ""),
         if image_url:
             return image_url
 
-    # 3. Original article page metadata.
+    # 3. Original article page 
+metadata.
     return get_page_image(article_url)
 
 
