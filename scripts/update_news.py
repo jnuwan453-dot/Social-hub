@@ -141,22 +141,15 @@ def clean_summary(value, title="", limit=230):
     text = clean_text(value)
 
     if not text:
-        return FALLBACK_SUMMARY
+        return "Read the original report for the latest details."
 
-    # Remove common NASA APOD navigation text.
+    # Remove common NASA / ESA navigation and website text.
     boilerplate_patterns = [
-
         r"Today's\s+APOD\s+Archive",
         r"Today’s\s+APOD\s+Archive",
         r"Today's\s+Archive",
         r"Today’s\s+Archive",
-
-        r"Submissions\s+Index",
-
-        r"Search\s+Calendar\s+RSS\s+Education\s+About\s+Discuss",
-
         r"Astronomy\s+Picture\s+of\s+the\s+Day",
-
         r"Discover\s+the\s+cosmos!?",
 
         r"Each day a different image or photograph "
@@ -164,6 +157,24 @@ def clean_summary(value, title="", limit=230):
         r"along with a brief explanation written by "
         r"a professional astronomer\.?",
 
+        r"Earth Observatory",
+        r"Image of the Day",
+        r"Topics",
+        r"All Topics",
+        r"Mission Overview",
+        r"Science Overview",
+        r"Mission Updates",
+        r"Mission News",
+        r"Multimedia",
+        r"Videos",
+        r"Audio",
+        r"Raw Images",
+        r"More Information",
+        r"Where is Curiosity\?",
+        r"Home",
+
+        r"Submissions Index",
+        r"Search Calendar RSS Education About Discuss",
         r"Read this release in English here\.?",
         r"Read more\.?",
         r"Continue reading\.?",
@@ -172,11 +183,9 @@ def clean_summary(value, title="", limit=230):
         r"Skip to main content",
         r"Menu\s+Search",
         r"Navigation",
-
     ]
 
     for pattern in boilerplate_patterns:
-
         text = re.sub(
             pattern,
             " ",
@@ -184,7 +193,7 @@ def clean_summary(value, title="", limit=230):
             flags=re.IGNORECASE
         )
 
-    # Remove navigation words.
+    # Remove repeated navigation words.
     text = re.sub(
         r"\b(?:Archive|Submissions Index|Search|Calendar|"
         r"Education|Discuss|Navigation)\b",
@@ -193,7 +202,38 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    # Remove date/category prefixes.
+    # Remove copyright information.
+    text = re.sub(
+        r"Copyright\s*[:©].*?(?=Explanation|Image Credit|$)",
+        " ",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(
+        r"©\s*\d{4}[^.]*\.?",
+        " ",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove author/byline prefixes.
+    text = re.sub(
+        r"^(?:By|Written by|Author:?|Posted by)\s+"
+        r"[^.]{2,120}(?:\.\s*|\s+)(?=[A-Z])",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove date prefixes.
+    text = re.sub(
+        r"^\s*\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
     text = re.sub(
         r"^\s*(?:Science|NASA|Space)\s*[-–|:]\s*"
         r"\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
@@ -210,52 +250,36 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    # Remove repeated title from the beginning.
+    # Remove repeated article title at the beginning.
     if title:
-
         title_clean = clean_text(title)
 
-        title_variants = [
-            title_clean,
-            re.sub(
-                r"^APOD\s*[:\-–|]\s*",
-                "",
-                title_clean,
-                flags=re.IGNORECASE
-            ),
-        ]
+        if title_clean and text.lower().startswith(
+            title_clean.lower()
+        ):
+            text = text[len(title_clean):].lstrip(
+                " -–|:;,."
+            )
 
-        for title_variant in title_variants:
-
-            if not title_variant:
-                continue
-
-            if text.lower().startswith(title_variant.lower()):
-
-                text = text[len(title_variant):].lstrip(
-                    " -–|:;,."
-                )
-
-    # Remove remaining placeholder fragments.
+    # Remove placeholder fragments.
     text = re.sub(
         r"\[\s*(?:\.\.\.|…)?\s*\]",
         " ",
         text
     )
 
+    # Remove standalone ellipsis.
     text = re.sub(
-        r"\b(?:Read more|Continue reading)\b",
+        r"(?:\.\.\.|…)+",
         " ",
-        text,
-        flags=re.IGNORECASE
+        text
     )
 
-    # Remove ellipsis and clean punctuation.
-    text = re.sub(r"(?:\.\.\.|…)+", " ", text)
+    # Clean whitespace and punctuation.
     text = re.sub(r"\s+", " ", text)
     text = text.strip(" -–|•…:;,. ")
 
-    # Reject navigation-only summaries.
+    # Reject summaries containing only navigation text.
     meaningful = re.sub(
         r"[^A-Za-z0-9]",
         "",
@@ -263,8 +287,9 @@ def clean_summary(value, title="", limit=230):
     )
 
     if len(meaningful) < 35:
-        return FALLBACK_SUMMARY
+        return "Read the original report for the latest details."
 
+    # Keep summary within the requested character limit.
     if len(text) <= limit:
         return text
 
@@ -277,11 +302,8 @@ def clean_summary(value, title="", limit=230):
     )
 
     if sentence_end >= int(limit * 0.55):
-
         shortened = shortened[:sentence_end + 1]
-
     else:
-
         shortened = (
             shortened.rsplit(" ", 1)[0]
             .rstrip(" ,;:-")
@@ -289,7 +311,6 @@ def clean_summary(value, title="", limit=230):
         )
 
     return shortened
-
 
 # --------------------------------------------------
 # CATEGORY CLASSIFICATION
