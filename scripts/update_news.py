@@ -141,9 +141,83 @@ def clean_summary(value, title="", limit=230):
     text = clean_text(value)
 
     if not text:
-        return "Read the original report for the latest details."
+        return FALLBACK_SUMMARY
 
-    # Remove common NASA / ESA navigation and website text.
+    # Detect NASA website navigation-heavy summaries.
+    navigation_markers = [
+        r"The History of Hubble in Space",
+        r"Hubble by the Numbers",
+        r"At the Museum",
+        r"FAQs",
+        r"Impact & Benefits",
+        r"Science Impacts",
+        r"Cultural Impact",
+        r"Technology Benefits",
+        r"Earth EO Explorer",
+        r"All Atmosphere",
+        r"Heat & Radiation",
+        r"Life on Earth",
+        r"Human Dimensions",
+        r"Natural Events",
+        r"Remote Sensing",
+        r"Snow & Ice",
+        r"More Content",
+        r"Global Maps",
+        r"Curiosity Instruments",
+        r"Exploration Goals",
+        r"News and Features",
+        r"More Resources",
+        r"Mars Missions",
+        r"Mars Perseverance Rover",
+        r"Mars Curiosity Rover",
+        r"Mars Reconnaissance Orbiter",
+    ]
+
+    navigation_count = sum(
+        1
+        for pattern in navigation_markers
+        if re.search(pattern, text, re.IGNORECASE)
+    )
+
+    # Navigation-heavy content is not a reliable article summary.
+    if navigation_count >= 2:
+        return FALLBACK_SUMMARY
+
+    # Remove APOD date prefix.
+    text = re.sub(
+        r"^\s*\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove repeated article title.
+    if title:
+        title_clean = clean_text(title)
+
+        if title_clean and text.lower().startswith(
+            title_clean.lower()
+        ):
+            text = text[len(title_clean):].lstrip(
+                " -–|:;,."
+            )
+
+    # Remove APOD image credit and explanation labels.
+    text = re.sub(
+        r"^\s*Image\s+Credit\s*(?:&|and)\s*Explanation\s*:\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    text = re.sub(
+        r"^\s*Explanation\s*:\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
+
+    # Remove common APOD boilerplate.
     boilerplate_patterns = [
         r"Today's\s+APOD\s+Archive",
         r"Today’s\s+APOD\s+Archive",
@@ -151,12 +225,10 @@ def clean_summary(value, title="", limit=230):
         r"Today’s\s+Archive",
         r"Astronomy\s+Picture\s+of\s+the\s+Day",
         r"Discover\s+the\s+cosmos!?",
-
         r"Each day a different image or photograph "
         r"of our fascinating universe is featured, "
         r"along with a brief explanation written by "
         r"a professional astronomer\.?",
-
         r"Earth Observatory",
         r"Image of the Day",
         r"Topics",
@@ -171,8 +243,9 @@ def clean_summary(value, title="", limit=230):
         r"Raw Images",
         r"More Information",
         r"Where is Curiosity\?",
-        r"Home",
-
+        r"Skip to main content",
+        r"Menu\s+Search",
+        r"Navigation",
         r"Submissions Index",
         r"Search Calendar RSS Education About Discuss",
         r"Read this release in English here\.?",
@@ -180,16 +253,6 @@ def clean_summary(value, title="", limit=230):
         r"Continue reading\.?",
         r"Click here\.?",
         r"Share this story\.?",
-       r"Skip to main content",
-        r"Menu\s+Search",
-        r"Navigation",
-
-        # NASA Hubble website navigation
-        r"Explore\s+Hubble",
-        r"Hubble\s+Overview",
-        r"About\s+Hubble",
-        r"Hubble\s+Timeline",
-        r"Why\s+Have\s+a\s+Telescope",
     ]
 
     for pattern in boilerplate_patterns:
@@ -199,15 +262,6 @@ def clean_summary(value, title="", limit=230):
             text,
             flags=re.IGNORECASE
         )
-
-    # Remove repeated navigation words.
-    text = re.sub(
-        r"\b(?:Archive|Submissions Index|Search|Calendar|"
-        r"Education|Discuss|Navigation)\b",
-        " ",
-        text,
-        flags=re.IGNORECASE
-    )
 
     # Remove copyright information.
     text = re.sub(
@@ -233,14 +287,7 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    # Remove date prefixes.
-    text = re.sub(
-        r"^\s*\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
-        "",
-        text,
-        flags=re.IGNORECASE
-    )
-
+    # Remove date and category prefixes.
     text = re.sub(
         r"^\s*(?:Science|NASA|Space)\s*[-–|:]\s*"
         r"\d{4}\s+[A-Za-z]+\s+\d{1,2}\s*[-–|:]\s*",
@@ -257,25 +304,13 @@ def clean_summary(value, title="", limit=230):
         flags=re.IGNORECASE
     )
 
-    # Remove repeated article title at the beginning.
-    if title:
-        title_clean = clean_text(title)
-
-        if title_clean and text.lower().startswith(
-            title_clean.lower()
-        ):
-            text = text[len(title_clean):].lstrip(
-                " -–|:;,."
-            )
-
-    # Remove placeholder fragments.
+    # Remove placeholder fragments and ellipses.
     text = re.sub(
         r"\[\s*(?:\.\.\.|…)?\s*\]",
         " ",
         text
     )
 
-    # Remove standalone ellipsis.
     text = re.sub(
         r"(?:\.\.\.|…)+",
         " ",
@@ -286,7 +321,7 @@ def clean_summary(value, title="", limit=230):
     text = re.sub(r"\s+", " ", text)
     text = text.strip(" -–|•…:;,. ")
 
-    # Reject summaries containing only navigation text.
+    # Reject summaries that contain too little real information.
     meaningful = re.sub(
         r"[^A-Za-z0-9]",
         "",
@@ -294,9 +329,9 @@ def clean_summary(value, title="", limit=230):
     )
 
     if len(meaningful) < 35:
-        return "Read the original report for the latest details."
+        return FALLBACK_SUMMARY
 
-    # Keep summary within the requested character limit.
+    # Limit summary length.
     if len(text) <= limit:
         return text
 
@@ -327,6 +362,7 @@ def classify_category(title, summary, fallback="Space"):
 
     text = f"{title} {summary}".lower()
 
+    # AI and technology stories.
     if re.search(
         r"\b(artificial intelligence|machine learning|"
         r"robotics|technology|algorithm|computer|"
@@ -336,16 +372,20 @@ def classify_category(title, summary, fallback="Space"):
     ):
         return "AI & Technology"
 
+    # Earth, environment and general science stories.
     if re.search(
         r"\b(climate|weather|clouds?|fog|earth observatory|"
         r"ocean|wildfire|hurricane|atmosphere|ecosystem|"
         r"biodiversity|earth science|reservoir|flood|"
         r"flooding|river|rainfall|drought|water surge|"
-        r"water levels|soil|forest|volcano|earthquake)\b",
+        r"water levels|soil|forest|volcano|earthquake|"
+        r"flow country|peatland|wetland|habitat|ecology|"
+        r"environment|environmental)\b",
         text
     ):
         return "Science"
 
+    # Discoveries and scientific findings.
     if re.search(
         r"\b(discovery|discoveries|discovered|detection|"
         r"detected|evidence of|newly found|first ever|"
@@ -355,11 +395,14 @@ def classify_category(title, summary, fallback="Space"):
     ):
         return "Discoveries"
 
+    # Space and astronomy stories.
     if re.search(
         r"\b(space|mars|moon|lunar|planet|saturn|jupiter|"
         r"astronaut|rocket|rover|telescope|galaxy|galaxies|"
         r"star|stars|orbit|chandra|perseverance|curiosity|"
-        r"voyager|satellite|nebula|cosmos|ngc)\b",
+        r"voyager|satellite|nebula|cosmos|ngc|hubble|"
+        r"bepicolombo|euclid|solar orbiter|webb|"
+        r"endeavour)\b",
         text
     ):
         return "Space"
