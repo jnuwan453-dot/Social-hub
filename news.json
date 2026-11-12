@@ -1,5 +1,32 @@
 [
   {
+    "title": "NASA Ames Stars of the Month: November 2026",
+    "summary": "The NASA Ames Science Directorate recognizes the outstanding contributions of (pictured left to right) Alyssa Villanueva, Steve Howell, and Samuel LeBlanc.",
+    "url": "https://www.nasa.gov/general/nasa-ames-stars-of-the-month-november-2026/",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/som-november-2026-banner.jpg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-12T17:54:32+00:00"
+  },
+  {
+    "title": "Latest updates: BepiColombo's arrival at Mercury",
+    "summary": "After eight years of travelling through the inner Solar System, BepiColombo is arriving at Mercury. This page will show the latest updates throughout the mission's arrival",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/latest-updates-bepicolombo-s-arrival-at-mercury",
+    "image": "",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-11-12T14:12:28+00:00"
+  },
+  {
+    "title": "NASA’s Hubble Offers Cosmic Sampler of Targets for Roman",
+    "summary": "Explore Hubble Hubble Overview About Hubble The History of Hubble Hubble Timeline Why Have a Telescope in Space? Hubble by the Numbers At the Museum FAQs Impact & Benefits Hubble’s Impact & Benefits Science Impacts Cultural…",
+    "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-offers-cosmic-sampler-of-targets-for-roman/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/missions/hubble/gravitational-lens/Hubble_lenscollage_P18085_ok4_noletters.tif/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-12T13:18:40+00:00"
+  },
+  {
     "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
     "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
     "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
@@ -28,7 +55,7 @@
   },
   {
     "title": "Moon, Venus and Spica Meet",
-    "summary": "2026 November 12 - Moon, Venus and Spica Meet 2026 November 12 Moon, Venus and Spica Meet Image Credit & Copyright : Włodzimierz Bubak Explanation: Explanation: Not all those who wander are lost.",
+    "summary": "2026 November 12 - Moon, Venus and Spica Meet 2026 November 12 Moon, Venus and Spica Meet Image Credit & Explanation: Explanation: Not all those who wander are lost.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-12-moon-venus-and-spica-meet/",
     "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/conjunction-bubak.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
@@ -37,16 +64,16 @@
   },
   {
     "title": "Scotland’s Flow Country",
-    "summary": "Earth Observatory Science Earth Observatory Scotland’s Flow Country Earth Earth Observatory Image of the Day EO Explorer Topics All Topics Atmosphere Land Heat & Radiation Life on Earth Human Dimensions Natural Events Oceans…",
+    "summary": "Science Scotland’s Flow Country Earth EO Explorer All Atmosphere Land Heat & Radiation Life on Earth Human Dimensions Natural Events Oceans Remote Sensing Technology Snow & Ice Water More Content Collections Global Maps World of…",
     "url": "https://science.nasa.gov/earth/earth-observatory/scotlands-flow-country/",
     "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/scotland’s-flow-country-/scotland_flowcountry_oli2_20240304_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
-    "category": "Science",
+    "category": "AI & Technology",
     "published": "2026-11-12T05:01:00+00:00"
   },
   {
     "title": "Curiosity Blog, Sols 5063-5069 Rocks and Chips",
-    "summary": "Curiosity Curiosity Home Mission Overview Where is Curiosity? Mission Updates Science Overview Instruments Highlights Exploration Goals News and Features Multimedia Curiosity Raw Images Images Videos Audio Mosaics More Resources…",
+    "summary": "Curiosity Curiosity Instruments Highlights Exploration Goals News and Features Curiosity Images Mosaics More Resources Mars Missions Mars Perseverance Rover Mars Curiosity Rover Mars Reconnaissance Orbiter Mars Odyssey More Mars…",
     "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips/",
     "image": "https://assets.science.nasa.gov/content/dam/science/missions/msl/2026/curiosity-rover-updates/november/https___mars.nasa.gov_msl-raw-images_msss_05067_mhli_5067MH0009180001804584C00_DXXX.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
@@ -54,17 +81,8 @@
     "published": "2026-11-12T00:41:35+00:00"
   },
   {
-    "title": "Latest updates: BepiColombo's arrival at Mercury",
-    "summary": "After eight years of travelling through the inner Solar System, BepiColombo is arriving at Mercury. This page will show the latest updates throughout the mission's arrival",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/latest-updates-bepicolombo-s-arrival-at-mercury",
-    "image": "",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-11T14:50:35+00:00"
-  },
-  {
     "title": "NGC 4449: Small Galaxy, Big Impact",
-    "summary": "Explanation: Don’t judge a galaxy by its size. Our home galaxy, the Milky Way , is about 100,000 light years across. This huge expanse of space contains hundreds of billions of stars!",
+    "summary": "2026 November 11 - NGC 4449: Small Galaxy, Big Impact 2026 November 11 NGC 4449: Small Galaxy, Big Impact Image Credit & Explanation: Explanation: Don’t judge a galaxy by its size.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact/",
     "image": "https://assets.science.nasa.gov/content/dam/science/missions/hubble/galaxies/irregular/NGC%204449.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
@@ -73,11 +91,11 @@
   },
   {
     "title": "Water Surges Into Navajo Reservoir",
-    "summary": "Earth Observatory Science Earth Observatory Water Surges Into Navajo Earth Earth Observatory Image of the Day EO Explorer Topics All Topics Atmosphere Land Heat & Radiation Life on Earth Human Dimensions Natural Events Oceans…",
+    "summary": "Science Water Surges Into Navajo Earth EO Explorer All Atmosphere Land Heat & Radiation Life on Earth Human Dimensions Natural Events Oceans Remote Sensing Technology Snow & Ice Water More Content Collections Global Maps World…",
     "url": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir/",
     "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/water-surges-into-navajo-reservoir/navajoreservoir_oli2_20261107_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
-    "category": "Science",
+    "category": "AI & Technology",
     "published": "2026-11-11T05:01:00+00:00"
   },
   {
@@ -91,7 +109,7 @@
   },
   {
     "title": "NASA to Welcome Expedition 74 Astronauts Home at Space Center Houston",
-    "summary": "NASA will welcome home the Expedition 74 crew during a public event at Space Center Houston following their return from a long-duration mission aboard the International Space Station.",
+    "summary": "NASA will welcome the Expedition 74 crew during a public event at Space Center Houston following their return from a long-duration mission aboard the International Space Station.",
     "url": "https://www.nasa.gov/news-release/nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston/",
     "image": "https://www.nasa.gov/wp-content/uploads/2026/11/expedition-74-picture.jpg",
     "source": "NASA",
@@ -99,26 +117,8 @@
     "published": "2026-11-10T18:06:33+00:00"
   },
   {
-    "title": "NASA Scientists Show How Gravitational Waves Can Reveal New Worlds",
-    "summary": "5 min read NASA Scientists Show How Gravitational Waves Can Reveal New Worlds The LISA (Laser Interferometer Space Antenna) observatory, now in development, will detect gravitational waves, the tiny ripples in space-time caused…",
-    "url": "https://science.nasa.gov/missions/lisa/gravitational-waves-can-reveal-new-worlds/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/missions/lisa/news/2026/l3harris-award-for-test-telescope/LISA_key_visual_ESA_lg_ac.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-10T16:00:26+00:00"
-  },
-  {
-    "title": "CHAPEA Crew Leaves a Mark",
-    "summary": "NASA The Crew Health and Performance Exploration Analog (CHAPEA) Mission 2 crew arranged photos around a boot print in the simulated Martian sand outside their habitat on Aug. 31, 2026.",
-    "url": "https://www.nasa.gov/image-article/chapea-crew-leaves-a-mark/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/jsc2026e425219orig.jpg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-10T14:57:55+00:00"
-  },
-  {
     "title": "Saturn Behind the Moon",
-    "summary": "2026 November 10 - Saturn Behind the Moon 2026 November 10 Saturn Behind the Moon Image Credit & Copyright : Roberto Ortu Explanation: Explanation: Sometimes Saturn disappears.",
+    "summary": "2026 November 10 - Saturn Behind the Moon 2026 November 10 Saturn Behind the Moon Image Credit & Explanation: Explanation: Sometimes Saturn disappears.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-10-saturn-behind-the-moon/",
     "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Moonsaturn6_Ortu_2124.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
@@ -127,7 +127,7 @@
   },
   {
     "title": "Successful Earth flyby improves Juice’s course to Jupiter",
-    "summary": "The European Space Agency’s Jupiter Icy Moons Explorer (Juice) skimmed the very outer edge of Earth’s atmosphere on 28 September, using the gravity of our home planet to alter its route to Jupiter using very little fuel",
+    "summary": "The European Space Agency’s Jupiter Icy Moons Explorer (Juice) skimmed the very outer edge of Earth’s atmosphere on 28 September, using the gravity of our planet to alter its route to Jupiter using very little fuel",
     "url": "https://www.esa.int/articles/about-us/directorates/science/juice/successful-earth-flyby-improves-juice-s-course-to-jupiter",
     "image": "",
     "source": "ESA",
@@ -208,11 +208,11 @@
   },
   {
     "title": "A Farewell to Swift",
-    "summary": "2026 November 6 - A Farewell to Swift 2026 November 6 A Farewell to Swift Image Credit & Copyright : NASA / Swift and AndreaMosaic Explanation: Explanation: It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory .",
+    "summary": "Explanation: It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory . After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of…",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
     "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
     "source": "NASA",
-    "category": "Space",
+    "category": "Science",
     "published": "2026-11-06T05:05:00+00:00"
   }
 ]
