@@ -190,7 +190,13 @@ def clean_summary(value, title="", limit=230):
         text,
         flags=re.IGNORECASE
     )
-
+# Remove reading-time labels.
+    text = re.sub(
+        r"^\s*\d+\s+Min(?:ute)?s?\s+Read\s*",
+        "",
+        text,
+        flags=re.IGNORECASE
+    )
     # Remove repeated article title.
     if title:
         title_clean = clean_text(title)
