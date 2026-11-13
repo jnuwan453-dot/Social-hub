@@ -399,7 +399,6 @@ def classify_category(title, summary, fallback="Space"):
 
     text = f"{title} {summary}".lower()
 
-    # AI and technology stories.
     if re.search(
         r"\b(artificial intelligence|machine learning|robotics|technology|"
         r"algorithm|computer|cybersecurity|quantum computing|"
@@ -408,7 +407,6 @@ def classify_category(title, summary, fallback="Space"):
     ):
         return "AI & Technology"
 
-    # Earth and environmental science.
     if re.search(
         r"\b(climate|weather|clouds?|fog|earth observatory|ocean|wildfire|"
         r"hurricane|atmosphere|ecosystem|biodiversity|earth science|"
@@ -419,7 +417,6 @@ def classify_category(title, summary, fallback="Space"):
     ):
         return "Science"
 
-    # Discoveries.
     if re.search(
         r"\b(discovery|discoveries|discovered|detection|detected|evidence of|"
         r"newly found|first ever|new finding|newly discovered|exoplanet|"
@@ -428,7 +425,6 @@ def classify_category(title, summary, fallback="Space"):
     ):
         return "Discoveries"
 
-    # Space and astronomy.
     if re.search(
         r"\b(space|mars|moon|lunar|planet|saturn|jupiter|astronaut|rocket|"
         r"rover|telescope|galaxy|galaxies|star|stars|orbit|chandra|"
@@ -531,6 +527,12 @@ def valid_image_url(url, base_url=""):
     if (
         parsed.scheme not in ("http", "https")
         or not parsed.netloc
+    ):
+        return ""
+
+    if (
+        "youtube.com" in url.lower()
+        or "youtu.be" in url.lower()
     ):
         return ""
 
@@ -667,13 +669,6 @@ def get_image(item, article_url):
                 or element.attrib.get("href", ""),
                 article_url,
             )
-
-            # Do not use YouTube video links as article images.
-            if image_url and (
-                "youtube.com" in image_url.lower()
-                or "youtu.be" in image_url.lower()
-            ):
-                image_url = ""
 
             if image_url:
                 return image_url
@@ -883,23 +878,28 @@ def main():
     articles = []
     seen_links = set()
 
-    successful_sources = set()
-
-    configured_sources = {
-        feed["source"]
-        for feed in FEEDS
-    }
+    successful_feeds = set()
+    failed_feeds = set()
 
     existing_articles = load_existing_news()
 
+    # Keep old articles indexed by their original URL.
+    old_by_link = {
+        article.get("url"): article
+        for article in existing_articles
+        if isinstance(article, dict)
+        and article.get("url")
+    }
+
     for feed in FEEDS:
 
+        feed_name = feed["name"]
         source_name = feed["source"]
 
         try:
 
             print(
-                f"\nReading {feed['name']} feed..."
+                f"\nReading {feed_name} feed..."
             )
 
             items, actual_feed_url = fetch_feed(feed)
@@ -938,8 +938,6 @@ def main():
                 ):
                     continue
 
-                seen_links.add(link)
-
                 summary = get_best_summary(
                     item,
                     title,
@@ -960,8 +958,6 @@ def main():
                     "{*}updated",
                 )
 
-                date = parse_published(published)
-
                 print(
                     f"Getting image: {title[:60]}"
                 )
@@ -971,11 +967,26 @@ def main():
                     link,
                 )
 
-                print(
-                    "Image found."
-                    if image_url
-                    else "No image found for this article."
+                # Preserve the previous image for this exact article URL
+                # when the current feed does not provide an image.
+                old_article = old_by_link.get(
+                    link,
+                    {},
                 )
+
+                if not image_url:
+                    image_url = old_article.get(
+                        "image",
+                        "",
+                    )
+
+                # Preserve the previous useful summary if the new
+                # feed only provides an unusable description.
+                if (
+                    summary == FALLBACK_SUMMARY
+                    and old_article.get("summary")
+                ):
+                    summary = old_article["summary"]
 
                 articles.append({
                     "title": title,
@@ -984,38 +995,40 @@ def main():
                     "image": image_url,
                     "source": source_name,
                     "category": category,
-                    "published": date,
+                    "published": parse_published(published),
                 })
 
+                seen_links.add(link)
                 source_count += 1
+
+                print(
+                    "Image found."
+                    if image_url
+                    else "No image found for this article."
+                )
 
             if source_count == 0:
 
                 raise RuntimeError(
-                    f"{feed['name']} returned no usable articles."
+                    f"{feed_name} returned no usable articles."
                 )
 
-            successful_sources.add(
-                source_name
-            )
+            successful_feeds.add(feed_name)
 
             print(
-                f"{feed['name']}: {source_count} articles collected."
+                f"{feed_name}: {source_count} articles collected."
             )
 
         except Exception as error:
 
+            failed_feeds.add(feed_name)
+
             print(
-                f"Could not update {feed['name']}: {error}"
+                f"Could not update {feed_name}: {error}"
             )
 
-    # Determine failed sources.
-    failed_sources = (
-        configured_sources - successful_sources
-    )
-
-    # Never overwrite news.json if all feeds fail.
-    if not successful_sources:
+    # If every feed fails, do not overwrite the existing news.json.
+    if not successful_feeds:
 
         print(
             "\nAll feeds failed. Existing news.json will be preserved."
@@ -1023,7 +1036,21 @@ def main():
 
         return
 
-    # Preserve old stories from failed feeds.
+    # A source is considered partially failed if any of its configured
+    # feeds failed. This is important because both NASA feeds share
+    # the same source name in the existing JSON structure.
+    failed_sources = {
+        feed["source"]
+        for feed in FEEDS
+        if feed["name"] in failed_feeds
+    }
+
+    configured_sources = {
+        feed["source"]
+        for feed in FEEDS
+    }
+
+    # Preserve previous stories from sources with failed feeds.
     preserved_count = 0
 
     for old_article in existing_articles:
@@ -1053,9 +1080,7 @@ def main():
         ):
 
             articles.append(old_article)
-
             seen_links.add(old_link)
-
             preserved_count += 1
 
     print(
@@ -1124,14 +1149,14 @@ def main():
     )
 
     print(
-        f"Successful feeds: {', '.join(sorted(successful_sources))}"
+        f"Successful feeds: {', '.join(sorted(successful_feeds))}"
     )
 
-    if failed_sources:
+    if failed_feeds:
 
         print(
             "Feeds requiring attention: "
-            f"{', '.join(sorted(failed_sources))}"
+            f"{', '.join(sorted(failed_feeds))}"
         )
 
 
