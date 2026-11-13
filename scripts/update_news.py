@@ -55,7 +55,9 @@ VALID_CATEGORIES = {
 
 OUTPUT_FILE = "news.json"
 TEMP_FILE = "news.json.tmp"
+
 MAX_ARTICLES = 24
+MAX_ITEMS_PER_FEED = 12
 FALLBACK_SUMMARY = "Read the original report for the latest details."
 
 
@@ -120,6 +122,107 @@ def clean_text(value):
         text = re.sub(r"<[^>]+>", " ", str(value))
 
     text = html.unescape(text)
+
+    return re.sub(r"\s+", " ", text).strip()
+
+
+# --------------------------------------------------
+# SUMMARY CLEANING HELPERS
+# --------------------------------------------------
+
+def remove_image_credits(text):
+
+    # Remove credit blocks at the beginning of a summary.
+    # Example:
+    # X-ray: NASA/...; Optical: SDSS; Image Processing: NASA/...
+    # Using NASA's Chandra X-ray Observatory...
+
+    credit_labels = (
+        r"(?:X-ray|Optical|Infrared|Radio|"
+        r"Ultraviolet|Composite|Illustration|"
+        r"Image Processing|Image Credit|"
+        r"Photo Credit|Credits?)"
+    )
+
+    if re.match(
+        r"^\s*" + credit_labels + r"\s*:",
+        text,
+        re.IGNORECASE,
+    ):
+
+        narrative_starters = [
+            r"\bUsing\s+",
+            r"\bThe\s+",
+            r"\bA\s+",
+            r"\bAn\s+",
+            r"\bAstronomers\s+",
+            r"\bScientists\s+",
+            r"\bResearchers\s+",
+            r"\bNASA\s+",
+            r"\bESA\s+",
+            r"\bThis\s+",
+            r"\bThese\s+",
+            r"\bObservations\s+",
+        ]
+
+        positions = []
+
+        for pattern in narrative_starters:
+
+            match = re.search(
+                pattern,
+                text,
+                re.IGNORECASE,
+            )
+
+            if match:
+                positions.append(match.start())
+
+        if positions:
+
+            first_position = min(positions)
+
+            if first_position > 10:
+                text = text[first_position:]
+
+    # Remove photographer credits such as:
+    # NASA/Amber Jean Notvest The U.S. Air Force...
+
+    text = re.sub(
+        r"^\s*NASA\s*/\s*"
+        r"[A-Za-z][A-Za-z.'-]*"
+        r"(?:\s+[A-Za-z][A-Za-z.'-]*){1,3}"
+        r"\s+(?=(?:The|A|An|This|These|Using|"
+        r"Astronomers|Scientists|NASA|ESA)\b)",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    # Remove inline credits such as:
+    # Credits: NASA/Carla Thomas As a new exhibit opens...
+
+    text = re.sub(
+        r"\b(?:Image\s+)?Credits?\s*:\s*"
+        r"NASA\s*/\s*"
+        r"[A-Za-z][A-Za-z.'-]*"
+        r"(?:\s+[A-Za-z][A-Za-z.'-]*){0,3}"
+        r"\s*",
+        " ",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    # Remove standalone NASA photographer prefix.
+    text = re.sub(
+        r"^\s*NASA\s*/\s*"
+        r"[A-Za-z][A-Za-z.'-]*"
+        r"(?:\s+[A-Za-z][A-Za-z.'-]*){1,3}"
+        r"\s*$",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
 
     return re.sub(r"\s+", " ", text).strip()
 
@@ -197,6 +300,7 @@ def clean_summary(value, title="", limit=230):
         if title_clean and text.lower().startswith(
             title_clean.lower()
         ):
+
             text = text[len(title_clean):].lstrip(
                 " -–|:;,."
             )
@@ -223,6 +327,9 @@ def clean_summary(value, title="", limit=230):
         text,
         flags=re.IGNORECASE,
     )
+
+    # Remove image credits and photographer prefixes.
+    text = remove_image_credits(text)
 
     boilerplate_patterns = [
         r"Today's\s+APOD\s+Archive",
@@ -358,7 +465,6 @@ def clean_summary(value, title="", limit=230):
             + "…"
         )
 
-    # Clean shortened summary.
     shortened = re.sub(
         r"\s+(?:on\s+)?(?:Sunday,?\s+)?Nov\.$",
         "",
@@ -399,40 +505,52 @@ def classify_category(title, summary, fallback="Space"):
 
     text = f"{title} {summary}".lower()
 
+    # AI and technology.
     if re.search(
-        r"\b(artificial intelligence|machine learning|robotics|technology|"
-        r"algorithm|computer|cybersecurity|quantum computing|"
-        r"semiconductor|microchip)\b",
+        r"\b(artificial intelligence|machine learning|robotics|"
+        r"technology|algorithm|computer|cybersecurity|"
+        r"quantum computing|semiconductor|microchip|"
+        r"generative ai|software)\b",
         text,
     ):
         return "AI & Technology"
 
+    # Space and astronomy take priority over general discovery terms.
+    # This prevents galaxy and astronomy stories being misclassified.
     if re.search(
-        r"\b(climate|weather|clouds?|fog|earth observatory|ocean|wildfire|"
-        r"hurricane|atmosphere|ecosystem|biodiversity|earth science|"
-        r"reservoir|flood|flooding|river|rainfall|drought|water surge|"
-        r"water levels|soil|forest|volcano|earthquake|flow country|"
-        r"peatland|wetland|habitat|ecology|environment|environmental)\b",
+        r"\b(space|mars|moon|lunar|planet|saturn|jupiter|"
+        r"astronaut|rocket|rover|telescope|galaxy|galaxies|"
+        r"star|stars|orbit|chandra|perseverance|curiosity|"
+        r"voyager|satellite|nebula|cosmos|ngc|hubble|"
+        r"bepicolombo|euclid|solar orbiter|webb|endeavour|"
+        r"andromeda|exoplanet|supernova|black hole|"
+        r"stellar|constellation|asteroid|comet)\b",
         text,
     ):
-        return "Science"
+        return "Space"
 
+    # Discoveries and scientific breakthroughs.
     if re.search(
-        r"\b(discovery|discoveries|discovered|detection|detected|evidence of|"
-        r"newly found|first ever|new finding|newly discovered|exoplanet|"
-        r"signs of life|mysterious outburst)\b",
+        r"\b(discovery|discoveries|discovered|detection|"
+        r"detected|evidence of|newly found|first ever|"
+        r"new finding|newly discovered|signs of life|"
+        r"breakthrough|scientists reveal)\b",
         text,
     ):
         return "Discoveries"
 
+    # Earth and environmental science.
     if re.search(
-        r"\b(space|mars|moon|lunar|planet|saturn|jupiter|astronaut|rocket|"
-        r"rover|telescope|galaxy|galaxies|star|stars|orbit|chandra|"
-        r"perseverance|curiosity|voyager|satellite|nebula|cosmos|ngc|"
-        r"hubble|bepicolombo|euclid|solar orbiter|webb|endeavour)\b",
+        r"\b(climate|weather|clouds?|fog|earth observatory|"
+        r"ocean|wildfire|hurricane|atmosphere|ecosystem|"
+        r"biodiversity|earth science|reservoir|flood|"
+        r"flooding|river|rainfall|drought|water surge|"
+        r"water levels|soil|forest|volcano|earthquake|"
+        r"flow country|peatland|wetland|habitat|ecology|"
+        r"environment|environmental|pollution)\b",
         text,
     ):
-        return "Space"
+        return "Science"
 
     if fallback in VALID_CATEGORIES:
         return fallback
@@ -869,6 +987,36 @@ def load_existing_news():
     return []
 
 
+def refresh_preserved_article(article):
+
+    # Preserve existing fields and image.
+    updated = dict(article)
+
+    title = updated.get("title", "")
+    summary = updated.get("summary", "")
+
+    # Clean existing summaries too, not just new feed summaries.
+    cleaned_summary = clean_summary(
+        summary,
+        title,
+    )
+
+    if cleaned_summary != FALLBACK_SUMMARY:
+        updated["summary"] = cleaned_summary
+
+    # Reclassify old stories using the corrected category rules.
+    updated["category"] = classify_category(
+        title,
+        updated.get("summary", ""),
+        updated.get("category", "Science"),
+    )
+
+    if updated["category"] not in VALID_CATEGORIES:
+        updated["category"] = "Science"
+
+    return updated
+
+
 # --------------------------------------------------
 # MAIN NEWS UPDATE
 # --------------------------------------------------
@@ -906,7 +1054,7 @@ def main():
 
             source_count = 0
 
-            for item in items[:12]:
+            for item in items[:MAX_ITEMS_PER_FEED]:
 
                 title = clean_text(
                     get_text(
@@ -943,6 +1091,22 @@ def main():
                     title,
                 )
 
+                # Reuse old summary if the new feed has no useful text.
+                old_article = old_by_link.get(
+                    link,
+                    {},
+                )
+
+                if (
+                    summary == FALLBACK_SUMMARY
+                    and old_article.get("summary")
+                ):
+
+                    summary = clean_summary(
+                        old_article["summary"],
+                        title,
+                    )
+
                 category = classify_category(
                     title,
                     summary,
@@ -969,24 +1133,11 @@ def main():
 
                 # Preserve the previous image for this exact article URL
                 # when the current feed does not provide an image.
-                old_article = old_by_link.get(
-                    link,
-                    {},
-                )
-
                 if not image_url:
                     image_url = old_article.get(
                         "image",
                         "",
                     )
-
-                # Preserve the previous useful summary if the new
-                # feed only provides an unusable description.
-                if (
-                    summary == FALLBACK_SUMMARY
-                    and old_article.get("summary")
-                ):
-                    summary = old_article["summary"]
 
                 articles.append({
                     "title": title,
@@ -1037,8 +1188,7 @@ def main():
         return
 
     # A source is considered partially failed if any of its configured
-    # feeds failed. This is important because both NASA feeds share
-    # the same source name in the existing JSON structure.
+    # feeds failed. This protects old stories when one feed fails.
     failed_sources = {
         feed["source"]
         for feed in FEEDS
@@ -1079,7 +1229,11 @@ def main():
             and old_link not in seen_links
         ):
 
-            articles.append(old_article)
+            preserved_article = refresh_preserved_article(
+                old_article
+            )
+
+            articles.append(preserved_article)
             seen_links.add(old_link)
             preserved_count += 1
 
