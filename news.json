@@ -1,5 +1,23 @@
 [
   {
+    "title": "NGC 206 and the Star Clouds of Andromeda",
+    "summary": "The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-13T05:05:00+00:00"
+  },
+  {
+    "title": "A Global Rebound for Mangroves",
+    "summary": "After decades of decline, this ecologically significant type of forest is making a comeback",
+    "url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/a-global-rebound-for-mangroves/burmamangroves_oli2_20260202_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-13T05:01:00+00:00"
+  },
+  {
     "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
     "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
     "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
@@ -108,15 +126,6 @@
     "published": "2026-11-11T05:05:00+00:00"
   },
   {
-    "title": "Water Surges Into Navajo Reservoir",
-    "summary": "Rounds of heavy rain in the U.S. Southwest flooded rivers and rapidly raised New Mexico’s second-largest reservoir",
-    "url": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/water-surges-into-navajo-reservoir/navajoreservoir_oli2_20261107_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Science",
-    "published": "2026-11-11T05:01:00+00:00"
-  },
-  {
     "title": "Saturn Behind the Moon",
     "summary": "Sometimes Saturn disappears. It doesn't really go away, of course -- it just disappears from our view when Earth's Moon moves in front.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-10-saturn-behind-the-moon/",
@@ -205,14 +214,5 @@
     "source": "ESA",
     "category": "Space",
     "published": "2026-11-06T08:07:34+00:00"
-  },
-  {
-    "title": "A Farewell to Swift",
-    "summary": "It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory. After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Science",
-    "published": "2026-11-06T05:05:00+00:00"
   }
 ]
