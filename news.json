@@ -1,5 +1,23 @@
 [
   {
+    "title": "Outbursts from a Massive Star",
+    "summary": "X-ray: NASA/CXC/Univ. of Virginia/M. Aghakhanloo et al.; Optical: SDSS; Image Processing: NASA/CXC/SAO/P. Edmonds Using NASA’s Chandra X-ray Observatory, astronomers have discovered what is triggering repeated outbursts from a…",
+    "url": "https://www.nasa.gov/image-article/outbursts-from-a-massive-star/",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/at2016blu.jpg",
+    "source": "NASA",
+    "category": "Discoveries",
+    "published": "2026-11-13T16:39:33+00:00"
+  },
+  {
+    "title": "Gemini Astronaut Photos Inspired Early Earth Observation Program",
+    "summary": "NASA astronauts James A. Lovell Jr. and Edwin E. “Buzz” Aldrin Jr. captured this image of the area surrounding the Red Sea and Nile river valley on November 14, 1966, during their four-day mission in space.",
+    "url": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program/",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/s66-63535-f.png",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-13T16:05:54+00:00"
+  },
+  {
     "title": "NGC 206 and the Star Clouds of Andromeda",
     "summary": "The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/",
@@ -18,15 +36,6 @@
     "published": "2026-11-13T05:01:00+00:00"
   },
   {
-    "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
-    "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
-    "image": "",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-12T21:24:00+00:00"
-  },
-  {
     "title": "I Am Artemis Katie Spicer",
     "summary": "For Katie Spicer, embracing opportunity and challenge has led to giant leaps during her time at NASA. Now as the NASA lander integration lead for Blue Origin’s Blue Moon Mark 2 lander, one of the commercially provided human…",
     "url": "https://www.nasa.gov/missions/artemis/i-am-artemis-katie-spicer/",
@@ -39,7 +48,7 @@
     "title": "Heart in the Sky at NASA Kennedy",
     "summary": "NASA/Amber Jean Notvest The U.S. Air Force Thunderbirds create a heart-shaped smoke trail during a flight maneuver near NASA’s Vehicle Assembly Building during the agency’s MAX POWER expo and air show",
     "url": "https://www.nasa.gov/image-article/heart-in-the-sky-at-nasa-kennedy/",
-    "image": "",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/55640210122-dae9d5e6b9-o.jpg",
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-12T19:12:49+00:00"
@@ -48,19 +57,10 @@
     "title": "NASA Ames Stars of the Month: November 2026",
     "summary": "The NASA Ames Science Directorate recognizes the outstanding contributions of (pictured left to right) Alyssa Villanueva, Steve Howell, and Samuel LeBlanc.",
     "url": "https://www.nasa.gov/general/nasa-ames-stars-of-the-month-november-2026/",
-    "image": "",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/som-november-2026-banner.jpg",
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-12T17:54:32+00:00"
-  },
-  {
-    "title": "Latest updates: BepiColombo's arrival at Mercury",
-    "summary": "After eight years of travelling through the inner Solar System, BepiColombo is arriving at Mercury. This page will show the latest updates throughout the mission's arrival",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/latest-updates-bepicolombo-s-arrival-at-mercury",
-    "image": "",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-12T14:12:28+00:00"
   },
   {
     "title": "NASA’s Hubble Offers Cosmic Sampler of Targets for Roman",
@@ -81,13 +81,13 @@
     "published": "2026-11-12T13:00:00+00:00"
   },
   {
-    "title": "Win a trip to ESA to witness BepiColombo arrive at Mercury",
-    "summary": "Get ready to celebrate BepiColombo’s arrival at Mercury. Craft a welcoming message that could be a drawing, song, poem or any other art form and stand a chance to win a trip to mission control!",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/win-a-trip-to-esa-to-witness-bepicolombo-arrive-at-mercury",
-    "image": "",
+    "title": "Euclid lays the foundation for its best-ever 3D map of the Universe",
+    "summary": "The European Space Agency’s Euclid mission has released its first major batch of data. With this release, which captures the light of more than a billion objects and covers an area of sky as big as 9500 full Moons, ESA’s dark…",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-lays-the-foundation-for-its-best-ever-3d-map-of-the-universe",
+    "image": "https://media.esa.int/global/public/common/image/2026/11/402228/image-thumb__402228__fit_large/5-euclid-ews-dr1-northpr-m81disk-r4-equ-10k6k-4k.cd774474.webp",
     "source": "ESA",
     "category": "Space",
-    "published": "2026-11-12T10:35:25+00:00"
+    "published": "2026-11-12T11:00:00+00:00"
   },
   {
     "title": "Moon, Venus and Spica Meet",
@@ -97,24 +97,6 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-12T05:05:00+00:00"
-  },
-  {
-    "title": "Scotland’s Flow Country",
-    "summary": "Blanket bogs in the Scottish Highlands store vast amounts of carbon",
-    "url": "https://science.nasa.gov/earth/earth-observatory/scotlands-flow-country/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/scotland’s-flow-country-/scotland_flowcountry_oli2_20240304_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Science",
-    "published": "2026-11-12T05:01:00+00:00"
-  },
-  {
-    "title": "Curiosity Blog, Sols 5063-5069 Rocks and Chips",
-    "summary": "Nov. 6, 2026 This week Curiosity has been completing its drill campaign at the “Nazca” drill hole. This is an area characterized by bedrock containing disk-shaped (or in a liberal interpretation, potato chip shaped",
-    "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/missions/msl/2026/curiosity-rover-updates/november/https___mars.nasa.gov_msl-raw-images_msss_05067_mhli_5067MH0009180001804584C00_DXXX.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-12T00:41:35+00:00"
   },
   {
     "title": "NGC 4449: Small Galaxy, Big Impact",
@@ -133,15 +115,6 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-10T05:05:00+00:00"
-  },
-  {
-    "title": "Successful Earth flyby improves Juice’s course to Jupiter",
-    "summary": "The European Space Agency’s Jupiter Icy Moons Explorer (Juice) skimmed the very outer edge of Earth’s atmosphere on 28 September, using the gravity of our home planet to alter its route to Jupiter using very little fuel",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/juice/successful-earth-flyby-improves-juice-s-course-to-jupiter",
-    "image": "",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-09T14:29:29+00:00"
   },
   {
     "title": "Rigel and the Witch Head Nebula",
@@ -171,48 +144,75 @@
     "published": "2026-11-07T05:05:00+00:00"
   },
   {
-    "title": "Science begins for Smile",
-    "summary": "On 23 September, the European-Chinese Smile mission was declared ready to start revealing how Earth responds to the wind of charged particles from the Sun.",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/smile/science-begins-for-smile",
-    "image": "",
-    "source": "ESA",
+    "title": "A Farewell to Swift",
+    "summary": "It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory. After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
     "category": "Science",
-    "published": "2026-11-06T08:41:02+00:00"
+    "published": "2026-11-06T05:05:00+00:00"
   },
   {
-    "title": "Mars’s oddest cloud may be even odder than we thought",
-    "summary": "Scientists using the European Space Agency's Mars Express, in combination with a state-of-the-art meteorological model of the Red Planet, have found that there may be some very exotic physics behind Mars’s most curious cloud",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/mars-express/mars-s-oddest-cloud-may-be-even-odder-than-we-thought",
-    "image": "",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-06T08:37:57+00:00"
-  },
-  {
-    "title": "Solar Orbiter tracks origin of mysterious magnetic switchbacks",
-    "summary": "The European Space Agency-led Solar Orbiter spacecraft has flown through an S-shaped kink known as a ‘switchback’ in the solar wind’s magnetic field.",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/solar-orbiter/solar-orbiter-tracks-origin-of-mysterious-magnetic-switchbacks",
-    "image": "",
-    "source": "ESA",
+    "title": "Enceladus in Silhouette",
+    "summary": "One of our Solar System's most tantalizing worlds, Enceladus is backlit by the Sun in this Cassini spacecraft image from November 1, 2009.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-5-enceladus-in-silhouette/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/PIA17144EnceladusPandora.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "source": "NASA",
     "category": "Space",
-    "published": "2026-11-06T08:37:09+00:00"
+    "published": "2026-11-05T05:05:00+00:00"
   },
   {
-    "title": "Euclid discovers new comet",
-    "summary": "The European Space Agency’s Euclid space telescope has discovered its first previously unknown comet, in images taken between 16 and 24 September 2026",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
-    "image": "",
+    "title": "The Not-So-Hidden Galaxy, IC 342",
+    "summary": "“I see” IC 342, the Hidden Galaxy! Today’s image peers through the plane of the Milky Way, through all its gas, dust and stars, to unveil this spiral galaxy.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-4-the-not-so-hidden-galaxy-ic-342/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/ic342.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-04T05:05:00+00:00"
+  },
+  {
+    "title": "Comet PanSTARRs and Rainbow Meteor",
+    "summary": "Did this meteor come from that comet? Probably not. Although many meteors do originate from comets, there are thousands of comets that have visited the inner Solar System recently, and matching meteors to them can be tricky.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-3-comet-panstarrs-and-rainbow-meteor/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/CometMeteor_Metais_1934.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-03T05:05:00+00:00"
+  },
+  {
+    "title": "A Long Cloud on Mars",
+    "summary": "What’s causing this unusually long cloud on Mars? Known as the Arsia Mons Elongated Cloud (AMEC) and first recorded by NASA’s Viking Orbiter 2 in 1977, the strange cloud has been imaged in greater detail more recently by ESA ’s…",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-2-a-long-cloud-on-mars/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/MonsCloud_MarsExpress_1920.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-02T05:05:00+00:00"
+  },
+  {
+    "title": "Ghostly Cat’s Head Nebula lurks within sight of Hubble and Webb",
+    "summary": "The NASA/ESA Hubble and the NASA/ESA/CSA James Webb Space Telescopes recently stared at an eerie star-forming scene within the Carina Nebula, a massive gas and dust cloud located approximately 7500 light-years away from Earth.",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/ghostly-cat-s-head-nebula-lurks-within-sight-of-hubble-and-webb",
+    "image": "https://media.esa.int/global/public/common/image/2026/10/402110/image-thumb__402110__fit_large/weic2622a.d7afbbb2.webp",
     "source": "ESA",
-    "category": "Discoveries",
-    "published": "2026-11-06T08:24:42+00:00"
+    "category": "Science",
+    "published": "2026-10-29T15:24:10+00:00"
   },
   {
     "title": "Stars brewing in a nebulous cauldron",
     "summary": "In this Picture of the Month from the NASA/ESA James Webb Space Telescope, we visit a turbulent cauldron of star formation to see what is brewing inside dense clumps of gas.",
     "url": "https://www.esa.int/articles/about-us/directorates/science/webb/stars-brewing-in-a-nebulous-cauldron",
-    "image": "",
+    "image": "https://media.esa.int/global/public/common/image/2026/11/402224/image-thumb__402224__fit_large/stars-brewing-in-a-nebulous-cauldron.e4da8aaa.webp",
     "source": "ESA",
     "category": "Space",
-    "published": "2026-11-06T08:07:34+00:00"
+    "published": "2026-10-22T08:00:00+00:00"
+  },
+  {
+    "title": "Euclid discovers new comet",
+    "summary": "The European Space Agency’s Euclid space telescope has discovered its first previously unknown comet, in images taken between 16 and 24 September 2026",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-discovers-new-comet",
+    "image": "https://media.esa.int/global/public/common/image/2026/10/comet-c-2026-s1-euclid-streaks-across-the-sky.gif",
+    "source": "ESA",
+    "category": "Discoveries",
+    "published": "2026-10-19T12:35:00+00:00"
   }
 ]
