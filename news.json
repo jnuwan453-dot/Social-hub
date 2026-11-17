@@ -1,5 +1,23 @@
 [
   {
+    "title": "Milky Way versus Aurora",
+    "summary": "Are these two giant arches battling for control of the sky? No, but it sure looks like it! The arch on the left is the central band of our Milky Way Galaxy, an ancient system of stars, gas, and dust that predates our Earth and…",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-17-milky-way-versus-aurora/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/GalaxyVsAurora_Scheib_960.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-17T05:05:00+00:00"
+  },
+  {
+    "title": "Tossing Fireworks from Cloud to Cloud",
+    "summary": "For many astronauts, the spectacular sight of lightning stands out when looking back at Earth from the International Space Station",
+    "url": "https://science.nasa.gov/earth/earth-observatory/tossing-fireworks-from-cloud-to-cloud/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/tossing-fireworks-from-cloud-to-cloud/ISS075-E-250951_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-17T05:01:00+00:00"
+  },
+  {
     "title": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
     "summary": "Nov. 16, 2026 During the Perseverance rover’s investigation of “Idubi” — an area of ancient Martian crust exposed in the “Lac de Charmes” region, outside of Jezero crater — the Perseverance rover team has been captivated by a…",
     "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago/",
@@ -90,24 +108,6 @@
     "published": "2026-11-14T05:05:00+00:00"
   },
   {
-    "title": "Outbursts from a Massive Star",
-    "summary": "Using NASA’s Chandra X-ray Observatory, astronomers have discovered what is triggering repeated outbursts from a giant, unstable star located in the galaxy shown in this image released on Nov. 9, 2026.",
-    "url": "https://www.nasa.gov/image-article/outbursts-from-a-massive-star/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/at2016blu.jpg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-13T16:39:33+00:00"
-  },
-  {
-    "title": "Gemini Astronaut Photos Inspired Early Earth Observation Program",
-    "summary": "NASA astronauts James A. Lovell Jr. and Edwin E. “Buzz” Aldrin Jr. captured this image of the area surrounding the Red Sea and Nile river valley on November 14, 1966, during their four-day mission in space.",
-    "url": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/s66-63535-f.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-13T16:05:54+00:00"
-  },
-  {
     "title": "NGC 206 and the Star Clouds of Andromeda",
     "summary": "The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/",
@@ -189,15 +189,6 @@
     "published": "2026-11-06T05:05:00+00:00"
   },
   {
-    "title": "Enceladus in Silhouette",
-    "summary": "One of our Solar System's most tantalizing worlds, Enceladus is backlit by the Sun in this Cassini spacecraft image from November 1, 2009.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-5-enceladus-in-silhouette/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/PIA17144EnceladusPandora.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-05T05:05:00+00:00"
-  },
-  {
     "title": "Ghostly Cat’s Head Nebula lurks within sight of Hubble and Webb",
     "summary": "The NASA/ESA Hubble and the NASA/ESA/CSA James Webb Space Telescopes recently stared at an eerie star-forming scene within the Carina Nebula, a massive gas and dust cloud located approximately 7500 light-years away from Earth.",
     "url": "https://www.esa.int/articles/about-us/directorates/science/webb/ghostly-cat-s-head-nebula-lurks-within-sight-of-hubble-and-webb",
@@ -214,5 +205,14 @@
     "source": "ESA",
     "category": "Space",
     "published": "2026-10-29T09:00:00+00:00"
+  },
+  {
+    "title": "Stars brewing in a nebulous cauldron",
+    "summary": "In this Picture of the Month from the NASA/ESA James Webb Space Telescope, we visit a turbulent cauldron of star formation to see what is brewing inside dense clumps of gas.",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/stars-brewing-in-a-nebulous-cauldron",
+    "image": "https://media.esa.int/global/public/common/image/2026/11/402224/image-thumb__402224__fit_large/stars-brewing-in-a-nebulous-cauldron.e4da8aaa.webp",
+    "source": "ESA",
+    "category": "Space",
+    "published": "2026-10-22T08:00:00+00:00"
   }
 ]
