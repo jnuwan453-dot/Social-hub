@@ -1,5 +1,14 @@
 [
   {
+    "title": "Prodex at 40: advancing European space science",
+    "summary": "For forty years, Prodex, the European Space Agency’s Programme for the Development of Scientific Experiments, has turned the scientific ambitions of its Participating States into instruments and experiments flown in space",
+    "url": "https://www.esa.int/articles/prodex-at-40-advancing-european-space-science",
+    "image": "https://media.esa.int/global/public/common/image/2026/11/402538/image-thumb__402538__fit_large/prodex-40years.cdd4e894.webp",
+    "source": "ESA",
+    "category": "Space",
+    "published": "2026-11-17T12:03:28+00:00"
+  },
+  {
     "title": "Milky Way versus Aurora",
     "summary": "Are these two giant arches battling for control of the sky? No, but it sure looks like it! The arch on the left is the central band of our Milky Way Galaxy, an ancient system of stars, gas, and dust that predates our Earth and…",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-17-milky-way-versus-aurora/",
@@ -205,14 +214,5 @@
     "source": "ESA",
     "category": "Space",
     "published": "2026-10-29T09:00:00+00:00"
-  },
-  {
-    "title": "Stars brewing in a nebulous cauldron",
-    "summary": "In this Picture of the Month from the NASA/ESA James Webb Space Telescope, we visit a turbulent cauldron of star formation to see what is brewing inside dense clumps of gas.",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/stars-brewing-in-a-nebulous-cauldron",
-    "image": "https://media.esa.int/global/public/common/image/2026/11/402224/image-thumb__402224__fit_large/stars-brewing-in-a-nebulous-cauldron.e4da8aaa.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-10-22T08:00:00+00:00"
   }
 ]
