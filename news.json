@@ -1,5 +1,14 @@
 [
   {
+    "title": "In the shadow of volcanic giants",
+    "summary": "Even Mars’s more modest volcanoes demand attention. This month’s snapshot from ESA’s Mars Express spotlights Tharsis Tholus, a fascinating peak with an eventful past",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/mars-express/in-the-shadow-of-volcanic-giants",
+    "image": "https://media.esa.int/global/public/common/misc/2026/11/402636/image-thumb__402636__fit_large/s331-col.e505cd3f.webp",
+    "source": "ESA",
+    "category": "Space",
+    "published": "2026-11-18T10:00:00+00:00"
+  },
+  {
     "title": "A Medium-Sized Solar Flare",
     "summary": "What a flare for the chromatic! Today’s image captures a piece of the Sun ’s chromosphere, the layer of the Sun ’s atmosphere above its surface where the temperature rises.",
     "url": "https://science.nasa.gov/image-article/apod-2026-november-18-an-m-class-solar-flare/",
@@ -205,14 +214,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-07T05:05:00+00:00"
-  },
-  {
-    "title": "Ghostly Cat’s Head Nebula lurks within sight of Hubble and Webb",
-    "summary": "The NASA/ESA Hubble and the NASA/ESA/CSA James Webb Space Telescopes recently stared at an eerie star-forming scene within the Carina Nebula, a massive gas and dust cloud located approximately 7500 light-years away from Earth.",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/ghostly-cat-s-head-nebula-lurks-within-sight-of-hubble-and-webb",
-    "image": "https://media.esa.int/global/public/common/image/2026/10/402110/image-thumb__402110__fit_large/weic2622a.d7afbbb2.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-10-29T15:24:10+00:00"
   }
 ]
