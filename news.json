@@ -1,5 +1,23 @@
 [
   {
+    "title": "A Medium-Sized Solar Flare",
+    "summary": "What a flare for the chromatic! Today’s image captures a piece of the Sun ’s chromosphere, the layer of the Sun ’s atmosphere above its surface where the temperature rises.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-18-an-m-class-solar-flare/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/solar_M_flare.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-18T05:05:00+00:00"
+  },
+  {
+    "title": "Sierra Snow Season Spins Up",
+    "summary": "A widespread, early-season snowstorm blanketed California’s mountains in white in mid-November 2026",
+    "url": "https://science.nasa.gov/earth/earth-observatory/sierra-snow-season-spins-up/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/sierra-snow-season-spins-up/sierranevada_tmo_20261114_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-18T05:01:00+00:00"
+  },
+  {
     "title": "NASA Launches Nuclear Power Systems Student Contest",
     "summary": "NASA’s Power to Explore Student Challenge kicked off Tuesday, Nov. 17. The science, engineering, technology, and mathematics (STEM) challenge invites kindergarten through 12th grade students in the United States to learn about…",
     "url": "https://science.nasa.gov/centers-and-facilities/glenn/nasa-launches-nuclear-power-systems-student-contest/",
@@ -70,24 +88,6 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-17T17:06:07+00:00"
-  },
-  {
-    "title": "NASA Invites Media, Public to View Roman Telescope’s First Images",
-    "summary": "NASA will release the first images from its Nancy Grace Roman Space Telescope during a live stream from the American Geophysical Union (AGU) Annual Meeting in San Francisco at 3:30 p.m. EST (12:30 p.m. PST) Monday, Dec. 7.",
-    "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-view-roman-telescopes-first-images/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/54963457618-23b91802ea-k-1.jpg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-17T17:00:29+00:00"
-  },
-  {
-    "title": "Space Selfie",
-    "summary": "NASA astronaut Anil Menon took this selfie during a spacewalk on Oct. 29, 2026. He and CSA (Canadian Space Agency) astronaut Joshua Kutryk installed a new roll-out solar array on the International Space Station.",
-    "url": "https://www.nasa.gov/image-article/space-selfie-2/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/iss075e0253155orig.jpg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-17T16:51:14+00:00"
   },
   {
     "title": "Prodex at 40: advancing European space science",
@@ -207,12 +207,12 @@
     "published": "2026-11-07T05:05:00+00:00"
   },
   {
-    "title": "A Farewell to Swift",
-    "summary": "It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory. After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
+    "title": "Ghostly Cat’s Head Nebula lurks within sight of Hubble and Webb",
+    "summary": "The NASA/ESA Hubble and the NASA/ESA/CSA James Webb Space Telescopes recently stared at an eerie star-forming scene within the Carina Nebula, a massive gas and dust cloud located approximately 7500 light-years away from Earth.",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/ghostly-cat-s-head-nebula-lurks-within-sight-of-hubble-and-webb",
+    "image": "https://media.esa.int/global/public/common/image/2026/10/402110/image-thumb__402110__fit_large/weic2622a.d7afbbb2.webp",
+    "source": "ESA",
     "category": "Space",
-    "published": "2026-11-06T05:05:00+00:00"
+    "published": "2026-10-29T15:24:10+00:00"
   }
 ]
