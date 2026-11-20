@@ -1,5 +1,14 @@
 [
   {
+    "title": "Challenge: Public Input on Life and the World in 2075",
+    "summary": "Preparations for Next Moonwalk Simulations Underway (and Underwater) Image credit: CrowdPlat NASA’s Transformational Tools and Technologies (TTT) is gathering public perspectives on life today and how the world may change by…",
+    "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/challenge-public-input-on-life-and-the-world-in-2075/",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/ttt-publicinputonlife-2026.png",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-19T19:34:20+00:00"
+  },
+  {
     "title": "NASA Science Data Powers New Method to Discover Hard-to-Find Pulsars",
     "summary": "NASA’s Fermi Gamma-ray Space Telescope, illustrated here, scans the entire sky every three hours as it orbits Earth. Its publicly available data helps scientists find the rapidly spinning cores of dead stars, known as pulsars.",
     "url": "https://science.nasa.gov/open-science/fermi-data-pulsar-discovery/",
@@ -54,6 +63,15 @@
     "published": "2026-11-19T05:00:00+00:00"
   },
   {
+    "title": "Seven-spacecraft observatory to study plasma universe",
+    "summary": "ESA Member States have selected Plasma Observatory as the agency’s next medium-class mission. Its seven coordinated spacecraft will track how the Sun’s energy moves through Earth’s magnetic shield, across different scales of…",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/seven-spacecraft-observatory-to-study-plasma-universe",
+    "image": "https://media.esa.int/global/public/common/image/2026/11/402687/image-thumb__402687__fit_large/magnetospheric-system.ab6b8163.webp",
+    "source": "ESA",
+    "category": "Science",
+    "published": "2026-11-18T23:00:00+00:00"
+  },
+  {
     "title": "NASA Sets Coverage for Northrop Grumman CRS-25 Launch, Prelaunch",
     "summary": "NASA’s Northrop Grumman Commercial Resupply Services 24 mission launched Saturday, April 11, 2026, aboard the company’s Cygnus XL spacecraft atop a SpaceX Falcon 9 rocket from Space Launch Complex 40 at Cape Canaveral Space…",
     "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-northrop-grumman-crs-25-launch-prelaunch/",
@@ -79,15 +97,6 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-18T18:12:32+00:00"
-  },
-  {
-    "title": "Empire State Building Goes Gold for Voyager",
-    "summary": "The Empire State Building is seen illuminated in gold to celebrate NASA’s Voyager 1 spacecraft as it was about to pass one light-day away from Earth, a distance reached by no other human-made object, Nov. 17, 2026.",
-    "url": "https://www.nasa.gov/image-article/empire-state-building-goes-gold-for-voyager/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/55658604092-c6f0765cc5-o.jpg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-18T17:50:26+00:00"
   },
   {
     "title": "In the shadow of volcanic giants",
@@ -205,14 +214,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-09T05:05:00+00:00"
-  },
-  {
-    "title": "Major Fireball Meteor",
-    "summary": "The sky glows with soft pinkish colors of fading twilight in this serendipitous mountaintop vista. Taken in subfreezing temperatures, the thoughtfully composed photo shows snowy, rugged peaks seen from a mountain pass on 2017…",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/meteor2017_Taylor_1200.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-08T05:05:00+00:00"
   }
 ]
