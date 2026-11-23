@@ -1,5 +1,23 @@
 [
   {
+    "title": "The Emergence of Dark Nebula Lynds 1251",
+    "summary": "If you stare into space for a long time, what might you see? At first, you might only see the usual brightest stars, but if your eyes (or camera) could continue to collect light, you would see increasingly more.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Ldn1251Comparison_Cruz_2160.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-23T05:05:00+00:00"
+  },
+  {
+    "title": "Laser Focus at the Top of the World",
+    "summary": "A next-generation geodetic instrument developed by NASA, part of a network that helps measure satellites’ orbits and the planet’s shape, has debuted in Svalbard, Norway",
+    "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/laser-focus-at-the-top-of-the-world/svalbardzm_oli2_20260730_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-23T05:01:00+00:00"
+  },
+  {
     "title": "65 Years of Human Spaceflight at NASA Johnson",
     "summary": "NASA astronaut Randy Bresnik, ESA (European Space Agency) astronaut Luca Parmitano, former NASA astronaut Russell “Rusty” Schweickart, and NASA astronauts Frank Rubio and Bob Hines appear onstage at the Artemis Celebration Gala…",
     "url": "https://www.nasa.gov/centers-and-facilities/johnson/65-years-of-human-spaceflight-at-nasa-johnson/",
@@ -79,24 +97,6 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-20T05:05:00+00:00"
-  },
-  {
-    "title": "The Stormy Southwest Pacific",
-    "summary": "Tropical Cyclone Xavier launched the basin’s storm season with a bang",
-    "url": "https://science.nasa.gov/earth/earth-observatory/the-stormy-southwest-pacific/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/the-stormy-southwest-pacific--/cyclonexavier_amo_20261116_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-20T05:01:00+00:00"
-  },
-  {
-    "title": "Challenge: Public Input on Life and the World in 2075",
-    "summary": "Preparations for Next Moonwalk Simulations Underway (and Underwater) Image credit: CrowdPlat NASA’s Transformational Tools and Technologies (TTT) is gathering public perspectives on life today and how the world may change by…",
-    "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/challenge-public-input-on-life-and-the-world-in-2075/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/ttt-publicinputonlife-2026.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-19T19:34:20+00:00"
   },
   {
     "title": "The Horsehead and Flame Nebulas",
@@ -207,12 +207,12 @@
     "published": "2026-11-12T05:05:00+00:00"
   },
   {
-    "title": "NGC 4449: Small Galaxy, Big Impact",
-    "summary": "Don’t judge a galaxy by its size. Our home galaxy, the Milky Way, is about 100,000 light years across. This huge expanse of space contains hundreds of billions of stars!",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/missions/hubble/galaxies/irregular/NGC%204449.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
+    "title": "Ghostly Cat’s Head Nebula lurks within sight of Hubble and Webb",
+    "summary": "The NASA/ESA Hubble and the NASA/ESA/CSA James Webb Space Telescopes recently stared at an eerie star-forming scene within the Carina Nebula, a massive gas and dust cloud located approximately 7500 light-years away from Earth.",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/webb/ghostly-cat-s-head-nebula-lurks-within-sight-of-hubble-and-webb",
+    "image": "https://media.esa.int/global/public/common/image/2026/10/402110/image-thumb__402110__fit_large/weic2622a.d7afbbb2.webp",
+    "source": "ESA",
     "category": "Space",
-    "published": "2026-11-11T05:05:00+00:00"
+    "published": "2026-10-29T15:24:10+00:00"
   }
 ]
