@@ -46,11 +46,11 @@ FEEDS = [
         ],
         "category": "AI & Technology",
     },
-    {
-        "name": "ScienceDaily",
-        "source": "Science Daily",
+   {
+        "name": "Phys.org",
+        "source": "Phys.org",
         "urls": [
-            "https://www.sciencedaily.com/rss/top/science.xml"
+            "https://phys.org/rss-feed/"
         ],
         "category": "Science",
     },
@@ -614,9 +614,7 @@ def get_text(item, *names):
     return ""
 
 
-def get_best_summary(item, title):
-
-    candidates = []
+def get_best_summary(item, title, source=""):
 
     names = [
         "description",
@@ -625,6 +623,8 @@ def get_best_summary(item, title):
         "{*}encoded",
         "{*}content",
     ]
+
+    candidates = []
 
     for name in names:
 
@@ -635,6 +635,10 @@ def get_best_summary(item, title):
 
     if not candidates:
         return FALLBACK_SUMMARY
+
+    # Preserve Phys.org RSS summary without cleaning or truncating.
+    if source == "Phys.org":
+        return candidates[0]
 
     cleaned = [
         clean_summary(value, title)
@@ -1023,6 +1027,9 @@ def refresh_preserved_article(article):
     summary = updated.get("summary", "")
 
     # Clean existing summaries too, not just new feed summaries.
+   if updated.get("source") == "Phys.org":
+    cleaned_summary = summary
+else:
     cleaned_summary = clean_summary(
         summary,
         title,
@@ -1113,9 +1120,10 @@ def main():
                 ):
                     continue
 
-                summary = get_best_summary(
+               summary = get_best_summary(
                     item,
                     title,
+                    source_name,
                 )
 
                 # Reuse old summary if the new feed has no useful text.
