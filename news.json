@@ -1,5 +1,23 @@
 [
   {
+    "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
+    "summary": "New York has banned AI chatbot toys for five years as new research from Common Sense Media reveals troubling safety failures, including exposure to inappropriate content and risks to emotional development",
+    "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2237660127.jpg?resize=1200,800",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-25T18:11:46+00:00"
+  },
+  {
+    "title": "State AGs fight Character AI’s plan to auction off users’ private chats",
+    "summary": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said",
+    "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+    "image": "https://techcrunch.com/wp-content/uploads/2024/06/Character-Calls-Image-feat.jpg?resize=1200,675",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-25T17:35:58+00:00"
+  },
+  {
     "title": "Childhood, Career Come Full Circle for Budget Analyst at NASA Goddard",
     "summary": "Conversations about NASA were the norm around the dinner table during Ashley Knight’s childhood. Her parents worked at NASA’s Goddard Space Flight Center in Greenbelt, Maryland, and discussions about happenings at the agency…",
     "url": "https://www.nasa.gov/centers-and-facilities/goddard/childhood-career-come-full-circle-for-budget-analyst-at-nasa-goddard/",
@@ -18,6 +36,15 @@
     "published": "2026-11-25T16:21:04+00:00"
   },
   {
+    "title": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+    "summary": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt.",
+    "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/Anita-Verma-Lallian-2.jpg?w=1024",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-25T15:41:43+00:00"
+  },
+  {
     "title": "NASA’s Hubble Views Ocean of Stars in Groundwork for Roman",
     "summary": "These Hubble observations are part of a survey that will help researchers better interpret upcoming Nancy Grace Roman Space Telescope observations as they seek to characterize the stars and search for exoplanets in this busy…",
     "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-views-ocean-of-stars-in-groundwork-for-roman/",
@@ -25,6 +52,51 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-25T14:56:54+00:00"
+  },
+  {
+    "title": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+    "summary": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse",
+    "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/09/muse-ai-meta.jpg?w=1200",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-25T14:10:18+00:00"
+  },
+  {
+    "title": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
+    "summary": "The central question for investigators is what Nvidia knew about where those chips ended up and whether Huang's affair with a Megaspeed executive gave the company reason to doubt Megaspeed's assurances",
+    "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2249127237.jpg?resize=1200,800",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-25T13:00:00+00:00"
+  },
+  {
+    "title": "A space telescope hunting for dark matter just discovered something unexpected",
+    "summary": "ESA’s Euclid space telescope has discovered its first previously unknown comet, despite being designed to study distant galaxies and the mysteries of the dark Universe.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261124055852.htm",
+    "image": "https://www.sciencedaily.com/images/1920/esa-euclid-space-telescope.webp",
+    "source": "Science Daily",
+    "category": "Space",
+    "published": "2026-11-25T10:35:04+00:00"
+  },
+  {
+    "title": "Physicists trap antimatter in a breakthrough that could explain why the universe exists",
+    "summary": "Positrons are the antimatter counterpart of an electron. Physicists trapped a positron and cooled it to temperatures near absolute zero. Positron is suspended in a wall-free trap, safely separated from ordinary matter.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261124055849.htm",
+    "image": "https://www.sciencedaily.com/images/1920/particle-trapped-antimatter-physics.webp",
+    "source": "Science Daily",
+    "category": "Discoveries",
+    "published": "2026-11-25T10:06:22+00:00"
+  },
+  {
+    "title": "What is a thought made of? Why human consciousness may be beyond AI’s reach",
+    "summary": "A new theory suggests that the brain may chemically encode and retrieve memories rather than relying solely on electrical signals.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261124055712.htm",
+    "image": "https://www.sciencedaily.com/images/1920/human-vs-ai-brain-thought-consciousness.webp",
+    "source": "Science Daily",
+    "category": "Science",
+    "published": "2026-11-25T09:30:54+00:00"
   },
   {
     "title": "SPHEREx Seeing Through Dust",
@@ -43,6 +115,78 @@
     "source": "NASA",
     "category": "Science",
     "published": "2026-11-25T05:00:00+00:00"
+  },
+  {
+    "title": "Physicists just sent an unblockable message through a brick wall using gravity",
+    "summary": "Scientists have successfully transmitted a message through a brick wall using nothing but gravity, an old elevator, and an incredibly sensitive detector.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261123005343.htm",
+    "image": "https://www.sciencedaily.com/images/1920/gravity-signal-brick-wall.webp",
+    "source": "Science Daily",
+    "category": "Science",
+    "published": "2026-11-25T02:29:38+00:00"
+  },
+  {
+    "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+    "summary": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia's CEO and board member, could prove a giant mistake, exposing the directors to \"historic\" personal liability…",
+    "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/Jensen-ChatGPT.png?resize=1200,675",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-25T00:12:02+00:00"
+  },
+  {
+    "title": "New nose drops restore youthful memory and fight Alzheimer’s in aging mice",
+    "summary": "A revolutionary new nasal treatment has restored youthful learning and memory performance in aging mice while preventing severe cognitive decline in mice with Alzheimer’s-like disease.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261123005337.htm",
+    "image": "https://www.sciencedaily.com/images/1920/senior-man-nasal-spray-nose-drops.webp",
+    "source": "Science Daily",
+    "category": "Science",
+    "published": "2026-11-24T23:31:52+00:00"
+  },
+  {
+    "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
+    "summary": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder",
+    "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
+    "image": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2192215566.jpg?resize=1200,800",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-24T22:27:52+00:00"
+  },
+  {
+    "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+    "summary": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company",
+    "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294936867.jpg?resize=1200,800",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-24T21:48:27+00:00"
+  },
+  {
+    "title": "Even the best AI agents struggle with everyday life",
+    "summary": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems",
+    "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2296543552.jpg?w=1024",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-24T21:33:29+00:00"
+  },
+  {
+    "title": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+    "summary": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent",
+    "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/muse-walmart.png?w=1200",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-24T21:32:38+00:00"
+  },
+  {
+    "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+    "summary": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data",
+    "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/11/01-maple-hero-chargebacks-photo-16x9-1.png?resize=1200,675",
+    "source": "TechCrunch",
+    "category": "AI & Technology",
+    "published": "2026-11-24T21:19:52+00:00"
   },
   {
     "title": "NASA+ Content Coming to Big Screen at Greenbelt, Maryland Cinema",
@@ -70,149 +214,5 @@
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-24T19:19:52+00:00"
-  },
-  {
-    "title": "NASA’s Northrop Grumman CRS-25 Mission Overview",
-    "summary": "NASA’s Northrop Grumman Commercial Resupply Services 25 mission, or Northrop Grumman CRS-25, will deliver about 11,000 pounds of science and supplies to the International Space Station.",
-    "url": "https://www.nasa.gov/missions/station/nasas-northrop-grumman-crs-25-mission-overview/",
-    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/ntv-ng-crs-25-falcon9-cygnus-overview-2160-dark.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-24T19:09:16+00:00"
-  },
-  {
-    "title": "AGU Hyperwall Schedule",
-    "summary": "American Geophysical Union (AGU) 2026 Join NASA in the Exhibit Hall (Booth # 525 ) for Hyperwall Storytelling by NASA experts. Full Hyperwall Agenda below.",
-    "url": "https://science.nasa.gov/earth/agu-hyperwall-schedule/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/esd/private-sector-engagement/meatball-whitebkgd.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-24T18:55:42+00:00"
-  },
-  {
-    "title": "Meet the winners of Plato’s Find-a-New-Earth Art Challenge",
-    "summary": "Lilo’s colourful artwork has been chosen as the first prize winner of Plato’s Find-a-New-Earth Art Challenge",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/plato/meet-the-winners-of-plato-s-find-a-new-earth-art-challenge",
-    "image": "https://media.esa.int/global/public/common/image/2026/11/402720/image-thumb__402720__fit_large/lilo-5-germany.12688f3d.webp",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-24T10:21:57+00:00"
-  },
-  {
-    "title": "Euclid breaks own quasar record by 40 million years",
-    "summary": "The European Space Agency’s Euclid space telescope has discovered the most distant quasar to date: a rare 360 million-sun-mass galactic core seen just 630 million years after the Big Bang.",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
-    "image": "https://media.esa.int/global/public/common/image/2026/11/402420/image-thumb__402420__fit_large/j1504-6252-euclid-press-master-16bit-jpg.bfc2f054.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-24T08:00:00+00:00"
-  },
-  {
-    "title": "Galaxies Battle in the NGC 7771 Group",
-    "summary": "After this galaxy battle, only one galaxy will remain. Already visible in the featured picture are rings and faint star swirls from previous gravitational encounters.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-24-galaxies-battle-in-the-ngc-7771-group/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/NGC7771group_Marinoni_1179.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-24T05:05:00+00:00"
-  },
-  {
-    "title": "Latest updates: BepiColombo's arrival at Mercury",
-    "summary": "After eight years of travelling through the inner Solar System, BepiColombo is arriving at Mercury. This page will show the latest updates throughout the mission's arrival",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/latest-updates-bepicolombo-s-arrival-at-mercury",
-    "image": "https://media.esa.int/legacy/web/images/esa_multimedia/images/2018/03/mercury_transfer_module_separation3/17405481-1-eng-GB/208235/image-thumb__208235__fit_large/Mercury_Transfer_Module_separation.f6ab167b.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-23T17:00:00+00:00"
-  },
-  {
-    "title": "The Emergence of Dark Nebula Lynds 1251",
-    "summary": "If you stare into space for a long time, what might you see? At first, you might only see the usual brightest stars, but if your eyes (or camera) could continue to collect light, you would see increasingly more.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Ldn1251Comparison_Cruz_2160.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-23T05:05:00+00:00"
-  },
-  {
-    "title": "Swirls and Colors on Jupiter from Juno",
-    "summary": "What creates the colors in Jupiter's clouds? No one is sure. The thick atmosphere of Jupiter is mostly hydrogen and helium, elements which are colorless at the low temperatures of the Jovian cloud tops.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-22-swirls-and-colors-on-jupiter-from-juno/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/JupiterSwirls_JunoBrealey_3709.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-22T05:05:00+00:00"
-  },
-  {
-    "title": "Voyager's Neptune",
-    "summary": "Cruising through the outer solar system, the Voyager 2 spacecraft made its closest approach to Neptune on August 25, 1989, the only spacecraft to visit the most distant ice giant planet.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-21-voyagers-neptune/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Neptune-South-Pole-Voyager-2_2327x1670.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-21T05:05:00+00:00"
-  },
-  {
-    "title": "10 winners welcome BepiColombo to Mercury",
-    "summary": "Cross-stitched fabric, clay models, scrap-material spacecraft, illustrations, songs and poems: more than 60 people from across the globe have sent their ‘Welcome to Mercury’ messages to the ESA/JAXA BepiColombo mission.",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/10-winners-welcome-bepicolombo-to-mercury",
-    "image": "https://media.esa.int/legacy/web/images/esa_multimedia/images/2026/09/welcome_bepicolombo_to_mercury/27520540-1-eng-GB/399805/image-thumb__399805__fit_large/Welcome_BepiColombo_to_Mercury.fee5daaf.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-20T08:30:00+00:00"
-  },
-  {
-    "title": "V-G-R",
-    "summary": "On November 17, fans of interstellar spaceflight around planet Earth were invited to shine a message into the night sky. Traced by a flashlight beam switched on and off, the dashes and dots of a Morse code message captured in…",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-20-v-g-r/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/IMG_4364N_Kyriazis.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-20T05:05:00+00:00"
-  },
-  {
-    "title": "The Horsehead and Flame Nebulas",
-    "summary": "Today's image could have been a painting. But what do these colors mean? The brightest star, left of the center, is blue Alnitak (the Girdle): a triple star system best known for being the easternmost star in Orion's Belt.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-19-the-horsehead-and-flame-nebulas/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Horsehead_Nebula_Killion.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-19T05:05:00+00:00"
-  },
-  {
-    "title": "Seven-spacecraft observatory to study plasma universe",
-    "summary": "ESA Member States have selected Plasma Observatory as the agency’s next medium-class mission. Its seven coordinated spacecraft will track how the Sun’s energy moves through Earth’s magnetic shield, across different scales of…",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/seven-spacecraft-observatory-to-study-plasma-universe",
-    "image": "https://media.esa.int/global/public/common/image/2026/11/402687/image-thumb__402687__fit_large/magnetospheric-system.ab6b8163.webp",
-    "source": "ESA",
-    "category": "Science",
-    "published": "2026-11-18T23:00:00+00:00"
-  },
-  {
-    "title": "In the shadow of volcanic giants",
-    "summary": "Even Mars’s more modest volcanoes demand attention. This month’s snapshot from ESA’s Mars Express spotlights Tharsis Tholus, a fascinating peak with an eventful past",
-    "url": "https://www.esa.int/articles/about-us/directorates/science/mars-express/in-the-shadow-of-volcanic-giants",
-    "image": "https://media.esa.int/global/public/common/misc/2026/11/402636/image-thumb__402636__fit_large/s331-col.e505cd3f.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-18T10:00:00+00:00"
-  },
-  {
-    "title": "A Medium-Sized Solar Flare",
-    "summary": "What a flare for the chromatic! Today’s image combines a series of images taken over ten minutes capturing the Sun ’s chromosphere, the layer of the Sun ’s atmosphere above its surface where the temperature rises.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-18-an-m-class-solar-flare/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/solar_M_flare.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Science",
-    "published": "2026-11-18T05:05:00+00:00"
-  },
-  {
-    "title": "Prodex at 40: advancing European space science",
-    "summary": "For forty years, Prodex, the European Space Agency’s Programme for the Development of Scientific Experiments, has turned the scientific ambitions of its Participating States into instruments and experiments flown in space",
-    "url": "https://www.esa.int/articles/prodex-at-40-advancing-european-space-science",
-    "image": "https://media.esa.int/global/public/common/image/2026/11/402538/image-thumb__402538__fit_large/prodex-40years.cdd4e894.webp",
-    "source": "ESA",
-    "category": "Space",
-    "published": "2026-11-17T12:03:28+00:00"
   }
 ]
