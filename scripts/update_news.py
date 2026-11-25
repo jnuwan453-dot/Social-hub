@@ -38,6 +38,22 @@ FEEDS = [
         ],
         "category": "Science",
     },
+    {
+        "name": "TechCrunch AI",
+        "source": "TechCrunch",
+        "urls": [
+            "https://techcrunch.com/category/artificial-intelligence/feed/"
+        ],
+        "category": "AI & Technology",
+    },
+    {
+        "name": "ScienceDaily",
+        "source": "Science Daily",
+        "urls": [
+            "https://www.sciencedaily.com/rss/top/science.xml"
+        ],
+        "category": "Science",
+    },
 ]
 
 HEADERS = {
