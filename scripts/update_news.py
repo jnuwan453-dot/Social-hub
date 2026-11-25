@@ -67,21 +67,22 @@ FALLBACK_SUMMARY = "Read the original report for the latest details."
 
 class VisibleTextParser(HTMLParser):
 
-    def __init__(self):
-        super().__init__(convert_charrefs=True)
+    def _init_(self):
+        super()._init_(convert_charrefs=True)
         self.parts = []
         self.skip_depth = 0
-       self.skip_tags = {
-    "script",
-    "style",
-    "noscript",
-    "svg",
-    "nav",
-    "footer",
-    "aside",
-    "menu",
-    "form",
-}
+        self.skip_tags = {
+            "script",
+            "style",
+            "noscript",
+            "svg",
+            "nav",
+            "header",
+            "footer",
+            "aside",
+            "menu",
+            "form",
+        }
 
     def handle_starttag(self, tag, attrs):
 
