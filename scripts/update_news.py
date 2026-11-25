@@ -33,8 +33,8 @@ FEEDS = [
         "source": "ESA",
         "urls": [
             "https://www.esa.int/rss/science.rss",
-            "https://www.esa.int/rssfeed/Science_Exploration/Space_Science",
-            "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
+            "https://www.esa.int/rssfeed/TopNews",
+           
         ],
         "category": "Science",
     },
@@ -71,7 +71,17 @@ class VisibleTextParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.parts = []
         self.skip_depth = 0
-        self.skip_tags = {"script", "style", "noscript", "svg"}
+       self.skip_tags = {
+    "script",
+    "style",
+    "noscript",
+    "svg",
+    "nav",
+    "footer",
+    "aside",
+    "menu",
+    "form",
+}
 
     def handle_starttag(self, tag, attrs):
 
