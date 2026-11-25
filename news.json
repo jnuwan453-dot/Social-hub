@@ -1,9 +1,27 @@
 [
   {
+    "title": "SPHEREx Seeing Through Dust",
+    "summary": "What is blocking the center of the Milky Way? During its 13 billion years, our Milky Way has collected a lot of dust. In contrast to the skin cells, dirt, pollen, and other debris that make up the dust behind your couch, cosmic…",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-25-spherex-seeing-through-dust/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/spherex_1.2micron.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-25T05:05:00+00:00"
+  },
+  {
+    "title": "Georgia’s Pecan Belt",
+    "summary": "Since an early-1900s planting boom, orchards along the Flint River in southwest Georgia have become a center of U.S. pecan production",
+    "url": "https://science.nasa.gov/earth/earth-observatory/georgias-pecan-belt/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/georgia’s-pecan-belt/georgiapecans_oli_20261023_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-25T05:00:00+00:00"
+  },
+  {
     "title": "NASA+ Content Coming to Big Screen at Greenbelt, Maryland Cinema",
     "summary": "Credit: NASA NASA announced Monday that NASA+ content has found its first theatrical home at The Greenbelt Cinema in Greenbelt, Maryland, expanding the agency’s reach across major viewing platforms and bringing space even closer…",
     "url": "https://www.nasa.gov/nasa/nasa-content-coming-to-big-screen-at-greenbelt-maryland-cinema/",
-    "image": "",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/nasa-promo-image-horizontal-1.jpg",
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-24T21:14:36+00:00"
@@ -99,13 +117,13 @@
     "published": "2026-11-24T05:05:00+00:00"
   },
   {
-    "title": "Eruption Extends Iwo Jima’s Beach",
-    "summary": "A volcanic eruption just off the southeast shore of the Pacific island has reshaped the coast, but it’s unclear how long the new land will survive",
-    "url": "https://science.nasa.gov/earth/earth-observatory/eruption-extends-iwo-jimas-beach/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/eruption-enlarges-iwo-jima’s-beach/iwojima_oli2_20261111_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
+    "title": "Latest updates: BepiColombo's arrival at Mercury",
+    "summary": "After eight years of travelling through the inner Solar System, BepiColombo is arriving at Mercury. This page will show the latest updates throughout the mission's arrival",
+    "url": "https://www.esa.int/articles/about-us/directorates/science/bepicolombo/latest-updates-bepicolombo-s-arrival-at-mercury",
+    "image": "https://media.esa.int/legacy/web/images/esa_multimedia/images/2018/03/mercury_transfer_module_separation3/17405481-1-eng-GB/208235/image-thumb__208235__fit_large/Mercury_Transfer_Module_separation.f6ab167b.webp",
+    "source": "ESA",
     "category": "Space",
-    "published": "2026-11-24T05:01:00+00:00"
+    "published": "2026-11-23T17:00:00+00:00"
   },
   {
     "title": "The Emergence of Dark Nebula Lynds 1251",
@@ -196,23 +214,5 @@
     "source": "ESA",
     "category": "Space",
     "published": "2026-11-17T12:03:28+00:00"
-  },
-  {
-    "title": "Milky Way versus Aurora",
-    "summary": "Are these two giant arches battling for control of the sky? No, but it sure looks like it! The arch on the left is the central band of our Milky Way Galaxy, an ancient system of stars, gas, and dust that predates our Earth and…",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-17-milky-way-versus-aurora/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/GalaxyVsAurora_Scheib_960.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-17T05:05:00+00:00"
-  },
-  {
-    "title": "NGC 7129: Star Formation with Jets from Webb",
-    "summary": "How do stars form? To help answer this question, NASA used the James Webb Space Telescope to take the featured detailed image of the star-forming region NGC 7129 in infrared light.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2026/10/weic2620a.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-16T05:05:00+00:00"
   }
 ]
