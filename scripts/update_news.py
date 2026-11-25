@@ -1019,43 +1019,32 @@ def load_existing_news():
 
 
 def refresh_preserved_article(article):
-    # Preserve existing fields and 
-image.
+    # Preserve existing fields and image.
     updated = dict(article)
 
     title = updated.get("title", "")
-    summary = updated.get("summary", 
-"")
+    summary = updated.get("summary", "")
 
-    # Clean existing summaries too, not 
-just new feed summaries.
-    if updated.get("source") == 
-"Phys.org":
+    # Clean existing summaries too, not just new feed summaries.
+    if updated.get("source") == "Phys.org":
         cleaned_summary = summary
     else:
-        cleaned_summary = 
-clean_summary(
+        cleaned_summary = clean_summary(
             summary,
             title,
         )
 
-    if cleaned_summary and 
-cleaned_summary != FALLBACK_SUMMARY:
-        updated["summary"] = 
-cleaned_summary
+    if cleaned_summary and cleaned_summary != FALLBACK_SUMMARY:
+        updated["summary"] = cleaned_summary
 
-    # Reclassify old stories using the 
-corrected category rules.
-    updated["category"] = 
-classify_category(
+    # Reclassify old stories using the corrected category rules.
+    updated["category"] = classify_category(
         title,
         updated.get("summary", ""),
-        updated.get("category", 
-"Science"),
+        updated.get("category", "Science"),
     )
 
-    if updated["category"] not in 
-VALID_CATEGORIES:
+    if updated["category"] not in VALID_CATEGORIES:
         updated["category"] = "Science"
 
     return updated
