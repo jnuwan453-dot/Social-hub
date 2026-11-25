@@ -1026,16 +1026,16 @@ def refresh_preserved_article(article):
     title = updated.get("title", "")
     summary = updated.get("summary", "")
 
-    # Clean existing summaries too, not just new feed summaries.
-   if updated.get("source") == "Phys.org":
-    cleaned_summary = summary
-else:
-    cleaned_summary = clean_summary(
-        summary,
-        title,
-    )
+                # Clean existing summaries too, not just new feed summaries.
+    if updated.get("source") == "Phys.org":
+        cleaned_summary = summary
+    else:
+        cleaned_summary = clean_summary(
+            summary,
+            title,
+        )
 
-    if cleaned_summary != FALLBACK_SUMMARY:
+    if cleaned_summary and cleaned_summary != FALLBACK_SUMMARY:
         updated["summary"] = cleaned_summary
 
     # Reclassify old stories using the corrected category rules.
@@ -1049,7 +1049,6 @@ else:
         updated["category"] = "Science"
 
     return updated
-
 
 # --------------------------------------------------
 # MAIN NEWS UPDATE
