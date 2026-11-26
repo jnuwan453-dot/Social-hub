@@ -727,6 +727,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .ticker-label i { animation:none; }
   html { scroll-behavior:auto; }
 }
+
+/* Facebook follow (2026-11-26) */
+@media (min-width:901px) {
+  .header-label { display:flex; flex-direction:column; align-items:flex-end; gap:11px; }
+}
+.fb-follow { display:inline-flex; align-items:center; gap:7px; background:#1877f2; color:#fff; font-size:12px; font-weight:bold; letter-spacing:.3px; text-transform:none; padding:8px 14px; border-radius:999px; transition:.2s; box-shadow:0 4px 14px rgba(24,119,242,.35); }
+.fb-follow:hover { background:#1464cc; transform:translateY(-1px); }
+.fb-follow svg { flex:0 0 auto; }
 </style>
 </head>
 
@@ -756,6 +764,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
     <div class="header-label">
       Curiosity · Context · Discovery
+      <a class="fb-follow" href="https://www.facebook.com/profile.php?id=61590741833588" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook (Global Social Hub)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>Follow on Facebook</a>
     </div>
 
   </div>
@@ -1115,6 +1124,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   <div class="footer-bottom">
     Informative stories and links to original sources.<br><br>
     <a href="about.html" style="color:#e9b85d">About Us</a> &nbsp;·&nbsp; <a href="privacy-policy.html" style="color:#e9b85d">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:#e9b85d">Terms &amp; Disclaimer</a> &nbsp;·&nbsp; <a href="contact.html" style="color:#e9b85d">Contact</a>
+    <br><br>
+    Follow our Facebook page: <a href="https://www.facebook.com/profile.php?id=61590741833588" target="_blank" rel="noopener noreferrer" style="color:#e9b85d;font-weight:bold">Global Social Hub</a> &mdash; daily space, science and AI videos.
   </div>
 
 </footer>
