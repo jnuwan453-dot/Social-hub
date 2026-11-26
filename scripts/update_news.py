@@ -46,6 +46,14 @@ FEEDS = [
         ],
         "category": "AI & Technology",
     },
+    {
+        "name": "ScienceDaily",
+        "source": "ScienceDaily",
+        "urls": [
+            "https://www.sciencedaily.com/rss/top/science.xml"
+        ],
+        "category": "Science",
+    },
    {
         "name": "Phys.org",
         "source": "Phys.org",
@@ -1118,7 +1126,7 @@ def main():
                 ):
                     continue
 
-               summary = get_best_summary(
+                summary = get_best_summary(
                     item,
                     title,
                     source_name,
