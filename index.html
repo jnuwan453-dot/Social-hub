@@ -735,6 +735,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .fb-follow { display:inline-flex; align-items:center; gap:7px; background:#1877f2; color:#fff; font-size:12px; font-weight:bold; letter-spacing:.3px; text-transform:none; padding:8px 14px; border-radius:999px; transition:.2s; box-shadow:0 4px 14px rgba(24,119,242,.35); }
 .fb-follow:hover { background:#1464cc; transform:translateY(-1px); }
 .fb-follow svg { flex:0 0 auto; }
+
+/* Featured Articles (Phase 2) */
+.feature-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:21px; }
+.feature-card { min-width:0; overflow:hidden; background:white; border:1px solid var(--line); border-radius:var(--radius); display:flex; flex-direction:column; box-shadow:var(--shadow); transition:transform .22s,box-shadow .22s; }
+.feature-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+.feature-card .story-image { height:190px; min-height:190px; }
+.feature-card .category { display:inline-block; align-self:flex-start; padding:5px 9px; border-radius:4px; font-size:10px; font-weight:bold; letter-spacing:.7px; text-transform:uppercase; }
+.feature-card[data-category="Space"] .category { color:#1c5682; background:#e8f1f9; }
+.feature-card[data-category="Science"] .category { color:#0d6e5f; background:#e6f5f1; }
+.feature-card[data-category="Discoveries"] .category { color:#7a4fa3; background:#f2eafa; }
+.feature-card[data-category="AI & Technology"] .category { color:#a52d35; background:#fff0ef; }
+.feature-card[data-category="World News"] .category { color:#8a6d1d; background:#fdf6e0; }
+.feature-card h3 { color:var(--navy); font:bold 20px/1.28 Georgia,serif; margin:13px 0 9px; }
+.feature-card p { color:#59697c; font-size:13.5px; line-height:1.65; margin:0 0 15px; }
+@media (max-width:900px) { .feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:600px) { .feature-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 
@@ -1078,6 +1094,86 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
       Editorial note: These introductory stories provide background information.
       Follow the linked original sources for current information.
     </p>
+
+  </section>
+
+    <section id="featured-articles">
+
+    <div class="section-heading">
+      <div>
+        <h2>Featured Articles</h2>
+        <p>Original explainers from The Civic Brief — written to make big ideas clear.</p>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+
+      <article class="feature-card" data-category="Space">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85" alt="Earth seen from orbit with satellite communications" loading="lazy">
+        </div>
+        <div class="story-content">
+          <span class="category">Space</span>
+          <h3>Space Is Full: The Kessler Syndrome Explained</h3>
+          <p>Tens of thousands of dead satellites and fragments circle Earth at bullet speed. One collision could start a chain reaction.</p>
+          <div class="story-meta">The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+          <a class="read-link" href="articles/kessler-syndrome-space-junk.html">Read Article &rarr;</a>
+        </div>
+      </article>
+
+      <article class="feature-card" data-category="Space">
+        <div class="story-image">
+          <img src="https://images-assets.nasa.gov/image/PIA04921/PIA04921~orig.jpg" alt="Planet Jupiter photographed by a NASA spacecraft" loading="lazy">
+        </div>
+        <div class="story-content">
+          <span class="category">Space</span>
+          <h3>Voyager 1: The Farthest Human-Made Object</h3>
+          <p>More than 16 billion miles away, a spacecraft built in the 1970s is still calling home. In November 2026 its signal began taking a full 24 hours to arrive.</p>
+          <div class="story-meta">The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+          <a class="read-link" href="articles/voyager-farthest-human-object.html">Read Article &rarr;</a>
+        </div>
+      </article>
+
+      <article class="feature-card" data-category="Space">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=85" alt="Earth viewed from a spacecraft in orbit" loading="lazy">
+        </div>
+        <div class="story-content">
+          <span class="category">Space</span>
+          <h3>Back to the Moon: NASA's Artemis Program Explained</h3>
+          <p>Apollo was a visit. Artemis is a move-in. NASA's plan to return astronauts to the Moon — and stay there.</p>
+          <div class="story-meta">The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+          <a class="read-link" href="articles/artemis-back-to-the-moon.html">Read Article &rarr;</a>
+        </div>
+      </article>
+
+      <article class="feature-card" data-category="Discoveries">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=85" alt="Distant galaxies in deep space" loading="lazy">
+        </div>
+        <div class="story-content">
+          <span class="category">Discoveries</span>
+          <h3>The Monster at the Center: Sagittarius A*</h3>
+          <p>Four million suns packed into a space smaller than Mercury's orbit — and in 2022, astronomers showed us its picture.</p>
+          <div class="story-meta">The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+          <a class="read-link" href="articles/sagittarius-a-black-hole.html">Read Article &rarr;</a>
+        </div>
+      </article>
+
+      <article class="feature-card" data-category="AI & Technology">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85" alt="Artificial intelligence and robotics technology" loading="lazy">
+        </div>
+        <div class="story-content">
+          <span class="category">AI & Technology</span>
+          <h3>Robots Report for Work: The Machines Joining the Workforce</h3>
+          <p>Four million robots already work in the world's factories. Now humanoid machines are applying for warehouse jobs.</p>
+          <div class="story-meta">The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+          <a class="read-link" href="articles/robots-report-for-work.html">Read Article &rarr;</a>
+        </div>
+      </article>
+
+    </div>
 
   </section>
 
