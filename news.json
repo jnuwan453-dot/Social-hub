@@ -1,5 +1,59 @@
 [
   {
+    "title": "The Moon Watchers",
+    "summary": "On November 24, all denizens of our fair planet could watch the Moon rise opposite the setting Sun. Easy to spot in twilight skies above fields, fences, backyards, and even stone walls, the Moon was big and bright, and at its…",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-27-the-moon-watchers/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Plenilunio1_2048r.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-27T05:05:00+00:00"
+  },
+  {
+    "title": "Shivelyuch Socked In",
+    "summary": "A cloud layer encircled the flanks of the volcano on the Kamchatka Peninsula but left its restless summit caldera in view",
+    "url": "https://science.nasa.gov/earth/earth-observatory/shivelyuch-socked-in/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/shivelyuch-socked-in/shivelyuchcloud_oli2_20261108_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Science",
+    "published": "2026-11-27T05:01:00+00:00"
+  },
+  {
+    "title": "Scientists identify two ages when children may be most vulnerable to screen time",
+    "summary": "Scientists have identified two potentially critical periods when screen time may be especially detrimental to children's learning and memory: infancy and the start of formal schooling.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261126033220.htm",
+    "image": "https://www.sciencedaily.com/images/1920/cute-boy-staring-at-cell-phone-screen.webp",
+    "source": "ScienceDaily",
+    "category": "Science",
+    "published": "2026-11-27T03:56:06+00:00"
+  },
+  {
+    "title": "Scientists discover signs of a hidden extinction crisis deep beneath the ocean",
+    "summary": "The deep sea has long been considered a safe haven for marine life, but new genetic research suggests a hidden biodiversity crisis may be unfolding far beneath the waves.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261125045249.htm",
+    "image": "https://www.sciencedaily.com/images/1920/lanternfish.webp",
+    "source": "ScienceDaily",
+    "category": "Science",
+    "published": "2026-11-27T01:55:42+00:00"
+  },
+  {
+    "title": "These bizarre prehistoric mammals may have been misunderstood for 150 years",
+    "summary": "Giant horned mammals that emerged shortly after the extinction of the dinosaurs may have had far fewer physical differences between males and females than scientists once believed.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261125045310.htm",
+    "image": "https://www.sciencedaily.com/images/1920/uintatheres.webp",
+    "source": "ScienceDaily",
+    "category": "Science",
+    "published": "2026-11-27T01:05:56+00:00"
+  },
+  {
+    "title": "For decades, scientists may have misunderstood how brain cells work",
+    "summary": "A major new study challenges a long-standing assumption about how the brain works, revealing that most neurons are versatile multitaskers rather than highly specialized workers.",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261125045302.htm",
+    "image": "https://www.sciencedaily.com/images/1920/brain-neurons-complex-structure.webp",
+    "source": "ScienceDaily",
+    "category": "Science",
+    "published": "2026-11-26T21:36:09+00:00"
+  },
+  {
     "title": "Nvidia hits pause on chip shipments to Southeast Asia",
     "summary": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China",
     "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
@@ -160,59 +214,5 @@
     "source": "ScienceDaily",
     "category": "Science",
     "published": "2026-11-26T10:46:17+00:00"
-  },
-  {
-    "title": "Eye in the Sky: The Milky Way over Lençóis",
-    "summary": "Beauty is in the eye of the beholder. And there is much to behold in today's featured image. The Milky Way shines bright in the sky of Brazil, over the white sand dunes and dark lagoons of Lençóis Maranhenses National Park.",
-    "url": "https://science.nasa.gov/image-article/apod-2026-november-26-eye-in-the-sky-the-milky-way-over-lencois/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/Milky_Way_Lencois.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-26T05:05:00+00:00"
-  },
-  {
-    "title": "Seeking Refuge on Resolution Island",
-    "summary": "New Zealanders have long envisioned the island as a predator-free zone for native birds, but swimming stoats have shown a resolve of their own",
-    "url": "https://science.nasa.gov/earth/earth-observatory/seeking-refuge-on-resolution-island/",
-    "image": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/seeking-refuge-on-resolution-island/nzresolution_oli2_20251212_th.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
-    "source": "NASA",
-    "category": "Space",
-    "published": "2026-11-26T05:01:00+00:00"
-  },
-  {
-    "title": "Scientists discover mysterious lakes more than a mile beneath the Red Sea",
-    "summary": "More than a mile beneath the surface of the Red Sea, scientists have discovered rare underwater lakes that could reveal secrets about Earth's ancient oceans and the possibility of alien life.",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261125045259.htm",
-    "image": "https://www.sciencedaily.com/images/1920/deep-sea-brine-pool.webp",
-    "source": "ScienceDaily",
-    "category": "Discoveries",
-    "published": "2026-11-26T02:42:37+00:00"
-  },
-  {
-    "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
-    "summary": "The credit rating agency may lower Nvidia's credit rating to AA-, the fourth-highest rating",
-    "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
-    "image": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2256813240.jpg?resize=1200,800",
-    "source": "TechCrunch",
-    "category": "AI & Technology",
-    "published": "2026-11-25T22:44:32+00:00"
-  },
-  {
-    "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
-    "summary": "OpenAI will introduce a single usage meter across ChatGPT as it combines the Chat and Work experiences",
-    "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-    "image": "https://techcrunch.com/wp-content/uploads/2026/11/openai-chatgpt.jpg?resize=1200,800",
-    "source": "TechCrunch",
-    "category": "AI & Technology",
-    "published": "2026-11-25T20:03:27+00:00"
-  },
-  {
-    "title": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
-    "summary": "Most codes of conduct serve as a reflection of corporate culture. In Nvidia's case, that could have consequences",
-    "url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
-    "image": "https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2227140868.jpg?w=1024",
-    "source": "TechCrunch",
-    "category": "AI & Technology",
-    "published": "2026-11-25T19:54:57+00:00"
   }
 ]
