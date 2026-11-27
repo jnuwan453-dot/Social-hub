@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How GPS Works: The Satellites That Guide Your Day | The Civic Brief</title>
+<meta name="description" content="Your phone finds itself by timing radio signals from atomic clocks 12,550 miles overhead — a system so precise it must correct for Einstein's relativity. How GPS works, and where the new GPS III satellites are taking it.">
+<meta name="theme-color" content="#101d30">
+<meta name="robots" content="index, follow">
+<meta name="author" content="The Civic Brief">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How GPS Works: The Satellites That Guide Your Day | The Civic Brief">
+<meta property="og:description" content="Your phone finds itself by timing radio signals from atomic clocks 12,550 miles overhead — a system so precise it must correct for Einstein's relativity. How GPS works, and where the new GPS III satellites are taking it.">
+<meta property="og:url" content="https://jnuwan453-dot.github.io/Social-hub/articles/how-gps-works.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jnuwan453-dot.github.io/Social-hub/articles/how-gps-works.html">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P5NH506GM0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P5NH506GM0');
+</script>
+<style>
+:root{--navy:#101d30;--navy2:#172d49;--blue:#24547e;--red:#d94b52;--gold:#e9b85d;--paper:#f4f6f9;--ink:#172436;--muted:#68788c;--line:#e3e9f0;--shadow:0 5px 22px rgba(16,29,48,.07);--radius:13px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.topline{height:4px;background:linear-gradient(90deg,var(--red),var(--gold),#3679a7)}
+header{background:var(--navy);color:white}
+.header-inner{max-width:1240px;margin:auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-row{display:flex;align-items:center;gap:15px}
+.logo{width:50px;height:50px;flex:0 0 50px;border-radius:12px;display:grid;place-items:center;background:var(--red);color:white;font:bold 23px Georgia,serif}
+.brand{font:bold clamp(24px,3.5vw,33px)/1.1 Georgia,serif}
+.brand-accent{color:var(--gold)}
+.tagline{margin-top:5px;color:#bdcbd9;font-size:10.5px;letter-spacing:1.2px}
+.nav-wrap{background:var(--navy2);position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(16,29,48,.25)}
+nav{max-width:1240px;margin:auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto}
+nav a{color:#d7e2ed;font-size:13.5px;font-weight:600;padding:13px 12px;border-bottom:3px solid transparent;white-space:nowrap}
+nav a:hover{color:white;border-bottom-color:var(--gold)}
+main{max-width:860px;margin:auto;padding:34px 24px 55px}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--blue);font-weight:600}
+.category{display:inline-block;padding:5px 10px;border-radius:4px;font-size:10.5px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase}
+.cat-Space{color:#1c5682;background:#e8f1f9}
+.cat-Science{color:#0d6e5f;background:#e6f5f1}
+.cat-Discoveries{color:#7a4fa3;background:#f2eafa}
+.cat-AITech{color:#a52d35;background:#fff0ef}
+.cat-World{color:#8a6d1d;background:#fdf6e0}
+h1{font:bold clamp(29px,4.6vw,42px)/1.18 Georgia,serif;color:var(--navy);margin:14px 0 12px}
+.meta{color:var(--muted);font-size:13px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.hero-img{width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:14px;box-shadow:var(--shadow);margin-bottom:8px}
+.img-cap{color:var(--muted);font-size:12px;margin-bottom:26px}
+.article-body p{font-size:16.5px;color:#2c3e52;margin:0 0 18px}
+.article-body h2{font:bold 23px Georgia,serif;color:var(--navy);margin:30px 0 12px}
+.keyfacts{background:white;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:20px 24px;margin:26px 0;box-shadow:var(--shadow)}
+.keyfacts h2{font:bold 17px Georgia,serif;color:var(--navy);margin:0 0 10px}
+.keyfacts ul{margin:0;padding-left:20px}
+.keyfacts li{margin:6px 0;font-size:14.5px}
+.sources{background:#eef3f8;border-radius:10px;padding:18px 24px;margin:30px 0}
+.sources h2{font:bold 16px Georgia,serif;color:var(--navy);margin:0 0 8px}
+.sources a{color:var(--blue);font-weight:600;text-decoration:underline}
+.sources li{margin:5px 0;font-size:14px}
+.more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:14px}
+.more-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:transform .2s}
+.more-card:hover{transform:translateY(-3px)}
+.more-card h3{font:bold 17px/1.3 Georgia,serif;color:var(--navy);margin:9px 0 7px}
+.more-card p{color:#59697c;font-size:13px;margin:0}
+.more-card .go{color:#1c5682;font-size:13px;font-weight:bold;display:inline-block;margin-top:10px}
+footer{background:var(--navy);color:#d9e4f0;padding:34px 24px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;font-size:13px}
+.footer-brand{color:white;font:bold 19px Georgia,serif}
+.footer-inner p{margin:5px 0 0;color:#aebfd0;font-size:12px}
+.footer-bottom{max-width:1240px;margin:23px auto 0;padding-top:17px;border-top:1px solid rgba(255,255,255,.13);color:#9eb0c3;font-size:11px}
+.footer-bottom a{color:var(--gold)}
+@media(max-width:640px){.more-grid{grid-template-columns:1fr}main{padding:26px 17px 45px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="header-inner">
+    <div class="brand-row">
+      <div class="logo">CB</div>
+      <div>
+        <div class="brand">The Civic <span class="brand-accent">Brief</span></div>
+        <div class="tagline">SPACE &middot; SCIENCE &middot; DISCOVERIES &middot; AI &amp; TECHNOLOGY &middot; WORLD NEWS</div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#articles">Latest Stories</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</div>
+<main>
+  <div class="crumb"><a href="../index.html">Home</a> &rsaquo; Articles &rsaquo; AI & Technology</div>
+  <span class="category cat-AITech">AI & Technology</span>
+  <h1>How GPS Works: The Satellites That Guide Your Day</h1>
+  <div class="meta">By The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85" alt="Earth at night with glowing networks of light">
+  <div class="img-cap">A navigation fix starts far above the clouds: GPS satellites circle the planet twice a day, broadcasting time signals to billions of receivers. (Image: Unsplash)</div>
+  <div class="keyfacts">
+    <h2>Key Facts</h2>
+    <ul>
+      <li>GPS is operated by the U.S. Space Force. The constellation is built around a baseline of 24 satellites, and 32 were listed as operational in 2026 (U.S. Coast Guard Navigation Center).</li>
+      <li>The satellites orbit about 12,550 miles (20,200 km) above Earth in six orbital planes, circling the planet roughly twice a day.</li>
+      <li>Each satellite carries atomic clocks and broadcasts its position and the exact time; your receiver works out where you are by timing how long the signals take to arrive.</li>
+      <li>A GPS-enabled smartphone is typically accurate to within about 16 feet (4.9 m) under open sky (GPS.gov).</li>
+      <li>All ten GPS III satellites had been launched by April 2026; they offer roughly three times better accuracy and eight times better anti-jamming than the previous generation.</li>
+    </ul>
+  </div>
+  <div class="article-body">
+<p>The blue dot on your phone feels like magic, but it is really an exercise in very precise timekeeping. The Global Positioning System — GPS — is a fleet of satellites, run by the U.S. Space Force and free for anyone on Earth to use, that does one simple thing relentlessly: it broadcasts what time it is. Your phone turns those time signals into a position accurate to a few steps. Here is how.</p>
+<h2>Position from pure timing</h2>
+<p>Each GPS satellite circles Earth at about 12,550 miles (20,200 km) altitude, completing an orbit roughly every 12 hours, and carries atomic clocks of extraordinary precision. It continually transmits a signal stamped with the exact time it was sent and the satellite's own position. Your receiver picks up that signal and notes the arrival time. Because radio waves travel at the speed of light — about 186,000 miles (300,000 km) per second — even a tiny delay reveals distance: a signal that left 0.07 seconds ago came from roughly 12,550 miles away.</p>
+<p>Knowing your distance from one satellite puts you somewhere on a giant sphere. A second satellite narrows it to a circle; a third, to two points, one of which is usually absurd (deep space or inside the Earth). This is trilateration — triangulation's quieter cousin — and it is why GPS receivers listen to as many satellites as they can see.</p>
+<h2>Why your phone needs a fourth satellite</h2>
+<p>There is a catch. Satellite clocks are atomic; your phone's clock is not, and at light speed a clock error of one millionth of a second becomes a position error of about 1,000 feet (300 m). The fix is elegant: a signal from a fourth satellite gives the receiver enough information to solve for its own clock error as well as its latitude, longitude and altitude. Every GPS fix is really four answers at once — three for place, one for time.</p>
+<p>GPS even has to outsmart Einstein. Because the satellites move fast and sit in weaker gravity than we do, their clocks gain about 38 millionths of a second per day relative to clocks on the ground — an effect predicted by relativity. Left uncorrected, it would throw positions off by roughly 6 miles (10 km) a day. Engineers build the correction in, making GPS an everyday, pocket-sized proof that relativity is real.</p>
+<h2>The constellation today: GPS III</h2>
+<p>The United States commits to keeping at least 24 GPS satellites operational, and in practice flies more: the U.S. Coast Guard Navigation Center listed 32 operational satellites in 2026, spread across six orbital planes so that at least four are visible from almost anywhere, at any time. The fleet is a mix of generations, topped by GPS III, built by Lockheed Martin. The tenth and final GPS III satellite launched in April 2026. These newest spacecraft broadcast a modern civil signal called L1C — designed to work smoothly with Europe's Galileo and other systems — and deliver roughly three times the accuracy and eight times the resistance to jamming of the satellites they replace. A follow-on generation, GPS IIIF, is in production.</p>
+<h2>A utility the world runs on</h2>
+<p>GPS began as a military system — the first satellite launched in 1978, and the constellation was declared fully operational in 1995 — but its timing signals now quietly synchronize power grids, cell networks, stock exchanges and farm equipment, quite apart from guiding aircraft, ships and lost drivers. All of it rests on a simple, beautiful idea: if you know exactly what time it is in orbit, you know exactly where you are on Earth.</p>
+  </div>
+  <div class="sources">
+    <h2>Sources &amp; Further Reading</h2>
+    <ul>
+      <li><a href="https://www.gps.gov" target="_blank" rel="noopener noreferrer">GPS.gov — the official U.S. GPS website</a></li>
+      <li><a href="https://www.navcen.uscg.gov/gps-constellation" target="_blank" rel="noopener noreferrer">U.S. Coast Guard Navigation Center — GPS constellation status</a></li>
+      <li><a href="https://www.lockheedmartin.com/en-us/products/gps-iii.html" target="_blank" rel="noopener noreferrer">Lockheed Martin — GPS III</a></li>
+    </ul>
+  </div>
+  <h2 style="font:bold 22px Georgia,serif;color:var(--navy);margin:34px 0 4px">More From The Civic Brief</h2>
+  <div class="more-grid">
+      <a class="more-card" href="how-starlink-works.html">
+        <span class="category cat-AITech">AI & Technology</span>
+        <h3>How Starlink Works: Internet From Orbit</h3>
+        <p>Thousands of satellites just 340 miles overhead now beam broadband to homes, ships and aircraft — and since 2025, to ordinary phones.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+      <a class="more-card" href="kessler-syndrome-space-junk.html">
+        <span class="category cat-Space">Space</span>
+        <h3>Space Is Full: The Kessler Syndrome Explained</h3>
+        <p>Tens of thousands of dead satellites and fragments circle Earth at bullet speed. One collision could start a chain reaction.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+      <a class="more-card" href="robots-report-for-work.html">
+        <span class="category cat-AITech">AI & Technology</span>
+        <h3>Robots Report for Work: The Machines Joining the Workforce</h3>
+        <p>Four million robots already work in the world's factories. Now humanoid machines are applying for warehouse jobs.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+      <a class="more-card" href="artemis-back-to-the-moon.html">
+        <span class="category cat-Space">Space</span>
+        <h3>Back to the Moon: NASA's Artemis Program Explained</h3>
+        <p>Apollo was a visit. Artemis is a move-in. NASA's plan to return astronauts to the Moon — and stay there.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">THE CIVIC BRIEF</div>
+      <p>Curiosity &middot; Context &middot; Credible Sources</p>
+    </div>
+    <div>
+      <strong>Explore the world with us.</strong>
+      <p>Space &middot; Science &middot; AI &middot; Technology &middot; World News</p>
+    </div>
+    <div>&copy; <span id="year"></span> The Civic Brief</div>
+  </div>
+  <div class="footer-bottom">
+    Informative stories and links to original sources.<br><br>
+    <a href="../about.html">About Us</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../contact.html">Contact</a>
+    <br><br>
+    Follow our Facebook page: <a href="https://www.facebook.com/profile.php?id=61590741833588" target="_blank" rel="noopener noreferrer">Global Social Hub</a> &mdash; daily space, science and AI videos.
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

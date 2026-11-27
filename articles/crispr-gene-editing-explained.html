@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRISPR Explained: Editing the Code of Life | The Civic Brief</title>
+<meta name="description" content="CRISPR lets scientists rewrite DNA letter by letter — and in 2025 it became a treatment built for a single patient, baby KJ. How gene editing works, what it has already achieved, and what comes next.">
+<meta name="theme-color" content="#101d30">
+<meta name="robots" content="index, follow">
+<meta name="author" content="The Civic Brief">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CRISPR Explained: Editing the Code of Life | The Civic Brief">
+<meta property="og:description" content="CRISPR lets scientists rewrite DNA letter by letter — and in 2025 it became a treatment built for a single patient, baby KJ. How gene editing works, what it has already achieved, and what comes next.">
+<meta property="og:url" content="https://jnuwan453-dot.github.io/Social-hub/articles/crispr-gene-editing-explained.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1200&q=85">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jnuwan453-dot.github.io/Social-hub/articles/crispr-gene-editing-explained.html">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<style>
+:root{--navy:#101d30;--navy2:#172d49;--blue:#24547e;--red:#d94b52;--gold:#e9b85d;--paper:#f4f6f9;--ink:#172436;--muted:#68788c;--line:#e3e9f0;--shadow:0 5px 22px rgba(16,29,48,.07);--radius:13px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.topline{height:4px;background:linear-gradient(90deg,var(--red),var(--gold),#3679a7)}
+header{background:var(--navy);color:white}
+.header-inner{max-width:1240px;margin:auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-row{display:flex;align-items:center;gap:15px}
+.logo{width:50px;height:50px;flex:0 0 50px;border-radius:12px;display:grid;place-items:center;background:var(--red);color:white;font:bold 23px Georgia,serif}
+.brand{font:bold clamp(24px,3.5vw,33px)/1.1 Georgia,serif}
+.brand-accent{color:var(--gold)}
+.tagline{margin-top:5px;color:#bdcbd9;font-size:10.5px;letter-spacing:1.2px}
+.nav-wrap{background:var(--navy2);position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(16,29,48,.25)}
+nav{max-width:1240px;margin:auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto}
+nav a{color:#d7e2ed;font-size:13.5px;font-weight:600;padding:13px 12px;border-bottom:3px solid transparent;white-space:nowrap}
+nav a:hover{color:white;border-bottom-color:var(--gold)}
+main{max-width:860px;margin:auto;padding:34px 24px 55px}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--blue);font-weight:600}
+.category{display:inline-block;padding:5px 10px;border-radius:4px;font-size:10.5px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase}
+.cat-Space{color:#1c5682;background:#e8f1f9}
+.cat-Science{color:#0d6e5f;background:#e6f5f1}
+.cat-Discoveries{color:#7a4fa3;background:#f2eafa}
+.cat-AITech{color:#a52d35;background:#fff0ef}
+.cat-World{color:#8a6d1d;background:#fdf6e0}
+h1{font:bold clamp(29px,4.6vw,42px)/1.18 Georgia,serif;color:var(--navy);margin:14px 0 12px}
+.meta{color:var(--muted);font-size:13px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.hero-img{width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:14px;box-shadow:var(--shadow);margin-bottom:8px}
+.img-cap{color:var(--muted);font-size:12px;margin-bottom:26px}
+.article-body p{font-size:16.5px;color:#2c3e52;margin:0 0 18px}
+.article-body h2{font:bold 23px Georgia,serif;color:var(--navy);margin:30px 0 12px}
+.keyfacts{background:white;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:20px 24px;margin:26px 0;box-shadow:var(--shadow)}
+.keyfacts h2{font:bold 17px Georgia,serif;color:var(--navy);margin:0 0 10px}
+.keyfacts ul{margin:0;padding-left:20px}
+.keyfacts li{margin:6px 0;font-size:14.5px}
+.sources{background:#eef3f8;border-radius:10px;padding:18px 24px;margin:30px 0}
+.sources h2{font:bold 16px Georgia,serif;color:var(--navy);margin:0 0 8px}
+.sources a{color:var(--blue);font-weight:600;text-decoration:underline}
+.sources li{margin:5px 0;font-size:14px}
+.more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:14px}
+.more-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:transform .2s}
+.more-card:hover{transform:translateY(-3px)}
+.more-card h3{font:bold 17px/1.3 Georgia,serif;color:var(--navy);margin:9px 0 7px}
+.more-card p{color:#59697c;font-size:13px;margin:0}
+.more-card .go{color:#1c5682;font-size:13px;font-weight:bold;display:inline-block;margin-top:10px}
+footer{background:var(--navy);color:#d9e4f0;padding:34px 24px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;font-size:13px}
+.footer-brand{color:white;font:bold 19px Georgia,serif}
+.footer-inner p{margin:5px 0 0;color:#aebfd0;font-size:12px}
+.footer-bottom{max-width:1240px;margin:23px auto 0;padding-top:17px;border-top:1px solid rgba(255,255,255,.13);color:#9eb0c3;font-size:11px}
+.footer-bottom a{color:var(--gold)}
+@media(max-width:640px){.more-grid{grid-template-columns:1fr}main{padding:26px 17px 45px}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P5NH506GM0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P5NH506GM0');
+</script>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="header-inner">
+    <div class="brand-row">
+      <div class="logo">CB</div>
+      <div>
+        <div class="brand">The Civic <span class="brand-accent">Brief</span></div>
+        <div class="tagline">SPACE &middot; SCIENCE &middot; DISCOVERIES &middot; AI &amp; TECHNOLOGY &middot; WORLD NEWS</div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#articles">Latest Stories</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</div>
+<main>
+  <div class="crumb"><a href="../index.html">Home</a> &rsaquo; Articles &rsaquo; Science</div>
+  <span class="category cat-Science">Science</span>
+  <h1>CRISPR Explained: Editing the Code of Life</h1>
+  <div class="meta">By The Civic Brief &middot; November 26, 2026 &middot; 4 min read</div>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1200&q=85" alt="Cells glowing under a fluorescence microscope">
+  <div class="img-cap">Cells under a fluorescence microscope. Gene editing lets scientists rewrite the DNA inside cells like these — and in 2025 it was used to treat a single baby. (Image: Unsplash)</div>
+  <div class="keyfacts">
+    <h2>Key Facts</h2>
+    <ul>
+      <li>Your genome is a code of about 3 billion DNA letters — and a single wrong letter can cause a serious disease.</li>
+      <li>CRISPR was adapted from a bacterial immune system; the landmark Doudna and Charpentier paper appeared in 2012, and the pair won the Nobel Prize in Chemistry in 2020.</li>
+      <li>The first CRISPR medicine, Casgevy, was approved by the FDA in December 2023, for sickle cell disease.</li>
+      <li>In 2025, baby KJ Muldoon became the first person treated with a personalized CRISPR therapy, designed for his exact mutation in about six months (Children's Hospital of Philadelphia / Penn Medicine).</li>
+      <li>KJ's disorder, CPS1 deficiency, affects roughly 1 in 1.3 million babies and is often fatal in infancy.</li>
+    </ul>
+  </div>
+  <div class="article-body">
+<p>Every cell in your body carries the same instruction manual: a molecule of DNA written in about 3 billion chemical letters. When even one letter is wrong, the result can be a devastating disease. For most of history, doctors could only treat the symptoms of such genetic errors. CRISPR changed that — it gave scientists a way to find a single wrong letter in the manual and fix it.</p>
+<h2>Scissors borrowed from bacteria</h2>
+<p>CRISPR was not invented in a laboratory. It was discovered in bacteria, which use it as an immune system: when a virus attacks, the bacterium stores a snippet of the invader's DNA and later uses it to recognize and cut that DNA if the virus returns. In 2012, Jennifer Doudna and Emmanuelle Charpentier showed this system could be reprogrammed to cut any DNA sequence scientists chose — work that won them the Nobel Prize in Chemistry in 2020. The tool has two parts: a guide RNA that acts like a GPS, leading the machinery to one exact address in the genome, and a protein — usually Cas9 — that acts as scissors. A newer version, called base editing, works less like scissors and more like a pencil: instead of cutting DNA, it chemically rewrites a single letter, which is gentler and more precise.</p>
+<h2>From laboratory tool to approved medicine</h2>
+<p>The first CRISPR medicine reached patients in December 2023, when the U.S. Food and Drug Administration approved Casgevy for sickle cell disease. Doctors remove a patient's own blood stem cells, edit them in the laboratory so they produce healthy hemoglobin, and return them to the body. The approach works, but it is slow, demanding and expensive — and it can only fix cells that can be taken out of the body. The bigger prize is editing DNA inside the body itself. That is exactly what happened in 2025.</p>
+<h2>A treatment built for one baby</h2>
+<p>KJ Muldoon was born in August 2024 with severe CPS1 deficiency, a genetic disorder so rare it affects roughly 1 in 1.3 million babies. His body could not clear ammonia, a toxic waste product of protein, and the buildup threatened his brain. Half of babies with the condition die in infancy. A team at Children's Hospital of Philadelphia and Penn Medicine, led by Rebecca Ahrens-Nicklas and Kiran Musunuru, proposed something never attempted: design a base-editing treatment for KJ's exact mutation — a drug for an audience of one. In about six months they designed, tested and manufactured it, delivering the editor to his liver inside tiny fat bubbles called lipid nanoparticles. KJ received three infusions between February and April 2025, starting at six months old. He tolerated them well, could eat more protein, and needed less medication. In June 2025, after more than 300 days in hospital, he went home. The case was published in The New England Journal of Medicine — the first documented personalized CRISPR treatment. His doctors stress it is too soon to call it a cure, but by early 2026 KJ was walking and talking.</p>
+<h2>What comes next</h2>
+<p>KJ's case is now reshaping regulation: in February 2026, the FDA joined his doctors in announcing a "plausible mechanism" framework intended to speed approval of one-off treatments for rare diseases, where large clinical trials are impossible. Challenges remain formidable — delivering editors to organs beyond the liver, keeping treatments affordable, and proving edits never land in the wrong place. But the direction is clear. Medicine spent a century treating diseases shared by millions. CRISPR has shown it can also treat a disease carried by exactly one child.</p>
+  </div>
+  <div class="sources">
+    <h2>Sources &amp; Further Reading</h2>
+    <ul>
+      <li><a href="https://www.chop.edu/news/one-year-anniversary-worlds-first-personalized-crispr-gene-therapy-child-rare-genetic-disease" target="_blank" rel="noopener noreferrer">Children's Hospital of Philadelphia — World's first personalized CRISPR therapy</a></li>
+      <li><a href="https://pci.upenn.edu/worlds-first-patient-treated-with-personalized-crispr-gene-editing-therapy-through-penn-medicine-and-chop-collaboration/" target="_blank" rel="noopener noreferrer">Penn Medicine — First patient treated with personalized CRISPR therapy</a></li>
+      <li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2504747" target="_blank" rel="noopener noreferrer">Musunuru et al. — Patient-specific CRISPR treatment, New England Journal of Medicine (2025)</a></li>
+    </ul>
+  </div>
+  <h2 style="font:bold 22px Georgia,serif;color:var(--navy);margin:34px 0 4px">More From The Civic Brief</h2>
+  <div class="more-grid">
+      <a class="more-card" href="human-brain-86-billion-neurons.html">
+        <span class="category cat-Science">Science</span>
+        <h3>The Human Brain: 86 Billion Neurons at Work</h3>
+        <p>Your brain runs on about 20 watts and holds 86 billion neurons — and in 2025, a simple blood test learned to detect one of its most feared diseases.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+      <a class="more-card" href="quantum-computing-explained.html">
+        <span class="category cat-Science">Science</span>
+        <h3>Quantum Computing Explained: Beyond Bits</h3>
+        <p>A benchmark that would take a supercomputer 10 septillion years took Google's Willow chip five minutes. What quantum computers are — and are not — yet.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+      <a class="more-card" href="robots-report-for-work.html">
+        <span class="category cat-AITech">AI & Technology</span>
+        <h3>Robots Report for Work: The Machines Joining the Workforce</h3>
+        <p>Four million robots already work in the world's factories. Now humanoid machines are applying for warehouse jobs.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+      <a class="more-card" href="sagittarius-a-black-hole.html">
+        <span class="category cat-Discoveries">Discoveries</span>
+        <h3>The Monster at the Center: Sagittarius A*</h3>
+        <p>Four million suns packed into a space smaller than Mercury's orbit — and in 2022, astronomers showed us its picture.</p>
+        <span class="go">Read Article &rarr;</span>
+      </a>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">THE CIVIC BRIEF</div>
+      <p>Curiosity &middot; Context &middot; Credible Sources</p>
+    </div>
+    <div>
+      <strong>Explore the world with us.</strong>
+      <p>Space &middot; Science &middot; AI &middot; Technology &middot; World News</p>
+    </div>
+    <div>&copy; <span id="year"></span> The Civic Brief</div>
+  </div>
+  <div class="footer-bottom">
+    Informative stories and links to original sources.<br><br>
+    <a href="../about.html">About Us</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="../terms.html">Terms &amp; Disclaimer</a> &nbsp;&middot;&nbsp; <a href="../contact.html">Contact</a>
+    <br><br>
+    Follow our Facebook page: <a href="https://www.facebook.com/profile.php?id=61590741833588" target="_blank" rel="noopener noreferrer">Global Social Hub</a> &mdash; daily space, science and AI videos.
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
