@@ -1,117 +1,126 @@
 [
   {
-    "title": "The world is experiencing a string of abnormally hot days—and records are being shattered",
-    "summary": "We're becoming used to seeing records being broken whenever we look at data telling us about Earth's climate. Whether it's the amount of carbon dioxide in the atmosphere, heat in the ocean or shrinking sea ice around the poles, the signs of human-caused climate change are all around us.",
-    "url": "https://phys.org/news/2026-11-world-experiencing-abnormally-hot-days.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2025/hot-earth.jpg",
-    "source": "Phys.org",
-    "category": "Science",
-    "published": "2026-11-27T21:00:05+00:00"
+    "title": "Apollo 17 VIP Site Anaglyph",
+    "summary": "Get out your red/blue glasses and check out this stereo scene from Taurus-Littrow valley on the Moon! The color anaglyph features a detailed 3D view of Apollo 17's Lunar Rover in the foreground.",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-28-apollo-17-vip-site-anaglyph/",
+    "image": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/a17anaglyph_vanMeijgaarden_f.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "NASA",
+    "category": "Space",
+    "published": "2026-11-28T05:05:00+00:00"
   },
   {
-    "title": "Strawberries, cucumbers and lemon basil show promise for future moon and Mars menus",
-    "summary": "As NASA prepares for future missions to the moon and Mars, researchers are studying crops that could provide astronauts with fresh food, nutrition and variety far from Earth. Such crop variety can help with menus in deep space, something top of mind this week as the nation celebrates Thanksgiving.",
-    "url": "https://phys.org/news/2026-11-strawberries-cucumbers-lemon-basil-future.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/crop-production-system.jpg",
+    "title": "Researchers explore the use of AI and smart sensors to improve food safety quickly, affordably",
+    "summary": "The smartJAN project, developed by the eVIDA research group at the University of Deusto in collaboration with Kernet and Fundación Miranda, has completed the development of a functional prototype capable of detecting the presence of LTPs (lipid transfer proteins), a family of plant proteins that includes allergens capable of triggering severe allergic reactions. These allergens are particularly relevant in the Mediterranean region.",
+    "url": "https://phys.org/news/2026-11-explore-ai-smart-sensors-food.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2022/peaches.jpg",
+    "source": "Phys.org",
+    "category": "Science",
+    "published": "2026-11-28T04:20:02+00:00"
+  },
+  {
+    "title": "Event Horizon Telescope views the dynamics and geometry of a black hole jet in extreme detail",
+    "summary": "The Event Horizon Telescope (EHT), a massive international collaboration of scientists and radio observatories, is like the gift that keeps on giving. In 2019, the EHT Collaboration gave us the first image of a black hole: the supermassive black hole (SMBH) at the heart of the M87 galaxy (M87*). In 2022, it provided the first image of Sagittarius A*, the SMBH at the center of the Milky Way. Between 2024 and 2026, the international array also produced detailed images of the relativistic jets emanating from 3C 84 and M87*.",
+    "url": "https://phys.org/news/2026-11-event-horizon-telescope-views-dynamics.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/the-event-horizon-tele.jpg",
     "source": "Phys.org",
     "category": "Space",
-    "published": "2026-11-27T21:00:01+00:00"
+    "published": "2026-11-28T02:40:01+00:00"
   },
   {
-    "title": "Is AI‑assisted thinking devaluing business degrees?",
-    "summary": "As AI models improve, high-quality knowledge is becoming easier to access. A degree therefore has to certify something more durable than the ability to retrieve knowledge or produce a plausible answer. It must show that a student can exercise judgment, make decisions and defend them.",
-    "url": "https://phys.org/news/2026-11-aiassisted-devaluing-business-degrees.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2024/brain-and-ai.jpg",
-    "source": "Phys.org",
-    "category": "Science",
-    "published": "2026-11-27T20:40:06+00:00"
-  },
-  {
-    "title": "Melting Barents Sea ice gives Eastern Europe's farmers a spring boost",
-    "summary": "For decades, sea ice in the Barents Sea, a part of the Arctic Ocean north of Norway and Russia, has been shrinking as the Arctic warms. The loss of so much ice can alter weather patterns well beyond the polar region, including in Europe. But how these changes might affect vegetation growth and agricultural production is less well understood.",
-    "url": "https://phys.org/news/2026-11-barents-sea-ice-eastern-europe.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/melting-barents-sea-ic.jpg",
-    "source": "Phys.org",
-    "category": "Science",
-    "published": "2026-11-27T20:40:02+00:00"
-  },
-  {
-    "title": "Once logging stops, recovery of Vietnam's tropical forests isn't guaranteed",
-    "summary": "Deep in the jungle of central Vietnam, the heat is heavy, the mosquitoes are relentless and the terrain offers no easy paths. My colleagues and I don't hike on clear trails; we wade up riverbeds, stepping carefully over slippery rocks to access the thousands of trees we have been measuring for the last decade.",
-    "url": "https://phys.org/news/2026-11-recovery-vietnam-tropical-forests-isnt.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/field-team-walking-thr.jpg",
-    "source": "Phys.org",
-    "category": "Science",
-    "published": "2026-11-27T20:20:08+00:00"
-  },
-  {
-    "title": "Hera reveals stadium-sized asteroid crater from spacecraft impact",
-    "summary": "Arriving at the site of humankind's first planetary defense experiment, the European Space Agency's Hera mission has found a miniature world of surprises. Dimorphos—the small asteroid whose orbit around a second, larger asteroid was deflected by a spacecraft impact—now has one face flattened with a stadium-sized crater and is tumbling chaotically. Meanwhile, hundreds of previously unknown boulders encircle the binary pair.",
-    "url": "https://phys.org/news/2026-11-hera-reveals-stadium-sized-asteroid.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/hera-reveals-stadium-s.jpg",
+    "title": "Should space data centers run on solar panels, nuclear reactors or both?",
+    "summary": "The last few days we've been covering a series of papers by Dr. Slava Turyshev of NASA's Jet Propulsion Laboratory about the constraints surrounding the use of orbital data centers in space. One that has come up repeatedly is weight, and the solar panels used to power these data centers contribute a significant portion of that weight. So why not go with an alternative power source? Nuclear energy in space applications is having a bit of a moment currently—maybe it could provide the power needed for the orbital data center revolution?",
+    "url": "https://phys.org/news/2026-11-space-centers-solar-panels-nuclear.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/should-space-data-cent.jpg",
     "source": "Phys.org",
     "category": "Space",
-    "published": "2026-11-27T20:20:06+00:00"
+    "published": "2026-11-28T01:40:01+00:00"
   },
   {
-    "title": "Income inequality is rising while becoming more similar across countries",
-    "summary": "Inequality is a much-debated issue in politics and society. International comparative research shows that income inequality has risen in most countries. At the same time, however, the differences in disposable income levels between countries have narrowed.",
-    "url": "https://phys.org/news/2026-11-income-inequality-similar-countries.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/income-inequality.jpg",
+    "title": "New technologies help Natural History Museum uncover 92 species in its transformed gardens",
+    "summary": "The Natural History Museum's transformed gardens in South Kensington are revealing new insights into London's urban wildlife. Among the 92 species recorded at the site for the first time between its reopening in July 2024 and the end of 2025 are the striking emperor moth and small red-eyed damselfly.",
+    "url": "https://phys.org/news/2026-11-technologies-natural-history-museum-uncover.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/new-technologies-help.jpg",
     "source": "Phys.org",
     "category": "Science",
-    "published": "2026-11-27T20:00:06+00:00"
+    "published": "2026-11-28T00:20:07+00:00"
   },
   {
-    "title": "When bad weather hits a fragile financial system",
-    "summary": "An extreme weather event does more than just destroy buildings, facilities or infrastructure. It can also reduce the value of collateral, weaken banks, make credit more expensive and force businesses to postpone investment. Consequently, the damage risks spreading well beyond the locality where the event occurred.",
-    "url": "https://phys.org/news/2026-11-bad-weather-fragile-financial.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/bad-weather.jpg",
+    "title": "RNA discovery reveals how gut bacterium adapts to life in intestinal mucus",
+    "summary": "The mucus layer in the human gut is a tough place for bacteria: nutrients are scarce, and conditions are harsh. How do bacteria adapt to such extreme environments? Researchers at the Helmholtz Institute for RNA-based Infection Research (HIRI) and the Chair of Microbiology of the Julius-Maximilians-Universität (JMU) in Würzburg, working with scientists at Vanderbilt Health in the United States, have identified a key regulator.",
+    "url": "https://phys.org/news/2026-11-rna-discovery-reveals-gut-bacterium.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/survival-experts-in-th.jpg",
+    "source": "Phys.org",
+    "category": "Discoveries",
+    "published": "2026-11-28T00:00:01+00:00"
+  },
+  {
+    "title": "AI simulates electron hops over far longer times than conventional quantum calculations",
+    "summary": "To predict how a material will behave, we need to know which atoms are located where. This allows us, for example, to explain whether a material is suitable as a catalyst for certain chemical reactions. But often, that is not enough: even if all the atoms stay exactly where they are, the distribution of electric charge within the material can change dramatically. Electrons can jump from one atom to another, changing the forces between atoms as well as the material's chemical reactivity.",
+    "url": "https://phys.org/news/2026-11-ai-simulates-electron-longer-conventional.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/artificial-intelligenc-29.jpg",
     "source": "Phys.org",
     "category": "Science",
-    "published": "2026-11-27T20:00:02+00:00"
+    "published": "2026-11-27T23:40:05+00:00"
   },
   {
-    "title": "Antarctic sea ice extent hits new low",
-    "summary": "Satellite observations show Antarctic sea ice coverage dipped to record daily lows in October 2026, surpassing even the extremely low extent observed in October 2023—the year poor sea ice conditions led to the deaths of thousands of emperor penguin chicks in Antarctica.",
-    "url": "https://phys.org/news/2026-11-antarctic-sea-ice-extent.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/antarctic-sea-ice-exte-4.jpg",
+    "title": "Targeted conversion of carbon dioxide into chemical feedstocks: CO₂ helps shape its own catalyst",
+    "summary": "Electrochemists at the University of Duisburg-Essen have discovered through computer simulations that carbon dioxide (CO₂) helps shape the surface of its own catalyst when the catalyst is restructured using voltage pulses. The calculations suggest that this allows CO₂ to be converted preferentially into formic acid. The findings have been published in Advanced Functional Materials.",
+    "url": "https://phys.org/news/2026-11-conversion-carbon-dioxide-chemical-feedstocks.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/voltage-pulses-and-car.jpg",
     "source": "Phys.org",
-    "category": "Space",
-    "published": "2026-11-27T19:40:06+00:00"
+    "category": "AI & Technology",
+    "published": "2026-11-27T23:40:01+00:00"
   },
   {
-    "title": "European oil and gas firms likely downplayed energy crisis profits, study finds",
-    "summary": "Following the Russian attack on Ukraine in February 2022, energy costs rose sharply and many households and businesses felt the financial burden immediately. Oil and gas companies, however, were making extraordinary profits during this time. As public criticism of high energy costs grew, how did these companies handle their profits? A new study shows that European oil and gas firms likely downplayed their profits between 2022 and 2023. These earnings management practices were particularly prevalent in countries that introduced windfall profit taxes as well as in countries with strong democratic institutions.",
-    "url": "https://phys.org/news/2026-11-european-oil-gas-firms-downplayed.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/maximizing-profits-in.jpg",
-    "source": "Phys.org",
-    "category": "Science",
-    "published": "2026-11-27T19:40:01+00:00"
-  },
-  {
-    "title": "Study shows path to more resilient future for Canada's forests",
-    "summary": "Mountain pine beetles have killed millions of lodgepole pines across western North America since the 1990s, but some trees have proved more resilient than others. New research suggests part of the difference is genetic and that the resistance can be passed from one generation of trees to the next.",
-    "url": "https://phys.org/news/2026-11-path-resilient-future-canada-forests.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/study-shows-path-to-mo-1.jpg",
+    "title": "Rocks under the lens: A simple microscope opens new possibilities for quantitative rock analysis",
+    "summary": "Rocks hold a wealth of information about Earth's history. The size, shape and orientation of the mineral grains that make them up can reveal how rocks formed, deformed and changed deep beneath the surface. However, collecting this information has traditionally required specialized equipment and time-consuming analysis.",
+    "url": "https://phys.org/news/2026-11-lens-simple-microscope-possibilities-quantitative.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/a-simple-microscope-op.jpg",
     "source": "Phys.org",
     "category": "Science",
-    "published": "2026-11-27T19:20:01+00:00"
+    "published": "2026-11-27T23:20:10+00:00"
   },
   {
-    "title": "Carbon storage wells linked to earthquakes near Canadian city",
-    "summary": "People across Edmonton, Canada, felt the ground shake on April 1 and again on May 9, 2026. After the May quake, the Alberta Energy Regulator said it had received no reports of damage or injuries. Researchers have now traced both earthquakes to carbon dioxide injected at Alberta's Quest storage project.",
-    "url": "https://phys.org/news/2026-11-carbon-storage-wells-linked-earthquakes.html",
-    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/study-links-a-magnitud.jpg",
+    "title": "Lab experiments suggest bat RSV can enter human cells, but existing antibodies block it",
+    "summary": "Respiratory syncytial virus (RSV) causes severe respiratory disease and is responsible for numerous deaths each year. A research team led by DZIF scientist Dr. Wendy K. Jo and DZIF scientist Dr. Jan Felix Drexler at Charité—University Medicine Berlin, as well as DZIF board member Dr. Thomas Pietschmann and Dr. Sibylle Haid from TWINCORE in Hanover, has now characterized a virus in West African fruit bats that is genetically distinct from known RSV variants but belongs to the same viral family as RSV.",
+    "url": "https://phys.org/news/2026-11-lab-rsv-human-cells-antibodies.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/researchers-study-bat.jpg",
     "source": "Phys.org",
     "category": "Science",
-    "published": "2026-11-27T19:10:06+00:00"
+    "published": "2026-11-27T23:20:01+00:00"
+  },
+  {
+    "title": "Battery-free implant harvests ultrasound energy and glows to reveal its condition",
+    "summary": "Implantable bioelectronics enable health care professionals to continuously monitor patients' physiological conditions, deliver targeted treatments and support recovery. However, once implanted, these devices are difficult to inspect directly, and damage or degradation may go undetected until complications occur. Limited battery lifetimes and leakage risks also raise safety concerns.",
+    "url": "https://phys.org/news/2026-11-battery-free-implant-harvests-ultrasound.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/polyu-researchers-deve.jpg",
+    "source": "Phys.org",
+    "category": "Science",
+    "published": "2026-11-27T23:00:04+00:00"
+  },
+  {
+    "title": "Work-life balance predicts job satisfaction more strongly than pay or flexible working in study",
+    "summary": "Work-life balance has a stronger association with job satisfaction than pay or flexible working arrangements, according to a study of employees in small and medium-sized enterprises (SMEs) published in the International Journal of Economics and Business Research.",
+    "url": "https://phys.org/news/2026-11-life-job-satisfaction-strongly-pay.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/parent-working.jpg",
+    "source": "Phys.org",
+    "category": "Science",
+    "published": "2026-11-27T23:00:01+00:00"
+  },
+  {
+    "title": "New research establishes fundamental complexity limit for quantum circuit optimization",
+    "summary": "Quantum circuit optimization is an important research area, as the computational resources required to execute quantum algorithms remain a major challenge. In particular, two-qubit operations are generally associated with higher error rates than single-qubit gates on current quantum hardware, making reducing the number of two-qubit gates an important objective.",
+    "url": "https://phys.org/news/2026-11-fundamental-complexity-limit-quantum-circuit.html",
+    "image": "https://scx1.b-cdn.net/csz/news/tmb/2026/new-research-establish.jpg",
+    "source": "Phys.org",
+    "category": "Science",
+    "published": "2026-11-27T22:40:04+00:00"
   },
   {
     "title": "Artemis III Astronaut Andre Douglas Visits VAB",
     "summary": "NASA astronaut Andre Douglas, Artemis III mission specialist, stands inside an RS-25 engine test article during a visit to the Vehicle Assembly Building at NASA’s Kennedy Space Center in Florida on Tuesday, Nov. 17, 2026.",
     "url": "https://www.nasa.gov/image-article/artemis-iii-astronaut-andre-douglas-visits-vab/",
-    "image": "",
+    "image": "https://www.nasa.gov/wp-content/uploads/2026/11/ksc-20261117-ph-kls02-0020orig.jpg",
     "source": "NASA",
     "category": "Space",
     "published": "2026-11-27T15:01:00+00:00"
@@ -205,14 +214,5 @@
     "source": "TechCrunch",
     "category": "AI & Technology",
     "published": "2026-11-26T20:03:54+00:00"
-  },
-  {
-    "title": "Grand Theft Auto VI proves why efficiency isn’t a virtue",
-    "summary": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time",
-    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
-    "image": "https://techcrunch.com/wp-content/uploads/2026/11/Jason_and_Lucia_17.117_b11r13mg5.jpg?resize=1200,675",
-    "source": "TechCrunch",
-    "category": "AI & Technology",
-    "published": "2026-11-26T16:00:00+00:00"
   }
 ]
