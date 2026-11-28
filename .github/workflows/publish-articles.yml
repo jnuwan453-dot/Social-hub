@@ -1,0 +1,41 @@
+name: Publish Scheduled Articles
+
+on:
+  schedule:
+    # 01:00 UTC = 06:30 Asia/Colombo, every day. The publish script
+    # itself decides whether an article is due (Mon-Fri queue dates).
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository files
+        uses: actions/checkout@v4
+        with:
+          ref: Social-Hub
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Publish any article due today
+        run: python scripts/publish_scheduled.py
+
+      - name: Save published article
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Publish scheduled article"
+            git push origin HEAD:Social-Hub
+          else
+            echo "No article due today - nothing to save."
+          fi
