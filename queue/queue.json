@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-11-30",
+    "display_date": "November 30, 2026",
+    "file": "nuclear-spaceship-mars-sr1-freedom.html",
+    "title": "A Nuclear Spaceship to Mars: NASA's SR-1 Freedom Explained",
+    "card_category": "Space",
+    "card_text": "NASA is building the first spacecraft that will ride a nuclear fission reactor to another planet. SR-1 Freedom launches for Mars in 2028 — and its design just took a leap forward.",
+    "image": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?auto=format&fit=crop&w=1200&q=85",
+    "image_alt": "The Moon and Earth seen from a spacecraft in orbit",
+    "read_time": 4,
+    "status": "queued"
+  },
+  {
+    "date": "2026-12-01",
+    "display_date": "December 1, 2026",
+    "file": "turning-carbon-dioxide-into-fuel-with-light.html",
+    "title": "Turning Carbon Dioxide Into a Fuel Ingredient — Using Only Light",
+    "card_category": "Science",
+    "card_text": "Splitting carbon dioxide used to take furnace heat. Rice University scientists just did it with visible light, a copper antenna and an 'oxygen sponge' — turning a pollutant into a product.",
+    "image": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=85",
+    "image_alt": "Scientific research laboratory",
+    "read_time": 4,
+    "status": "queued"
+  },
+  {
+    "date": "2026-12-02",
+    "display_date": "December 2, 2026",
+    "file": "homo-erectus-teeth-china-discovery.html",
+    "title": "The Teeth That Rewrote the Story of Homo Erectus",
+    "card_category": "Discoveries",
+    "card_text": "Nine teeth from two caves in southern China say Homo erectus survived 216,000 years longer than we thought — in tropical rainforest. And one tooth belongs to no one we know.",
+    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=85",
+    "image_alt": "Earth seen from a spacecraft in orbit",
+    "read_time": 4,
+    "status": "queued"
+  },
+  {
+    "date": "2026-12-03",
+    "display_date": "December 3, 2026",
+    "file": "ai-data-centers-in-space-starmind.html",
+    "title": "AI Data Centers in Space: The Plan for a Million Satellites",
+    "card_category": "AI & Technology",
+    "card_text": "The FCC has authorized SpaceX to put up to one million AI data-center satellites in orbit. Why data centers are heading to space — and why a million is such a startling number.",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85",
+    "image_alt": "Earth at night with glowing networks of light",
+    "read_time": 5,
+    "status": "queued"
+  },
+  {
+    "date": "2026-12-04",
+    "display_date": "December 4, 2026",
+    "file": "renewable-energy-passes-coal.html",
+    "title": "The Year Clean Energy Passed Coal",
+    "card_category": "World News",
+    "card_text": "For the first time in history, renewables generated more of the world's electricity than coal — 33.8% to 33.0%. Inside the record year, and the grid challenge that comes next.",
+    "image": "https://images.unsplash.com/photo-1561553873-e8491a564f01?auto=format&fit=crop&w=1200&q=85",
+    "image_alt": "Climate monitoring and weather measurements",
+    "read_time": 4,
+    "status": "queued"
+  }
+]
